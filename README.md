@@ -13,3 +13,7 @@
 - vectorで公開しているSUZUKI PLAN - Video Game Systemで本MMLをコンパイルしたものを利用できます。
 - 本MMLのコンパイルには、ここで公開しているvgsmmlコマンド（Kオペランド対応）が必要です。
 - SUZUKI PLAN - Video Game System mk-II（※Professional Editionを除く）には波形メモリ音源システムを組み込んでいないため利用できません。
+
+補足事項
+- MMLファイルは東方VGS上のリスト上の「曲番号-1」です。
+- もしかすると先頭部分にタイトルがコメントで入っているかもしれませんが、割と間違っていることが多いので騙されないでください。
