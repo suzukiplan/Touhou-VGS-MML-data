@@ -1,0 +1,167 @@
+$Brass \s600 \e22050 @1 %75
+$Pad1 @2 \s5600  \e44100 %80
+$Pad2 @2 \s22050 \e44100 %80
+$Pad3 @2 \s2205  \e44100 %80
+$Harp \s1000 \e1500 @0 %50
+$Bass \s100   \e200 @2 %85
+$Sq \s600 \e22050 @2 %75
+$Sq2 \s6000 \e22050 @1 %80
+$Hue \s5000 \e22050 @2 %80
+$Osi \s22050 \e22050 @2 %80
+$Osi2 \s12800 \e10000 @2 %80
+$Ou \s500 \e5000 @2 %74
+$B  \s10 \e1000 p-128 @0 %10 v35 o3
+$S  \s1  \e1000 p-128 @3 %20 v20 o4
+$H  \s1  \e1000 p-64  @3 %75 v10 o2
+
+
+Ch0 t150 m8 |
+
+Ch0 v8 @2 \s600 \e22050 %80 l8 o5 r16
+Ch0 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch0 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch0 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch0 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch0 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-16
+
+Ch1 v10 @2 \s600 \e22050 %80 l8 o5 
+Ch1 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch1 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch1 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch1 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+Ch1 fb->ce-c<b- fb->ce-c<b- fb->ce-c<b- fb->ce-c<b-
+
+Ch2 v10 l8 o4 
+Ch3 v10 l8 o4 
+Ch4 v10 l8 o4 
+
+Ch2 (Pad1)   a-1 > (Pad2) a-1 < r1
+Ch3 (Pad1)   c1  > (Pad2) c1  < r1
+Ch4 (Pad1) < f1 r2 (Pad3) >l8. ca-g<b->gf<a-4.
+
+Ch2 (Pad1)   a-1 > (Pad2) a-1 < r1
+Ch3 (Pad1)   c1  > (Pad2) c1  < r1
+Ch4 (Pad1) < f1 r2 (Pad3) >c4<a8g8.f4g4d-8.e-4
+
+Ch2 (Pad1)   a-1 > (Pad2) f1 < r1
+Ch3 (Pad1)   c1  > (Pad2) d-1  < r1
+Ch4 (Pad1)  <f1>r2 (Pad3) fa->d-e-fa-f4. <
+
+Ch2 (Pad1)   a-1 > (Pad2) f1 < r1
+Ch3 (Pad1)   c1  > (Pad2) d-1  < r1
+Ch4 (Pad1)  <f1>r2 (Pad3) <a-4>d-8f8.a-4b-4>d-8.<b-4
+
+Ch2 (Pad1)   a-1. r1 r4.
+Ch3 (Pad1)   c1.  r1 r4.
+Ch4 (Pad1)  <f1.  r1 r4.
+
+Ch5 v7 @2 \s600 \e22050 %80 l16 o4
+Ch5 v0c1r1r1r1
+Ch5 r1r1r1r1
+Ch5 r1r1r1r1 p-0 v7
+Ch5 f16.b-16.>c16.e-16.c16.<b-16. v+
+Ch5 f16.b-16.>c16.e-16.c16.<b-16. v+
+Ch5 f16.b-16.>c16.e-16.c16.<b-16. v+
+Ch5 f16.b-16.>c16.e-16.c16.<b-16. v+
+Ch5 f16.b-16.>c16.e-16.c16.<b-16. v+
+Ch5 v0f8.
+
+
+#--------
+Ch0 (Bass)@0 v0 f2l4 o3v15 rp-512cp-0<a-a-
+Ch0 ggff
+Ch0 e-e-dd
+Ch0 ddc+c+
+Ch0 e-e-a-a-
+Ch0 ggff
+Ch0 e-e-dd
+Ch0 ddc+c+
+Ch0 e-e- l16 a->fcf< a->fcf<
+Ch0 g>fcf< g>fcf< f>c<f >f<f>f cf<
+Ch0 e->fcf<e->fcf< db-d>d<b->d<d>d<
+Ch0 d>d<b->d<d>d<b->d< c+a->d-<a-d-a->d-<a-
+Ch0 e-b->e-<b- e->e-<b-g a->fcf< a->fcf<
+Ch0 g>fcf<g>fcf< f>c<f>f<f>fcf<
+Ch0 e->fcf<e->fcf< db-d>d<b->d<d>d<
+Ch0 d>d<b->d< d>d<b->d< c+a->d-<a- d-a->d-<a-
+Ch0 e-b->e-<b- e->e-<b-g
+
+Ch1 (Bass)@0 v0 f2l4 o4v10 rp-512cp-0<a-a-
+Ch1 ggff
+Ch1 e-e-dd
+Ch1 ddc+c+
+Ch1 e-e-a-a-
+Ch1 ggff
+Ch1 e-e-dd
+Ch1 ddc+c+
+Ch1 e-e- l16 a->fcf< a->fcf<
+Ch1 g>fcf< g>fcf< f>c<f >f<f>f cf<
+Ch1 e->fcf<e->fcf< db-d>d<b->d<d>d<
+Ch1 d>d<b->d<d>d<b->d< c+a->d-<a-d-a->d-<a-
+Ch1 e-b->e-<b- e->e-<b-g a->fcf< a->fcf<
+Ch1 g>fcf<g>fcf< f>c<f>f<f>fcf<
+Ch1 e->fcf<e->fcf< db-d>d<b->d<d>d<
+Ch1 d>d<b->d< d>d<b->d< c+a->d-<a- d-a->d-<a-
+Ch1 e-b->e-<b- e->e-<b-g
+
+
+Ch2 (Brass) v15 o4 l8 b-4 >ce-c< b-a-ga-
+Ch3 (Brass) v15 o4 l8 g4  a-b-a- gfe-f
+
+Ch2 a-2a-2a-2a-2 a-2^4.b-4>ce-c<b->c<b- a-2^8
+Ch3 f2g2f2e-2    d 2^4.g4a-b-a-ga-gf2^8
+
+Ch2 a-2a-2a-2a-2^4. b-4>ce-c<b->c<b->f2^8
+Ch3 g2f2e-2d2^4.    g4a-b-a-ga-ga-2^8
+
+Ch2 f2f2f2f2^4.  g4a->c<a-ga-ge-f2
+Ch3 g2f2e-2d2^4. b-4>cfc<b->c<b-a-2^8
+
+Ch2 f2f2f2f2^4.  g4a->c<a- ga-gf
+Ch3 g2f2e-2d2^4. b-4>cfc<b->c<b-a-
+
+Ch4 (Sq)v9 o3 %50 l8 r2r
+Ch4 rfga-a->c<a->c<
+
+Ch4 g>c<g>c<f>c<f>c<
+Ch4 e->c<e->c<db-db-
+Ch4 db-l16dfa-b- d-8a-8d-8a-8
+Ch4 e-gb->e-l8<b-g a->c<a->c<
+
+Ch4 g>c<g>c<f>c<f>c<
+Ch4 e->c<e->c<db-db-
+Ch4 db-l16dfa-b- d-8a-8d-8a-8
+Ch4 e-gb->e-l8<b-g a->c<a->c<
+
+Ch4 g>c<g>c<f>c<f>c<
+Ch4 e->c<e->c<db-db-
+Ch4 db-l16dfa-b- d-8a-8d-8a-8
+Ch4 e-gb->e-l8<b-g a->c<a->c<
+
+Ch4 g>c<g>c<f>c<f>c<
+Ch4 e->c<e->c<db-db-
+Ch4 db-l16dfa-b- d-8a-8d-8a-8
+Ch4 e-gb->e-l8<fg
+
+
+Ch5 r4(B)c4c8c8(S)c8c8
+Ch5 (B)c4(S)c4(B)c4(S)c4
+Ch5 (B)c4(S)c4(B)c8c8(S)c4
+Ch5 (B)c8c8(S)c8c8(B)c4(S)c4
+Ch5 (B)c8c8(S)c4c8c8cccc
+
+Ch5 (B)c4(S)c4(B)c4(S)c4
+Ch5 (B)c4(S)c4(B)c8c8(S)c4
+Ch5 (B)c8c8(S)c8c8(B)c4(S)c4
+Ch5 (B)c8c8(S)c4c8c8cccc
+
+Ch5 (B)c4(S)c4(B)c4(S)c4
+Ch5 (B)c4(S)c4(B)c8c8(S)c4
+Ch5 (B)c8c8(S)c8c8(B)c4(S)c4
+Ch5 (B)c8c8(S)c4c8c8cccc
+
+Ch5 (B)c4(S)c4(B)c4(S)c4
+Ch5 (B)c4(S)c4(B)c8c8(S)c4
+Ch5 (B)c8c8(S)c8c8(B)c4(S)c4
+Ch5 (B)c8c8(S)c4c8c8cccc
+

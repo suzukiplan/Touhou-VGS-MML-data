@@ -1,0 +1,286 @@
+$Brass \s600 \e22050 @1 %75
+$Pad1 @2 \s5600  \e44100 %80
+$Pad2 @2 \s22050 \e44100 %80
+$Pad3 @2 \s2205  \e44100 %80
+$Harp \s1000 \e1500 @0 %50
+$Bass \s100   \e200 @2 %85
+$Sq \s600 \e22050 @2 %75
+$Sq2 \s6000 \e22050 @1 %80
+$Hue \s5000 \e22050 @2 %80
+$Osi \s22050 \e22050 @2 %80
+$Osi2 \s12800 \e10000 @2 %80
+$Ou \s500 \e5000 @2 %74
+$B  \s10 \e1000 p-128 @0 %10 v35 o3
+$S  \s1  \e1000 p-128 @3 %20 v20 o4
+$H  \s1  \e1000 p-64  @3 %75 v10 o2
+
+Ch0 r1024
+Ch1 r1024
+Ch2 r1024
+Ch3 r1024
+Ch4 r1024
+Ch5 r1024
+
+#-----------------------------------------------------------------------------
+Ch0 t132 m8 l16 o2 v12
+Ch0 (Sq)
+Ch0 r1r1r1r1r1r1r1r2.p-256f+4p-0
+
+Ch0 d4<a>dd8e4<b>g+b8
+Ch0 f+8.f+8.a8f+8.f+8.>c+8<
+Ch0 d4<a>dd8f4 ff8g+
+Ch0 a8.a8.f+8b8.g+8.e8
+Ch0 d4<a>dd8e4<b>g+b8
+Ch0 f+8.f+8.a8f+8.f+8.>c+8<
+Ch0 d4<a>dd8e4g+g+8.
+Ch0 f+8.f+8.a8>c+8.<a8.>c+8<
+
+Ch0 d4<a>dd8e4<b>g+b8
+Ch0 f+8.f+8.a8 f+8.f+8.>c+8<
+Ch0 d4<a>dd8 f4 ff8g+
+Ch0 a8.a8.f+8 b8.g+8.e8
+Ch0 d4<a>dd8 e4<b>g+b8
+Ch0 f+8.f+8.a8 f+8.f+8.>c+8<
+Ch0 d4<a>dd8 e4g+g+8.
+Ch0 f+8.f+8.a8a8.a8.a8
+
+Ch0 f+8>c+8<c+f+>c+<f+8.>c+8<f+8>c+8<
+Ch0 e8>c+8<c+e>c+<e8.>c+8<ee>c+8<
+Ch0 d+8b8<b>d+bd+8.b8d+8.b
+Ch0 d+8b8d+b8.d+8b8d+8b8
+Ch0 d8a8ddad8.a8da8.
+Ch0 e8b8eg+be8.b8eg+b8
+Ch0 f+8>c+8<c+f+>c+<f+8.>c+8<f+8.>c+<
+Ch0 f+8>c+8<c+f+>c+<f+8.>c+8<f+f+>c+8<
+
+Ch0 f+8>c+8<c+f+>c+<f+8.>c+8<f+8>c+8<
+Ch0 e8>c+8<c+e>c+<e8.>c+8<ee>c+8<
+Ch0 d+8b8<b>d+bd+8.b8d+8.b
+Ch0 d+8b8d+b8.d+8b8d+8b8
+Ch0 d8a8ddad8.a8da8.
+Ch0 e8b8eg+be8.b8eg+b8
+Ch0 f+8>c+8<c+f+>c+<f+8.>c+8<f+8.>c+<
+Ch0 f+8>c+8<a>f+8.<f+8>c+8f+c+<af+
+
+Ch0 d4<a>dd8e4<b>g+b8
+Ch0 f+8.f+8.a8f+8.f+8.>c+8<
+Ch0 d4<a>dd8f4 ff8g+
+Ch0 a8.a8.f+8b8.g+8.e8
+Ch0 d4<a>dd8e4<b>g+b8
+Ch0 f+8.f+8.a8f+8.f+8.>c+8<
+Ch0 d4<a>dd8e4g+g+8.
+Ch0 f+8.f+8.a8>c+8.<a8.>c+8<
+
+Ch0 d4<a>dd8e4<b>g+b8
+Ch0 f+8.f+8.a8f+8.f+8.>c+8<
+Ch0 d4<a>dd8f4 ff8g+
+Ch0 a8.a8.f+8b8.g+8.e8
+Ch0 d4<a>dd8e4<b>g+b8
+Ch0 f+8.f+8.a8f+8.f+8.>c+8<
+Ch0 d4<a>dd8e4g+g+8.
+Ch0 f+8.f+8.a8>c+8.<a8.>c+8<
+
+#-----------------------------------------------------------------------------
+Ch1 (Sq)l16v14o4
+
+Ch1 \s6000f+4.>f+8 e8.a8.g+8  \s600erc+re8e\s6000f+16^2 <
+Ch1 f+4.>f+8 f8.f+8.g+8 \s11025 c+1 \s6000 <
+Ch1 f+4.>f+8 e8.f+8.g+8 \s600arc+rg+8g+\s6000a16^4b4
+Ch1 \s600>c+r<f+r8.g+a\s6000g+8.e8.c+8 \s600erc+re8e\s11025 f+16^2\s600
+
+Ch1 |@1v15f+4.edc+4.f+g+ a2<a8.b8.>c+8
+Ch1 a4.g+ag+4c+4 d4.c+<b>c+2
+Ch1 <a4.>f+8e8.f+8.g+8 arerf+8g+a16^4d4
+Ch1 f+4.ef+e4c+4 erc+re8ef+4.@2v14e<bg+
+
+Ch1 f+4.>f+8 e8.a8.g+8  erc+re8ef+16^2 <
+Ch1 f+4.>f+8 f8.f+8.g+8  a1  <
+Ch1 f+4.>f+8 e8.f+8.g+8 arc+rg+8g+a16^4b4
+Ch1 >c+r<f+r8.g+ag+8.e8.c+8 erc+re8e \s5000 f+16^4g+4
+
+Ch1 a2.>c+4< g+2.>c+4< f+1.r8.\s600e-32e32f+8g+8
+Ch1 a4.\s5000c+4g+8a8g+2b4.>c+4<a1.f+4g+4
+Ch1 a2.>c+4< g+2.>c+4< f+1.r8.\s600e-32e32f+8g+8
+Ch1 a4.\s5000c+4g+8a8g+8^8.<b8.>\s600g+8r8 b>e<bag+
+Ch1 a16^2.^8b32>c+32d32e32 f+2.g+4
+
+Ch1 a4c+8a8g+8f+8e8d8 c+8e8<b8>c+8<a4.a8
+Ch1 b8>c+8e8c+8<b8>c+8<b8a8 f+rar8.e32f+32e32f+32e32f+32^8.^4
+Ch1 >a4c+8a8g+8f+8e8d8 c+8e8<b8>c+8<a4.a8
+Ch1 b8>c+8e8c+8<b8>c+8e8f+8 arf+r8.e32f+32e32f+32e32f+32^8.^4
+
+Ch1 <@1v15
+Ch1 f+4.edc+4.f+g+ a2<a8.b8.>c+8
+Ch1 a4.g+ag+4c+4 d4.c+<b>c+2
+Ch1 f+4.edc+4.f+g+ a2<a8.b8.>c+8
+Ch1 d8.e8.f+8g+4e4 f+2.^8de
+
+#-----------------------------------------------------------------------------
+Ch2 (Sq)l16v12o4
+Ch2 \s6000d4.a8g+8.>e8.<b8  \s600>c+r<f+ra8g+\s6000a16^2
+Ch2 d4.a8f8.f+8.g+8   \s11025 a1 \s6000
+Ch2 d4.a8g+8.a8.b8    \s600>c+r<f+r>e8e \s6000f+16^4g+4
+Ch2 \s600ardr8.ef+\s6000e8.c+8.<a8 \s600brerg+8g+\s11025a16^2\s600
+
+Ch2 @1v15f+4.>f+8e8.a8.b8 >c+2<a8.b8.>c+8<
+Ch2 f+4.ff+f4>c+4 <b4.ag+a2
+Ch2 f+4.a8g+8.a8.b8 >c+8.d8.e8d4<a4
+Ch2 >dr<ar8.>c+dc+8.<b8.a8 brerg+8g+a4.@2v12c+<g+e
+
+Ch2 d4.a8g+8.>e8.<b8  >c+r<f+ra8g+a16^2
+Ch2 d4.a8f8.f+8.g+8    a1 
+Ch2 d4.a8g+8.a8.b8    >c+r<f+r>e8e f+16^4g+4
+Ch2 ardr8.ef+e8.c+8.<a8 brerg+8g+ \s5000 a16^4b4>
+
+Ch2 c+2.a4 c+2.g+4 d+1.r4\s600d+8d+8
+Ch2 c+4.\s5000<a4b8>c+8<b2>g+4.a4 c+1.<a4b4>
+Ch2 c+2.a4 c+2.g+4 d+1.r4\s600d+8d+8
+Ch2 c+4.<\s5000a4b8>c+8<b8^8.g+8.r8\s600>a4.^16
+Ch2 f+16^2.^8.^32g+32 a1 <
+
+Ch2 f+4.>f+8 e8.a8.g+8  erc+re8ef+16^2 <
+Ch2 f+4.>f+8 f8.f+8.g+8 \s11025 c+1 \s600 <
+Ch2 f+4.>f+8 e8.f+8.g+8 arc+rg+8g+f+8.^4g+b
+Ch2 >c+r<f+r8.g+ag+8.e8.c+8 erc+re8ef+16^2
+
+Ch2 <@1v15
+Ch2 f+4.>f+8e8.a8.b8 >c+2<a8.b8.>c+8<
+Ch2 f+4.ff+f4>c+4 <b4.ag+a2
+Ch2 <f+4.>f+8e8.a8.b8 >c+2<a8.b8.>c+8
+Ch2 d4.c+d<b4.ab a2.^16c+<bg+
+
+#-----------------------------------------------------------------------------
+Ch3 (Brass)l16v12o4
+Ch3 d8.\s6000a16^4<b8.>d8.g+8\s600  f+16.b16.<a>e16.<b16.g+\s6000a2
+Ch3 f+8.>d8.<a8>f8.<b8.>g+8 \s11025a2\s600c+16.a16.g+<b16.>g+16.f+
+Ch3 < f+d<a>daf+d<a b>eg+bg+b>e<b >c+<af+bg+eaf+ c+g+e<b>f+<a>ae
+Ch3 af+daf+d>d<ag+e<b>g+e<b>bg+ a>c+f+<b>eg+c+f+af+e<b>f+c+<ag+
+
+Ch3 f+d<a>daf+d<ab>eg+bg+b>e<b >c+<af+bg+eaf+c+g+e<b>f+<a>ae
+Ch3 af+daf+d>d<ag+e<b>g+e<b>bg+ a>c+f+<b>eg+c+f+af+e<b>f+c+<ag+
+Ch3 f+d<a>daf+d<ab>eg+bg+b>e<b >c+<af+bg+eaf+c+g+e<b>f+<a>ae
+Ch3 af+daf+d>d<ag+e<b>g+e<b>bg+ a>c+f+<b>eg+c+f+af+e<b>f+c+<ag+
+
+Ch3 f+d<a>daf+d<ab>eg+bg+b>e<b >c+<af+bg+eaf+c+g+e<b>f+<a>ae
+Ch3 af+daf+d>d<ag+e<b>g+e<b>bg+ a>c+f+<b>eg+c+f+af+e<b>f+c+<ag+
+Ch3 f+d<a>daf+d<ab>eg+bg+b>e<b >c+<af+bg+eaf+c+g+e<b>f+<a>ae
+Ch3 af+daf+d>d<ag+e<b>g+e<b>bg+ a>c+f+<b>eg+c+f+af+e<b>f+c+<ag+
+
+Ch3 l8o3@1%50\e6000\s600
+Ch3 g+>c+a>f+c+a<a>e <<eg+>e>c+f+f+be <<d+b>g+g+d+g+g+d+ d+<abd+<aa>c+a
+Ch3 <da>f+>daef+f+ <<eb>g+>ebeg+b <<f+a>f+a>f+a>f+<a f+g+g+<b>eec+<a
+Ch3 g+>c+a>f+c+a<a>e <<eg+>e>c+f+f+be <<d+b>g+g+d+g+g+d+ d+<abd+<aa>c+a
+Ch3 <da>f+>daef+f+ <<eb>g+>ebeg+b <<f+a>f+a>f+a>f+<a
+Ch3 (Brass) l16erc+re8ef+16^2
+
+Ch3 >@0
+
+Ch3 a4c+8a8g+8f+8e8d8 c+8e8<b8>c+8<a4.a8
+Ch3 b8>c+8e8c+8<b8>c+8<b8a8 f+rar8.e32f+32e32f+32e32f+32^8.^4
+Ch3 >a4c+8a8g+8f+8e8d8 c+8e8<b8>c+8<a4.a8
+Ch3 b8>c+8e8c+8<b8>c+8e8f+8 arf+r8.e32f+32e32f+32e32f+32^8.^4
+
+Ch3 <<@1
+
+Ch3 f+d<a>daf+d<ab>eg+bg+b>e<b >c+<af+bg+eaf+c+g+e<b>f+<a>ae
+Ch3 af+daf+d>d<ag+e<b>g+e<b>bg+ a>c+f+<b>eg+c+f+af+e<b>f+c+<ag+
+Ch3 f+d<a>daf+d<ab>eg+bg+b>e<b >c+<af+bg+eaf+c+g+e<b>f+<a>ae
+Ch3 af+daf+d>d<ag+e<b>g+e<b>bg+ a>c+f+<b>eg+c+f+af+e<b>f+c+<ag+
+
+
+#-----------------------------------------------------------------------------
+Ch4 (Brass)l16v11o4
+Ch4 \s6000a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2
+Ch4 d2\s600c+8.f+8.g+8 \s22050a1
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2\s600
+Ch4 >c+r<ar8.c+de4g+4 \s6000a4.\s600g+a\s6000f+2
+
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2
+Ch4 d2\s600c+8.f+8.g+8 \s22050a1
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2\s600
+Ch4 >c+r<ar8.c+de4g+4 \s6000a4.\s600g+a\s6000f+2
+
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2
+Ch4 d2\s600c+8.f+8.g+8 \s22050a1
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2\s600
+Ch4 >c+r<ar8.c+de4g+4 \s6000a4.\s600g+a\s6000f+2\s600
+
+Ch4 l8o3@1%50\e6000\s600r16
+Ch4 a>f+>c+af+g+c+f+ <<f+>c+g+>eb>e<g+b <<g+>d+bbf+bb<g+ bg+g+<bg+b>g+g+
+Ch4 <f+>da>f+g+dad <<g+>eb>g+g+bee <<g+>c+g+>c+g+>c+c+<g+ ac+f+f+<a>d<bg+
+Ch4 a>f+>c+af+g+c+f+ <<f+>c+g+>eb>e<g+b <<g+>d+bbf+bb<g+ bg+g+<bg+b>g+g+
+Ch4 <f+>da>f+g+dad <<g+>eb>g+g+bee <<g+>c+g+>c+g+>c+c+r16
+Ch4 (Brass)l16erc+re8ef+16^2
+
+Ch4 o4
+
+Ch4 \s6000a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2
+Ch4 d2\s600c+8.f+8.g+8 \s22050a1
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2\s600
+Ch4 >c+r<ar8.c+de4g+4 \s6000a4.\s600g+a\s6000f+2
+
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2
+Ch4 d2\s600c+8.f+8.g+8 \s22050a1
+Ch4 a2\s600g+8.f+8.e8 c+8.e8.\s6000f+8^2\s600
+Ch4 >c+r<ar8.c+de4g+4 \s6000a4.\s600g+a\s6000f+2
+
+#-----------------------------------------------------------------------------
+Ch5 (Brass)@0l16v10o3
+Ch5 d8.\s6000a16^4<b8.>d8.g+8\s600  f+16.b16.<a>e16.<b16.g+\s6000a2
+Ch5 f+8.>d8.<a8>f8.<b8.>g+8 \s11025a2\s600c+16.a16.g+<b16.>g+16.f+
+Ch5 v0f+1r1r1r2.(S)c4
+
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8cc(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8cc(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8.(B)c
+Ch5 c8cc c32c32ccc (S)c8(H)c8(S)c8cc
+
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8c8(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8cc(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8.(B)c
+Ch5 c8cc c32c32ccc (S)c8(B)c8(S)c8cc
+
+Ch5 (B)c8(H)c8(B)c8cc(S)c4(H)c8(B)c8
+Ch5 (B)c8(H)c8(B)c8cc(S)c4(H)c8(B)c8
+Ch5 (B)c8(H)c8(B)c8cc(S)c4(H)c8(B)c8
+Ch5 (B)c8(H)c8(B)c8cc(S)c8.c c8cc
+Ch5 (B)c8(H)c8(B)c8cc(S)c4(H)c8(B)c8
+Ch5 (B)c8(H)c8(B)c8cc(S)c4(H)c8(B)c8
+Ch5 (B)c8(H)c8(B)c8cc(S)c4(H)c8(B)c8
+Ch5 (B)c8(H)c8(B)c8cc(S)c8(B)c8(S)c8(H)c8
+
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8(S)c8c8cc
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c(B)c
+Ch5 c8cc c32c32ccc (S)c8(H)c8(S)c8cc
+
+Ch5 (B)c4(H)c4(B)c4(H)c4
+Ch5 (B)c4(H)c4(B)c4(H)c8(B)c8
+Ch5 (B)c8(H)c8(B)c8(H)c8(B)c8(H)c8(B)c8(H)c8
+Ch5 (B)c8(H)c8(B)c8(H)c8(S)c8(H)c8(S)c8(B)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8(H)c(B)cc8c8(S)c8(H)c(B)c
+Ch5 c8cc c32c32ccc (S)c8(H)c8(S)cccc
+
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8cc(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8(H)c8
+Ch5 (B)c8(H)c8(S)c8.(B)cc8cc(S)c4
+Ch5 (B)c8(H)c8(S)c8.(B)cc8(H)c(B)c(S)c8.(B)c
+Ch5 c8cc c32c32ccc (S)c8(H)c8(S)c8cc
+
