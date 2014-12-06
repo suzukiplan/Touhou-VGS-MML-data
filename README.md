@@ -89,4 +89,5 @@
 - bslot063.mml: the Grimoire of Alice
 - bslot064.mml: 神々が恋した幻想郷
 - bslot065.mml: 芥川龍之介の河童 ～ Candid Friend
+- bslot066.mml: フラワリングナイト
 
