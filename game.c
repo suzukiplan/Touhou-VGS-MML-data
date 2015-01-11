@@ -10,6 +10,8 @@
 #include "vgeapi.h"
 #include "vgeint.h"
 
+FILE* vge_fopen(const char*, const char*);
+
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
 #define SONG_NUM 70
@@ -43,7 +45,7 @@ struct SongData {
 struct SongData _list[SONG_NUM] = {
     // 東方幻想郷(0x40)
     //    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-     { 0x4007,  61, 1,  0,  0,  0,  0,  0,  0, 196,  0, "Bad Apple!!" }
+    { 0x4007,  61, 1,  0,  0,  0,  0,  0,  0, 196,  0, "Bad Apple!!" }
     // 東方怪綺談(0x50)
     //    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
     ,{ 0x5010,  62, 1,  3, 64,176,105,  1,  0, 196,  0, "" }
@@ -156,7 +158,7 @@ extern int _flingY;
 static void savelist()
 {
     int i,j,k;
-    FILE* fp=fopen("/data/data/com.suzukiplan.TOHOVGS/playlist.dat","wb");
+    FILE* fp=vge_fopen("playlist.dat","wb");
     if(NULL!=fp) {
         fwrite(&_mylist.no,4,1,fp);
         for(i=0;i<3;i++) {
@@ -184,7 +186,7 @@ static void savelist()
 static void loadlist()
 {
     int i,j,k,l,m;
-    FILE* fp=fopen("/data/data/com.suzukiplan.TOHOVGS/playlist.dat","rb");
+    FILE* fp=vge_fopen("playlist.dat","rb");
     if(NULL!=fp) {
         fread(&_mylist.no,4,1,fp);
         if(2<_mylist.no || _mylist.no<0) {
@@ -243,7 +245,7 @@ int vge_term()
 int vge_loop()
 {
     static const char* tn[4]={
-         "SANKAKU"
+        "SANKAKU"
         ,"NOKOGIR"
         ,"KUKEI  "
         ,"NOIZE  "
@@ -275,7 +277,7 @@ int vge_loop()
     int i,j,k;
     int dp;
     int wav;
-
+    
     /* Play after wait */
     if(playwait) {
         playwait--;
@@ -287,7 +289,7 @@ int vge_loop()
             playing=1;
         }
     }
-
+    
     /* タッチ状態を取得 */
     vge_touch(&ci.s,&ci.cx,&ci.cy,&ci.dx,&ci.dy);
     if(ci.s) {
@@ -314,7 +316,7 @@ int vge_loop()
         push=0;
         slide=0;
     }
-
+    
     /* リストの上下移動 */
     if(slide==0) {
         if(4<ci.dy || ci.dy<-4) {
@@ -330,7 +332,7 @@ int vge_loop()
         touch_off=0;
     }
     memcpy(&pi,&ci,sizeof(ci));
-
+    
 #ifdef _WIN32
     if(g_mouse_roll) {
         base+=g_mouse_roll/8;
@@ -339,7 +341,7 @@ int vge_loop()
         g_mouse_roll=0;
     }
 #endif
-
+    
     /* Fling */
     if(touchSB) {
         touchSB--;
@@ -352,7 +354,7 @@ int vge_loop()
         base+=mv;
         _flingY-=mv;
     }
-
+    
     /* Overscroll */
     if(ci.s==0) {
         if(4<base) {
@@ -372,7 +374,7 @@ int vge_loop()
             }
         }
     }
-
+    
     /* Auto focus */
     if(focus) {
         if(mcur*20+130+base<130) {
@@ -387,7 +389,7 @@ int vge_loop()
             focus=0;
         }
     }
-
+    
     /* Draw music list */
     for(i=0;i<SONG_NUM;i++) {
         if(_list[i].dis) {
@@ -404,8 +406,8 @@ int vge_loop()
                     vge_boxSP(4,i*20+130+base,220,i*20+146+base,111);
                 } else {
                     if(ci.s && touch_off==0 && 2==touching
-                    && HITCHK(ci.cx-4,ci.cy-4,8,8,0,130,240,190)
-                    && HITCHK(4,i*20+130+base,216,16,ci.cx-4,ci.cy-4,8,8)) {
+                       && HITCHK(ci.cx-4,ci.cy-4,8,8,0,130,240,190)
+                       && HITCHK(4,i*20+130+base,216,16,ci.cx-4,ci.cy-4,8,8)) {
                         vge_boxfSP(4,i*20+130+base,220,i*20+146+base,60);
                         vge_boxSP(4,i*20+130+base,220,i*20+146+base,111);
                         if(push) {
@@ -466,7 +468,7 @@ int vge_loop()
     myprint(4,i*20+135+base,"Composed by ZUN.");
     putfontS(4,i*20+145+base,"THIS IS AN ALTERNATIVE FICTION OF THE TOUHOU PROJECT.");
     vge_putSP(0,0,112,136,48,4,i*20+155+base);
-
+    
     /* Scroll bar */
     vge_boxfSP(224,130,240,320,103);
     if(1==touching) {
@@ -481,7 +483,7 @@ int vge_loop()
         i=(0-base+4)*100/(-bmin)*116/100;
         vge_boxfSP(225,142+i,238,192+i,108);
     }
-
+    
     /* Cursor(Top) */
     if(base>=4) {
         vge_putSP(0,208,32,16,12,224,130);
@@ -497,7 +499,7 @@ int vge_loop()
             vge_putSP(0,144,32,16,12,224,130);
         }
     }
-
+    
     /* Cursor(Bottom) */
     if(base<=bmin) {
         vge_putSP(0,224,32,16,12,224,308);
@@ -513,11 +515,11 @@ int vge_loop()
             vge_putSP(0,160,32,16,12,224,308);
         }
     }
-
+    
     /* Draw play pannel */
     vge_boxfSP(0,0,240,130,3);
     myprint(4,2,"Touhou BGM on VGS");
-
+    
     /* Configuration */
     if(!editmode) {
         if(ci.s && touch_off==0 && HITCHK(220,0,20,16,ci.cx-4,ci.cy-4,8,8)) {
@@ -548,7 +550,7 @@ int vge_loop()
             vge_putSP(0, 72,160, 16,8, 222, 2);
         }
     }
-
+    
     if(editmode) {
         vge_boxfSP(0,14,240,105,51);
         vge_lineSP(0,13,240,13,111);
@@ -556,7 +558,7 @@ int vge_loop()
         vge_lineSP(0,108,240,108,106);
         vge_lineSP(0,129,240,129,111);
         vge_lineSP(0,127,240,127,106);
-
+        
         myprint(8,20,"CHOOSE A LIST");
         for(i=0;i<3;i++) {
             if(i==_mylist.no) {
@@ -580,7 +582,7 @@ int vge_loop()
             }
             myprint(26+i*70,38,"LIST#%d",i+1);
         }
-
+        
         for(i=0,j=0,k=0;i<SONG_NUM;i++) {
             if(_list[i].dis) {
                 j++;
@@ -590,7 +592,7 @@ int vge_loop()
                 _list[i].played=0;
             }
         }
-
+        
         myprint(8,64,"CHANGE ALL");
         if(k==SONG_NUM) {
             vge_boxfSP(34,76,106,96, 102);
@@ -613,7 +615,7 @@ int vge_loop()
             }
             myprint(42,82,"ENABLED");
         }
-
+        
         if(j==SONG_NUM) {
             vge_boxfSP(134,76,206,96, 102);
             vge_boxSP(134,76,206,96, 104);
@@ -635,13 +637,13 @@ int vge_loop()
             }
             myprint(138,82,"DISABLED");
         }
-
+        
         putfontS(8,114,"PLEASE TAP A SONG TO ENABLE OR DISABLE.");
         px=ci.cx;
         py=ci.cy;
         return 0;
     }
-
+    
     /* RegBoard */
     vge_boxfSP(0,14,240,105,51);
     vge_lineSP(0,13,240,13,111);
@@ -669,7 +671,7 @@ int vge_loop()
     putfontS(8,24,"WAIT TIME %05d",_psg.waitTime);
     putfontS(8,32,"CH0 COUNT %05d  CH1 COUNT %05d  CH2 COUNT %05d",_psg.ch[0].count,_psg.ch[1].count,_psg.ch[2].count);
     putfontS(8,40,"CH3 COUNT %05d  CH4 COUNT %05d  CH5 COUNT %05d",_psg.ch[3].count,_psg.ch[4].count,_psg.ch[5].count);
-
+    
     /* Clac wav pow */
     for(i=0;i<6;i++) {
         wav=_psg.wav[i];
@@ -693,7 +695,7 @@ int vge_loop()
             }
         }
     }
-
+    
     /* Check all disabled */
     for(i=0,j=0;i<SONG_NUM;i++) {
         if(_list[i].dis) {
@@ -708,7 +710,7 @@ int vge_loop()
         py=ci.cy;
         return 0;
     }
-
+    
     /* PLAY  button */
     if(paused || mcur==-1) {
         if(ci.s && touch_off==0 && HITCHK(2,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
@@ -771,7 +773,7 @@ int vge_loop()
             vge_putSP(0,0,32,24,12,2,112);
         }
     }
-
+    
     /* PAUSE button */
     if(paused) {
         vge_putSP(0,120,32,24,12,28,112);
@@ -797,7 +799,7 @@ int vge_loop()
             vge_putSP(0,24,32,24,12,28,112);
         }
     }
-
+    
     /* INFINITE button */
     if(ci.s && touch_off==0 && HITCHK(54,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
         vge_putSP(0,168,80,24,12,54,112);
@@ -807,7 +809,7 @@ int vge_loop()
     } else {
         vge_putSP(0,144+(1-infy)*48,80,24,12,54,112);
     }
-
+    
     if(!infy) {
         /* SHUFFLE button */
         if(ci.s && touch_off==0 && HITCHK(80,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
@@ -837,14 +839,14 @@ int vge_loop()
             }
         }
     }
-
+    
     // acyclic song
     if(0==playwait && playing && 0==_psg.waitTime) {
         if(0==interval2) {
             interval2=1;
             if(shuf) {
                 for(i=0;i<bExist;i++) if(_list[i].played==0) break;
-                    if(bExist==i) {
+                if(bExist==i) {
                     for(j=0;j<SONG_NUM;j++) {
                         if(_list[j].dis) {
                             _list[j].played=1;
@@ -883,7 +885,7 @@ int vge_loop()
     } else {
         interval2=0;
     }
-
+    
     // cyclic songs
     if(-1!=mcur && 0==infy && _list[mcur].loop && _list[mcur].loop<=_psg.loop) {
         if(shuf) {
@@ -928,7 +930,7 @@ int vge_loop()
             }
         }
     }
-
+    
     px=ci.cx;
     py=ci.cy;
     return 0;
@@ -956,11 +958,11 @@ static void myprint(int x,int y,const char* msg,...)
     int c;
     int d;
     va_list args;
-
+    
     va_start(args,msg);
     vsprintf(buf,msg,args);
     va_end(args);
-
+    
     for(i=0;'\0'!=(c=(int)buf[i]);i++,x+=8) {
         c-=0x20;
         c&=0x7f;
@@ -977,11 +979,11 @@ static void myprintD(int x,int y,const char* msg,...)
     int c;
     int d;
     va_list args;
-
+    
     va_start(args,msg);
     vsprintf(buf,msg,args);
     va_end(args);
-
+    
     for(i=0;'\0'!=(c=(int)buf[i]);i++,x+=8) {
         c-=0x20;
         c&=0x7f;
@@ -998,11 +1000,11 @@ static void myprint2(int x,int y,const char* msg,...)
     int c;
     int d;
     va_list args;
-
+    
     va_start(args,msg);
     vsprintf(buf,msg,args);
     va_end(args);
-
+    
     for(i=0;'\0'!=(c=(int)buf[i]);i++,x+=8) {
         c-=0x20;
         c&=0x7f;
@@ -1023,11 +1025,11 @@ static void putfontS(int x,int y,const char* msg,...)
     int i;
     char c;
     va_list args;
-
+    
     va_start(args,msg);
     vsprintf(buf,msg,args);
     va_end(args);
-
+    
     for(i=0;'\0'!=(c=buf[i]);i++) {
         if('0'<=c && c<='9') {
             c-='0';
@@ -1052,11 +1054,11 @@ static void putfontSD(int x,int y,const char* msg,...)
     int i;
     char c;
     va_list args;
-
+    
     va_start(args,msg);
     vsprintf(buf,msg,args);
     va_end(args);
-
+    
     for(i=0;'\0'!=(c=buf[i]);i++) {
         if('0'<=c && c<='9') {
             c-='0';
