@@ -98,4 +98,6 @@
 - bslot064.mml: 神々が恋した幻想郷
 - bslot065.mml: 芥川龍之介の河童 ～ Candid Friend
 - bslot066.mml: フラワリングナイト
-
+- bslot067.mml: 明日ハレの日、ケの昨日
+- bslot068.mml: ネイティブフェイス
+- bslot069.mml: 稲田姫様に叱られるから
