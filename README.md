@@ -113,3 +113,4 @@
 - bslot067.mml: 明日ハレの日、ケの昨日
 - bslot068.mml: ネイティブフェイス
 - bslot069.mml: 稲田姫様に叱られるから
+- bslot079.mml: 花映塚 ～ Higan Retour
