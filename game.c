@@ -14,7 +14,7 @@ FILE* vge_fopen(const char*, const char*);
 
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
-#define SONG_NUM 70
+#define SONG_NUM 71
 
 /* Structure */
 struct InputInf {
@@ -120,6 +120,7 @@ struct SongData _list[SONG_NUM] = {
 	,{ 0x8015,  58, 1,  3,144,160, 70,  0,  0, 196,  0, "" }
 	// 東方花映塚(0x90)
 	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
+	,{ 0x9001,  70, 1,  1,120,160,128,  0,  0,  35,  0, "" }
 	,{ 0x9004,  66, 1,  1,  0,128, 87,  0,  0,  35,  0, "" }
 	,{ 0x900B,  60, 1,  3,  0,192, 56,  0,  0,  35,  0, "       (ShortVersion)" }
 	// 東方風神録(0xA0)
@@ -253,7 +254,7 @@ int vge_loop()
 	static int pos[6];
 	static int mcur=-1;
 	static double base=4;
-	static int bmin=-1300;
+	static int bmin=-1320;
 	static int bExist=SONG_NUM;
 	static int push=0;
 	static int pflag=0;
