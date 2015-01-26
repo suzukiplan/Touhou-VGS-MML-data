@@ -378,12 +378,12 @@ int vge_loop()
 
 	/* Auto focus */
 	if(focus) {
-		if(mcur*20+130+base<130) {
-			i=130-(mcur*20+130+base);
+		if(mcur*20+130+(int)base<130) {
+			i=130-(mcur*20+130+(int)base);
 			if(10<i) i=10;
 			base+=i;
-		} else if(320<mcur*20+146+base) {
-			i=(mcur*20+146+base)-320;
+		} else if(320<mcur*20+146+(int)base) {
+			i=(mcur*20+146+(int)base)-320;
 			if(10<i) i=10;
 			base-=i;
 		} else {
@@ -396,21 +396,21 @@ int vge_loop()
 		if(_list[i].dis) {
 			_list[i].played=1;
 		}
-		dp=i*20+130+base;
+		dp=i*20+130+(int)base;
 		if(i<bExist && 114<dp && dp<320) {
 			if(!editmode && _list[i].dis) {
-				vge_boxfSP(4,i*20+130+base,220,i*20+146+base,102);
-				vge_boxSP(4,i*20+130+base,220,i*20+146+base,104);
+				vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,102);
+				vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,104);
 			} else {
 				if(mcur==i) {
-					vge_boxfSP(4,i*20+130+base,220,i*20+146+base,75);
-					vge_boxSP(4,i*20+130+base,220,i*20+146+base,111);
+					vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,75);
+					vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
 				} else {
 					if(ci.s && touch_off==0 && 2==touching
 					&& HITCHK(ci.cx-4,ci.cy-4,8,8,0,130,240,190)
-					&& HITCHK(4,i*20+130+base,216,16,ci.cx-4,ci.cy-4,8,8)) {
-						vge_boxfSP(4,i*20+130+base,220,i*20+146+base,60);
-						vge_boxSP(4,i*20+130+base,220,i*20+146+base,111);
+					&& HITCHK(4,i*20+130+(int)base,216,16,ci.cx-4,ci.cy-4,8,8)) {
+						vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,60);
+						vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
 						if(push) {
 							if(editmode) {
 								push=0;
@@ -435,40 +435,40 @@ int vge_loop()
 						}
 					} else {
 						if(_list[i].dis) {
-							vge_boxfSP(4,i*20+130+base,220,i*20+146+base,102);
-							vge_boxSP(4,i*20+130+base,220,i*20+146+base,104);
+							vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,102);
+							vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,104);
 						} else {
-							vge_boxfSP(4,dp,220,i*20+146+base,_list[i].col+4*_list[i].played);
-							vge_boxSP(4,dp,220,i*20+146+base,105);
+							vge_boxfSP(4,dp,220,i*20+146+(int)base,_list[i].col+4*_list[i].played);
+							vge_boxSP(4,dp,220,i*20+146+(int)base,105);
 						}
 					}
 				}
 			}
 			if(_list[i].dis) {
-				putfontSD(8,i*20+135+base,"%3d.",(i+1));
-				myprintD(24,i*20+135+base,"%s",_list[i].text);
+				putfontSD(8,i*20+135+(int)base,"%3d.",(i+1));
+				myprintD(24,i*20+135+(int)base,"%s",_list[i].text);
 			} else {
-				putfontS(8,i*20+135+base,"%3d.",(i+1));
-				myprint(24,i*20+135+base,"%s",_list[i].text);
+				putfontS(8,i*20+135+(int)base,"%3d.",(i+1));
+				myprint(24,i*20+135+(int)base,"%s",_list[i].text);
 			}
 			if(_list[i].gxs) {
 				if(_list[i].dis) {
 					if(_list[i].kage) {
-						vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 25, i*20+134+base, 103);
+						vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 25, i*20+134+(int)base, 103);
 					}
-					vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 24, i*20+133+base,103);
+					vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 24, i*20+133+(int)base,103);
 				} else {
 					if(_list[i].kage) {
-						vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 25, i*20+134+base, 1);
+						vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 25, i*20+134+(int)base, 1);
 					}
-					vge_putSP(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 24, i*20+133+base);
+					vge_putSP(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 24, i*20+133+(int)base);
 				}
 			}
 		}
 	}
-	myprint(4,i*20+135+base,"Composed by ZUN.");
-	putfontS(4,i*20+145+base,"THIS IS AN ALTERNATIVE FICTION OF THE TOUHOU PROJECT.");
-	vge_putSP(0,0,112,136,48,4,i*20+155+base);
+	myprint(4,i*20+135+(int)base,"Composed by ZUN.");
+	putfontS(4,i*20+145+(int)base,"THIS IS AN ALTERNATIVE FICTION OF THE TOUHOU PROJECT.");
+	vge_putSP(0,0,112,136,48,4,i*20+155+(int)base);
 
 	/* Scroll bar */
 	vge_boxfSP(224,130,240,320,103);
@@ -478,10 +478,10 @@ int vge_loop()
 		base*=(-bmin*100)/166;
 		base/=100;
 		base=4-base;
-		i=(0-base+4)*100/(-bmin)*116/100;
+		i=(0-(int)base+4)*100/(-bmin)*116/100;
 		vge_boxfSP(225,142+i,238,192+i,56);
 	} else {
-		i=(0-base+4)*100/(-bmin)*116/100;
+		i=(0-(int)base+4)*100/(-bmin)*116/100;
 		vge_boxfSP(225,142+i,238,192+i,108);
 	}
 
@@ -519,7 +519,7 @@ int vge_loop()
 
 	/* Draw play pannel */
 	vge_boxfSP(0,0,240,130,3);
-	myprint(4,2,"Touhou BGM on VGS");
+	myprint(4,2,"Touhou BGM on VGS HQ(test)");
 
 	/* Configuration */
 	if(!editmode) {
@@ -669,7 +669,29 @@ int vge_loop()
 			putfontS(8,16,"INDEX     %05d  ACYCLIC SONG",_psg.nidx);
 		}
 	}
-	putfontS(8,24,"WAIT TIME %05d",_psg.waitTime);
+	if(0==infy && (_psg.timeI || _psg.timeL)) {
+		int ss;
+		int sm;
+		if(_list[mcur].loop) {
+			ss=(int)(_psg.timeI+_psg.timeL*_list[mcur].loop);
+			ss+=44100;
+			ss-=_psg.timeP;
+			ss/=22050;
+			if(ss<0) ss=0;
+			sm=ss/60;
+			ss-=sm*60;
+		} else {
+			ss=(int)(_psg.timeI+_psg.timeL);
+			ss-=_psg.timeP;
+			ss/=22050;
+			if(ss<0) ss=0;
+			sm=ss/60;
+			ss-=sm*60;
+		}
+		putfontS(8,24,"WAIT TIME %05d  %02d:%02d",_psg.waitTime,sm,ss);
+	} else {
+		putfontS(8,24,"WAIT TIME %05d",_psg.waitTime);
+	}
 	putfontS(8,32,"CH0 COUNT %05d  CH1 COUNT %05d  CH2 COUNT %05d",_psg.ch[0].count,_psg.ch[1].count,_psg.ch[2].count);
 	putfontS(8,40,"CH3 COUNT %05d  CH4 COUNT %05d  CH5 COUNT %05d",_psg.ch[3].count,_psg.ch[4].count,_psg.ch[5].count);
 
@@ -1046,6 +1068,10 @@ static void putfontS(int x,int y,const char* msg,...)
 			vge_putSPM(0,144,24,4,8,x+i*4+1,y+1,1);
 			vge_putSP(0,144,24,4,8,x+i*4,y);
 		}
+		else if(':'==c) {
+			vge_putSPM(0,148,24,4,8,x+i*4+1,y+1,1);
+			vge_putSP(0,148,24,4,8,x+i*4,y);
+		}
 	}
 }
 
@@ -1074,6 +1100,10 @@ static void putfontSD(int x,int y,const char* msg,...)
 		else if('.'==c) {
 			vge_putSPM(0,144,24,4,8,x+i*4+1,y+1,103);
 			vge_putSPM(0,144,24,4,8,x+i*4,y,103);
+		}
+		else if('.'==c) {
+			vge_putSPM(0,148,24,4,8,x+i*4+1,y+1,103);
+			vge_putSPM(0,148,24,4,8,x+i*4,y,103);
 		}
 	}
 }
