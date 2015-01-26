@@ -519,7 +519,7 @@ int vge_loop()
 
 	/* Draw play pannel */
 	vge_boxfSP(0,0,240,130,3);
-	myprint(4,2,"Touhou BGM on VGS HQ(test)");
+	myprint(4,2,"Touhou BGM on VGS");
 
 	/* Configuration */
 	if(!editmode) {
