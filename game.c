@@ -30,113 +30,19 @@ struct SongData {
 	int id;
 	int no;
 	int loop;
-	int gno;
-	int gx;
-	int gy;
-	int gxs;
-	int kage;
-	int dis;
 	int col;
+	int dis;
 	int played;
 	char text[64];
 };
 
 /* play list */
-struct SongData _list[SONG_NUM] = {
-	// 東方幻想郷(0x40)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-	 { 0x4007,  61, 1,  0,  0,  0,  0,  0,  0, 196,  0, "Bad Apple!!" }
-	// 東方怪綺談(0x50)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-	,{ 0x5010,  62, 1,  3, 64,176,105,  1,  0, 196,  0, "" }
-	,{ 0x5011,  63, 1,  0,  0,  0,  0,  0,  0, 196,  0, "the Grimoire of Alice" }
-	// 蓬莱人形(0x59)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-	,{ 0x5901,  59, 0,  3,192,144, 48,  0,  0, 196,  0, "" }
-	// 東方紅魔郷(0x60)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-	,{ 0x6001,   0, 1,  1,  0,  0, 64,  0,  0,   7,  0, "" }
-	,{ 0x6002,   1, 1,  1,  0, 16,128,  0,  0,   7,  0, "" }
-	,{ 0x6003,   2, 1,  1,  0, 32, 56,  0,  0,   7,  0, "" }
-	,{ 0x6004,   3, 1,  1,  0, 48, 80,  0,  0,   7,  0, "" }
-	,{ 0x6005,   4, 1,  1, 80, 48, 72,  0,  0,   7,  0, "" }
-	,{ 0x6006,   5, 1,  1, 64,  0,136,  0,  0,   7,  0, "" }
-	,{ 0x6007,   6, 1,  1,128, 16,128,  0,  0,   7,  0, "" }
-	,{ 0x6008,   7, 1,  1, 56, 32, 96,  0,  0,   7,  0, "" }
-	,{ 0x6009,   8, 1,  1,  0, 64,122,  0,  0,   7,  0, "" }
-	,{ 0x600A,   9, 1,  1,152, 32,104,  0,  0,   7,  0, "" }
-	,{ 0x600B,  10, 1,  1,128, 64,128,  0,  0,   7,  0, "" }
-	,{ 0x600C,  11, 1,  1,152, 48,104,  0,  0,   7,  0, "" }
-	,{ 0x600D,  12, 1,  1,104, 80,128,  0,  0,   7,  0, "" }
-	,{ 0x600E,  13, 1,  1,  0, 96,108,  0,  0,   7,  0, "" }
-	,{ 0x600F,  14, 1,  1,112, 96,136,  0,  0,   7,  0, "" }
-	,{ 0x6010,  15, 1,  1,  0,112, 73,  0,  0,   7,  0, "" }
-	,{ 0x6011,  16, 1,  1, 80,112,120,  0,  0,   7,  0, "" }
-	// 東方妖々夢(0x70)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-	,{ 0x7001,  17, 1,  2,  0,  0,153,  0,  0,  35,  0, "" }
-	,{ 0x7002,  18, 1,  2,  0, 16,144,  0,  0,  35,  0, "" }
-	,{ 0x7003,  19, 1,  2,144, 16,104,  0,  0,  35,  0, "" }
-	,{ 0x7004,  20, 1,  2,160,  0, 72,  0,  0,  35,  0, "" }
-	,{ 0x7005,  21, 1,  2,  0, 32,152,  0,  0,  35,  0, "" }
-	,{ 0x7006,  22, 1,  2,  0, 48,106,  0,  0,  35,  0, "" }
-	,{ 0x7007,  23, 1,  2,  0, 64,156,  0,  0,  35,  0, "" }
-	,{ 0x7008,  24, 1,  2,152, 32, 72,  0,  0,  35,  0, "" }
-	,{ 0x7009,  25, 1,  2,  0, 80,148,  0,  0,  35,  0, "" }
-	,{ 0x700A,  26, 1,  2,  0, 96,148,  0,  0,  35,  0, "" }
-	,{ 0x700B,  27, 1,  2,112, 48,139,  0,  0,  35,  0, "" }
-	,{ 0x700C,  28, 1,  2,152, 80,104,  0,  0,  35,  0, "" }
-	,{ 0x700D,  29, 1,  2,  0,112,192,  0,  0,  35,  0, "" }
-	,{ 0x700E,  30, 1,  2,160, 64, 88,  0,  0,  35,  0, "" }
-	,{ 0x700F,  31, 1,  2,192,112, 48,  0,  0,  35,  0, "" }
-	,{ 0x7010,  32, 1,  2,  0,128,128,  0,  0,  35,  0, "" }
-	,{ 0x7011,  33, 1,  2,128,128,120,  0,  0,  35,  0, "" }
-	,{ 0x7012,  34, 1,  2,160, 96, 84,  0,  0,  35,  0, "" }
-	,{ 0x7013,  35, 1,  2,144,144, 46,  0,  0,  35,  0, "" }
-	,{ 0x7014,  36, 1,  2,  0,144,141,  0,  0,  35,  0, "" }
-	,{ 0x7015,  37, 1,  2,  0,160,134,  0,  0,  35,  0, "" }
-	// 東方永夜抄(0x80)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl tx
-	,{ 0x8001,  38, 1,  3,  0,  0,120,  0,  0, 196,  0, "" }
-	,{ 0x8002,  39, 1,  3,128,  0,128,  0,  0, 196,  0, "" }
-	,{ 0x8003,  40, 1,  3,  0, 16,128,  0,  0, 196,  0, "" }
-	,{ 0x8004,  41, 1,  3,128, 16,123,  0,  0, 196,  0, "" }
-	,{ 0x8005,  42, 1,  3,  0, 32, 96,  0,  0, 196,  0, "" }
-	,{ 0x8006,  43, 1,  3, 96, 32,150,  0,  0, 196,  0, "" }
-	,{ 0x8007,  44, 1,  3,  0, 48, 72,  0,  0, 196,  0, "" }
-	,{ 0x8008,  45, 1,  3, 72, 48,160,  0,  0, 196,  0, "" }
-	,{ 0x8009,  46, 1,  3,  0, 64,136,  0,  0, 196,  0, "" }
-	,{ 0x800A,  47, 1,  3,144, 64,105,  0,  0, 196,  0, "" }
-	,{ 0x800B,  48, 1,  3,  0, 80,169,  0,  0, 196,  0, "" }
-	,{ 0x800C,  49, 1,  3,  0, 96,148,  0,  0, 196,  0, "" }
-	,{ 0x800D,  50, 1,  3,152, 96, 80,  0,  0, 196,  0, "" }
-	,{ 0x800E,  51, 1,  3,  0,112,168,  0,  0, 196,  0, "" }
-	,{ 0x800F,  52, 1,  3,  0,128,138,  0,  0, 196,  0, "" }
-	,{ 0x8010,  53, 1,  3,168,112, 80,  0,  0, 196,  0, "" }
-	,{ 0x8011,  54, 1,  3,  0,144,148,  0,  0, 196,  0, "" }
-	,{ 0x8012,  55, 1,  3,144,128,106,  0,  0, 196,  0, "" }
-	,{ 0x8013,  56, 1,  3,152,144, 34,  0,  0, 196,  0, "" }
-	,{ 0x8014,  57, 1,  3,  0,160,141,  0,  0, 196,  0, "" }
-	,{ 0x8015,  58, 1,  3,144,160, 70,  0,  0, 196,  0, "" }
-	// 東方花映塚(0x90)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-	,{ 0x9001,  70, 1,  1,120,160,128,  0,  0,  35,  0, "" }
-	,{ 0x9004,  66, 1,  1,  0,128, 87,  0,  0,  35,  0, "" }
-	,{ 0x900B,  60, 1,  3,  0,192, 56,  0,  0,  35,  0, "       (ShortVersion)" }
-	// 東方風神録(0xA0)
-	//    id    sn lp  gn  gx  gy  xs  kf  df  col, pl  tx
-	,{ 0xA003,  69, 1,  1, 88,128,141,  0,  0,   7,  0, "" }
-	,{ 0xA006,  64, 1,  3, 64,192,120,  0,  0,   7,  0, "" }
-	,{ 0xA007,  65, 1,  3,  0,208,186,  0,  0,   7,  0, "" }
-	,{ 0xA00E,  67, 1,  1,  0,144,142,  0,  0,   7,  0, "" }
-	,{ 0xA00F,  68, 1,  1,  0,160,118,  0,  0,   7,  0, "" }
-};
+struct SongData _list[SONG_NUM];
 
 struct MyList {
 	int no;
 	int id[3][SONG_NUM];
 };
-struct MyList _mylist;
 
 /* Proto types */
 static void myprint(int x,int y,const char* msg,...);
@@ -144,12 +50,16 @@ static void myprintD(int x,int y,const char* msg,...);
 static void myprint2(int x,int y,const char* msg,...);
 static void putfontS(int x,int y,const char* msg,...);
 static void putfontSD(int x,int y,const char* msg,...);
+static unsigned short getcode(unsigned char sjis[2]);
+static void putkanji(int x,int y,int col, const char* msg,...);
 
 /* Static variables */
 int g_request=0;
 int g_playing=0;
 extern int _forcePause;
 extern int _flingY;
+static struct MyList _mylist;
+static unsigned char* _kanji;
 
 /*
  *----------------------------------------------------------------------------
@@ -223,7 +133,12 @@ static void loadlist()
  */
 int vge_init()
 {
+	size_t sz;
+	char* bin;
+	bin=(char*)vge_getdata(0,&sz);
+	memcpy(_list,bin,sizeof(_list));
 	loadlist();
+	_kanji=(unsigned char*)vge_getdata(255,&sz);
 	return 0;
 }
 
@@ -445,30 +360,17 @@ int vge_loop()
 				}
 			}
 			if(_list[i].dis) {
-				putfontSD(8,i*20+135+(int)base,"%3d.",(i+1));
-				myprintD(24,i*20+135+(int)base,"%s",_list[i].text);
+				putfontSD(8,i*20+136+(int)base,"%3d.",(i+1));
+				putkanji(26,i*20+133+(int)base,103,"%s",_list[i].text);
 			} else {
-				putfontS(8,i*20+135+(int)base,"%3d.",(i+1));
-				myprint(24,i*20+135+(int)base,"%s",_list[i].text);
-			}
-			if(_list[i].gxs) {
-				if(_list[i].dis) {
-					if(_list[i].kage) {
-						vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 25, i*20+134+(int)base, 103);
-					}
-					vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 24, i*20+133+(int)base,103);
-				} else {
-					if(_list[i].kage) {
-						vge_putSPM(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 25, i*20+134+(int)base, 1);
-					}
-					vge_putSP(_list[i].gno, _list[i].gx, _list[i].gy, _list[i].gxs, 12, 24, i*20+133+(int)base);
-				}
+				putfontS(8,i*20+136+(int)base,"%3d.",(i+1));
+				putkanji(26,i*20+133+(int)base,255,"%s",_list[i].text);
 			}
 		}
 	}
 	myprint(4,i*20+135+(int)base,"Composed by ZUN.");
-	putfontS(4,i*20+145+(int)base,"THIS IS AN ALTERNATIVE FICTION OF THE TOUHOU PROJECT.");
-	vge_putSP(0,0,112,136,48,4,i*20+155+(int)base);
+	putkanji(4,i*20+145+(int)base,255,"このアプリは、東方Projectの二次創作物です。");
+	vge_putSP(0,0,112,136,48,4,i*20+160+(int)base);
 
 	/* Scroll bar */
 	vge_boxfSP(224,130,240,320,103);
@@ -674,7 +576,7 @@ int vge_loop()
 		int sm;
 		if(_list[mcur].loop) {
 			ss=(int)(_psg.timeI+_psg.timeL*_list[mcur].loop);
-			ss+=44100;
+			ss+=66150;
 			ss-=_psg.timeP;
 			ss/=22050;
 			if(ss<0) ss=0;
@@ -1104,6 +1006,69 @@ static void putfontSD(int x,int y,const char* msg,...)
 		else if('.'==c) {
 			vge_putSPM(0,148,24,4,8,x+i*4+1,y+1,103);
 			vge_putSPM(0,148,24,4,8,x+i*4,y,103);
+		}
+	}
+}
+
+static unsigned short getcode(unsigned char sjis[2])
+{
+	unsigned char jis[2];
+	unsigned short ret;
+	jis[0]=sjis[0];
+	jis[1]=sjis[1];
+	if(jis[0]<=0x9f) {
+		jis[0]-=0x71;
+	} else {
+		jis[0]-=0xb1;
+	}
+	jis[0]*=2;
+	jis[0]++;
+	if(jis[1]>=0x7F) {
+		jis[1]-=0x01;
+	}
+	if(jis[1]>=0x9e){
+		jis[1]-=0x7d;
+		jis[0]++;
+	} else {
+		jis[1]-=0x1f;
+	}
+	ret=(jis[0]-0x21)*94;
+	ret+=jis[1]-0x21;
+	return ret;
+}
+
+static void putkanji(int x,int y,int col,const char* msg,...)
+{
+	char buf[256];
+	int i,j,k;
+	unsigned char c[2];
+	int jis;
+	unsigned char bin;
+	va_list args;
+
+	va_start(args,msg);
+	vsprintf(buf,msg,args);
+	va_end(args);
+
+	for(i=0;'\0'!=(c[0]=(unsigned char)buf[i]);i++) {
+		if(c[0]&0x80) {
+			c[1]=(unsigned char)buf[i+1];
+			jis=(int)getcode(c);
+			jis*=12;
+			for(j=0;j<12;j++) {
+				bin=_kanji[jis+j];
+				for(k=0;k<8;k++,bin<<=1) {
+					if(bin&0x80) {
+						vge_pixelSP(x+k,y+j,col);
+					}
+				}
+			}
+			x+=8;
+			i++;
+		} else {
+			c[0]-=0x20;
+			vge_putSPM(255,c[0]%16*4,c[0]/16*12,4,12,x,y,col);
+			x+=4;
 		}
 	}
 }
