@@ -369,7 +369,7 @@ int vge_loop()
 		}
 	}
 	myprint(4,i*20+135+(int)base,"Composed by ZUN.");
-	putkanji(4,i*20+145+(int)base,255,"このアプリは、東方Projectの二次創作物です。");
+	putkanji(4,i*20+145+(int)base,255,"This app is an alternative fiction of Touhou Project.");
 	vge_putSP(0,0,112,136,48,4,i*20+160+(int)base);
 
 	/* Scroll bar */
