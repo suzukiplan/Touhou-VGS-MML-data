@@ -268,7 +268,7 @@
 東方花映塚
 
 - ● 花映塚　～ Higan Retour -- タイトル画面テーマ
-- △ 春色小径　～ Colorful Path -- 博麗 霊夢のテーマ
+- ● 春色小径　～ Colorful Path -- 博麗 霊夢のテーマ
 - △ オリエンタルダークフライト -- 霧雨 魔理沙のテーマ
 - ● フラワリングナイト -- 十六夜 咲夜のテーマ
 - ○ 東方妖々夢　～ Ancient Temple -- 魂魄 妖夢のテーマ
@@ -555,3 +555,4 @@
 - bslot068.mml: ネイティブフェイス
 - bslot069.mml: 稲田姫様に叱られるから
 - bslot070.mml: 花映塚 ～ Higan Retour
+- bslot071.mml: 春色小径 ～ Colorful Path
