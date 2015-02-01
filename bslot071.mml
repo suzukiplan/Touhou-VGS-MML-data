@@ -43,10 +43,10 @@ Ch5         r1024 l16
 
 #-----------------------------------------------------------------------------
 Ch0 r1r1(Bass)o2v13
-Ch0 g-2.b-4 >c2.<b-4 >c2d2e-1<
-Ch0 g-2.b-4 >c2.<b-4 >c2d2e-1<
-Ch0 g-2.b-4 >c2.<b-4 >c2d2e-1<
-Ch0 g-2.b-4 >c2.<b-4 >c2d2e-1<
+Ch0 a-2.b-4 >c2.<b-4 >c2d2e-1<
+Ch0 a-2.b-4 >c2.<b-4 >c2d2e-1<
+Ch0 a-2.b-4 >c2.<b-4 >c2d2e-1<
+Ch0 a-2.b-4 >c2.<b-4 >c2d2e-1<
 
 Ch0 e-8b-r e-8b-r e-8b-r e-8b-r d8b-r d8b-r d8b-r d8b-r
 Ch0 d-8a-r d-8a-r d-8a-r d-8a-r c8a-r c8a-r c8a-r c8a-r
@@ -63,10 +63,10 @@ Ch0 <b2>c+4.<b-1b8^2>c+2 d+1
 Ch0 <b2>c+4.<b-1b8^2>c+2 d+1
 Ch0 <b2>c+4.<b-1b8^2>c+2 d+1
 
-Ch0 g-2.b-4 >c2.<b-4 >c2d2e-1<
-Ch0 g-2.b-4 >c2.d4 e-2f2g1<
-Ch0 g-2.b-4 >c2.<b-4 >c2d2e-1<
-Ch0 g-2.b-4 >c2.d4 e-2f2g1<
+Ch0 a-2.b-4 >c2.<b-4 >c2d2e-1<
+Ch0 a-2.b-4 >c2.d4 e-2f2g1<
+Ch0 a-2.b-4 >c2.<b-4 >c2d2e-1<
+Ch0 a-2.b-4 >c2.d4 e-2f2g1<
 
 Ch0 k+
 
