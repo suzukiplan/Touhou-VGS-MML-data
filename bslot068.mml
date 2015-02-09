@@ -130,7 +130,7 @@ Ch0 <b-8>fr <b-8>fr c8gr c8gr ddaa ddaa ddaa ddaa
 Ch1 (Sq3)o5v14
 
 # Intro
-Ch1 f2e2d2c+4.e8
+Ch1 \s6000f2e2d2c+4.\s200e8
 Ch1 f8d8<a8>f8 e8c8<g8>e8 d8<b-8f8>d8 c+8<a8a>c+ea
 Ch1 >d<af>d<af>d<f >c<ge>c<ge>c<e b-fdb-fdb-d aec+<aea>c+g
 Ch1 >fd<a>fd<a>f<a >d<af>d<af>d<f >ec<g>ec<g>e<g >c+<ae>c+<aea>c+
@@ -232,7 +232,7 @@ Ch1 d<af+> d<af+> d<af+> d<af+> d<af+> d
 Ch2 (Sq3)o4v13
 
 # Intro
-Ch2 d2c2<b-2a4.>c+8
+Ch2 \s6000d2c2<b-2a4.>\s200c+8
 Ch2 d8<a8f8>d8 c8<g8e8>c8 <b-8f8d8b-8 a8e8 a>c+ea
 Ch2 afd afd ad gec gec gc fd<b-> fd<b-> f<b-> ec+<ae c+ea>c+
 Ch2 >d<af >d<af >d<f afd afd ad >c<ge >c<ge >c<e aec+ aec+ ea
@@ -332,7 +332,7 @@ Ch2 af+d af+d af+d af+d af+da
 Ch3 (Sq3)o4v13
 
 # Intro
-Ch3 a2g2f2e4.>c+8
+Ch3 \s6000a2g2f2e4.>\s200c+8
 Ch3 d8<a8d8a8 >c8<e8c8>c8 <b-8f8d8b-8 a8e8 (CG3)c+ea>e
 Ch3 afd afd ad gec gec gc fd<b-> fd<b-> f<b-> ec+<ae c+ea>c+
 Ch3 >d<af >d<af >d<f afd afd ad >c<ge >c<ge >c<e aec+ aec+ ea
