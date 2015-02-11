@@ -593,3 +593,5 @@
 - bslot069.mml: 稲田姫様に叱られるから
 - bslot070.mml: 花映塚 ～ Higan Retour
 - bslot071.mml: 春色小径 ～ Colorful Path
+- bslot072.mml: 少女さとり　～ 3rd eye
+- bslot073.mml: 星の器　～ Casket of Star
