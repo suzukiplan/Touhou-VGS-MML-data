@@ -133,7 +133,7 @@
 - ● Bad Apple!! -- ３面テーマ
 - △ 霊戦　～ Perdition crisis -- ３面ボス・エリーのテーマ
 - △ アリスマエステラ -- ４面テーマ
-- △ 少女綺想曲　～ Capriccio -- ４面ボス・靈夢のテーマ
+- ● 少女綺想曲　～ Capriccio -- ４面ボス・靈夢のテーマ
 - ● 星の器　～ Casket of Star -- ４面ボス・魔理沙のテーマ
 - × Lotus Love -- ５面テーマ
 - △ 眠れる恐怖　～ Sleeping Terror -- ５面ボス・幽香のテーマ１
