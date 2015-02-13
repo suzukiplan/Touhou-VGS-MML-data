@@ -595,3 +595,5 @@
 - bslot071.mml: 春色小径 ～ Colorful Path
 - bslot072.mml: 少女さとり　～ 3rd eye
 - bslot073.mml: 星の器　～ Casket of Star
+- bslot074.mml: 少女綺想曲　～ Capriccio
+- bslot075.mml: アリスマエステラ
