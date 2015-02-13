@@ -132,8 +132,8 @@
 - △ 紅響曲　～ Scarlet Phoneme -- ２面ボス・くるみのテーマ
 - ● Bad Apple!! -- ３面テーマ
 - △ 霊戦　～ Perdition crisis -- ３面ボス・エリーのテーマ
-- △ アリスマエステラ -- ４面テーマ
-- △ 少女綺想曲　～ Capriccio -- ４面ボス・靈夢のテーマ
+- ● アリスマエステラ -- ４面テーマ
+- ● 少女綺想曲　～ Capriccio -- ４面ボス・靈夢のテーマ
 - ● 星の器　～ Casket of Star -- ４面ボス・魔理沙のテーマ
 - × Lotus Love -- ５面テーマ
 - △ 眠れる恐怖　～ Sleeping Terror -- ５面ボス・幽香のテーマ１
@@ -595,3 +595,5 @@
 - bslot071.mml: 春色小径 ～ Colorful Path
 - bslot072.mml: 少女さとり　～ 3rd eye
 - bslot073.mml: 星の器　～ Casket of Star
+- bslot074.mml: 少女綺想曲　～ Capriccio
+- bslot075.mml: アリスマエステラ
