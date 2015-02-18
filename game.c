@@ -37,7 +37,9 @@ struct SongData {
 };
 
 /* play list */
-struct SongData _list[SONG_NUM];
+struct SongData* _list;
+struct SongData _listJ[SONG_NUM];
+struct SongData _listE[SONG_NUM];
 
 struct MyList {
 	int no;
@@ -136,7 +138,10 @@ int vge_init()
 	size_t sz;
 	char* bin;
 	bin=(char*)vge_getdata(0,&sz);
-	memcpy(_list,bin,sizeof(_list));
+	memcpy(_listJ,bin,sizeof(_listJ));
+	bin=(char*)vge_getdata(1,&sz);
+	memcpy(_listE,bin,sizeof(_listE));
+	_list=_listJ;
 	loadlist();
 	_kanji=(unsigned char*)vge_getdata(255,&sz);
 	return 0;
@@ -422,7 +427,19 @@ int vge_loop()
 
 	/* Draw play pannel */
 	vge_boxfSP(0,0,240,130,3);
-	myprint(4,2,"Touhou BGM on VGS");
+	myprint(22,2,"Touhou BGM on VGS");
+	if(ci.s && touch_off==0 && HITCHK(0,0,24,12,ci.cx-4,ci.cy-4,8,8)) {
+		vge_putSP(0,88,176,16,8,4,3);
+		if(push) {
+			if(_list==_listJ) {
+				_list=_listE;
+			} else {
+				_list=_listJ;
+			}
+		}
+	} else {
+		vge_putSP(0,88,160,16,8,4,3);
+	}
 
 	/* Configuration */
 	if(!editmode) {
