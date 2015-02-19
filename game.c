@@ -195,6 +195,8 @@ int vge_loop()
 	static struct InputInf pi;
 	static int editmode=0;
 	static int touching=0;
+	static int selectTime=0;
+	static int selectSong=-1;
 	struct InputInf ci;
 	int i,j,k;
 	int dp;
@@ -233,6 +235,7 @@ int vge_loop()
 		ci.cy=py;
 		slide=0;
 	} else {
+		selectSong=-1;
 		touching=0;
 		pflag=0;
 		push=0;
@@ -338,28 +341,40 @@ int vge_loop()
 					if(ci.s && touch_off==0 && 2==touching
 					&& HITCHK(ci.cx-4,ci.cy-4,8,8,0,130,240,190)
 					&& HITCHK(4,i*20+130+(int)base,216,16,ci.cx-4,ci.cy-4,8,8)) {
-						vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,60);
-						vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
-						if(push) {
-							if(editmode) {
-								push=0;
-								vge_eff(2);
-								_list[i].dis=1-_list[i].dis;
-								_mylist.id[_mylist.no][i]=_list[i].dis;
-								if(_list[i].dis) {
-									_list[i].played=1;
+						ci.s=0;
+						if(selectSong!=i) {
+							selectTime=0;
+							selectSong=i;
+						} else {
+							selectTime++;
+						}
+						if(selectTime<4) {
+							vge_boxfSP(4,dp,220,i*20+146+(int)base,_list[i].col+4*_list[i].played);
+							vge_boxSP(4,dp,220,i*20+146+(int)base,105);
+						} else {
+							vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,60);
+							vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
+							if(push) {
+								if(editmode) {
+									push=0;
+									vge_eff(2);
+									_list[i].dis=1-_list[i].dis;
+									_mylist.id[_mylist.no][i]=_list[i].dis;
+									if(_list[i].dis) {
+										_list[i].played=1;
+									} else {
+										_list[i].played=0;
+									}
 								} else {
-									_list[i].played=0;
+									push=0;
+									ci.s=0;
+									mcur=i;
+									paused=0;
+									_list[i].played=1;
+									vge_bstop();
+									playwait=6;
+									playing=0;
 								}
-							} else {
-								push=0;
-								ci.s=0;
-								mcur=i;
-								paused=0;
-								_list[i].played=1;
-								vge_bstop();
-								playwait=6;
-								playing=0;
 							}
 						}
 					} else {
