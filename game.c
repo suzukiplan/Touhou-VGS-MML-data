@@ -174,6 +174,7 @@ int vge_loop()
 	static int pos[6];
 	static int mcur=-1;
 	static double base=4;
+	static double move=0;
 	static int bmin=-1414;
 	static int bExist=SONG_NUM;
 	static int push=0;
@@ -245,9 +246,17 @@ int vge_loop()
 		}
 	}
 	if(slide) {
-		base+=ci.cy-pi.cy;
+		move+=ci.cy-pi.cy;
 		push=0;
 		touch_off=1;
+	} else {
+		move=0;
+	}
+	if(move) {
+		double mv=move/6.66666;
+		if((0<mv && mv<1.0) || (mv<0 && -1.0<mv)) mv=move;
+		move-=mv;
+		base+=mv;
 	}
 	if(ci.s==0 && touch_off) {
 		touch_off=0;
@@ -269,7 +278,7 @@ int vge_loop()
 		_flingY=0;
 	}
 	if(ci.s==0 && _flingY) {
-		int mv=_flingY/6;
+		double mv=_flingY/6;
 		if(_flingY<0 && -1<mv) mv=_flingY;
 		if(0<_flingY && mv<1) mv=_flingY;
 		base+=mv;
