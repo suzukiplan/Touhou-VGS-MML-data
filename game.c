@@ -468,7 +468,7 @@ int vge_loop()
 	/* Configuration */
 	if(!editmode) {
 		if(ci.s && touch_off==0 && HITCHK(220,0,20,16,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0, 72,176, 16,8, 222, 2);
+			vge_putSP(0, 72,176, 16,8, 222, 3);
 			if(push) {
 				push=0;
 				editmode=1;
@@ -481,18 +481,18 @@ int vge_loop()
 				vge_eff(0);
 			}
 		} else {
-			vge_putSP(0, 72,160, 16,8, 222, 2);
+			vge_putSP(0, 72,160, 16,8, 222, 3);
 		}
 	} else {
 		if(ci.s && touch_off==0 && HITCHK(220,0,20,16,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0, 72,176, 16,8, 222, 2);
+			vge_putSP(0, 72,176, 16,8, 222, 3);
 			if(push) {
 				push=0;
 				editmode=0;
 				vge_eff(1);
 			}
 		} else {
-			vge_putSP(0, 72,160, 16,8, 222, 2);
+			vge_putSP(0, 72,160, 16,8, 222, 3);
 		}
 	}
 
