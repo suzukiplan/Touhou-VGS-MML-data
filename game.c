@@ -174,6 +174,7 @@ int vge_loop()
 	static int pos[6];
 	static int mcur=-1;
 	static double base=4;
+	static double move=0;
 	static int bmin=-1414;
 	static int bExist=SONG_NUM;
 	static int push=0;
@@ -194,6 +195,8 @@ int vge_loop()
 	static struct InputInf pi;
 	static int editmode=0;
 	static int touching=0;
+	static int selectTime=0;
+	static int selectSong=-1;
 	struct InputInf ci;
 	int i,j,k;
 	int dp;
@@ -232,6 +235,7 @@ int vge_loop()
 		ci.cy=py;
 		slide=0;
 	} else {
+		selectSong=-1;
 		touching=0;
 		pflag=0;
 		push=0;
@@ -245,9 +249,17 @@ int vge_loop()
 		}
 	}
 	if(slide) {
-		base+=ci.cy-pi.cy;
+		move+=ci.cy-pi.cy;
 		push=0;
 		touch_off=1;
+	} else {
+		move=0;
+	}
+	if(move) {
+		double mv=move/6.66666;
+		if((0<mv && mv<1.0) || (mv<0 && -1.0<mv)) mv=move;
+		move-=mv;
+		base+=mv;
 	}
 	if(ci.s==0 && touch_off) {
 		touch_off=0;
@@ -269,7 +281,7 @@ int vge_loop()
 		_flingY=0;
 	}
 	if(ci.s==0 && _flingY) {
-		int mv=_flingY/6;
+		double mv=_flingY/6;
 		if(_flingY<0 && -1<mv) mv=_flingY;
 		if(0<_flingY && mv<1) mv=_flingY;
 		base+=mv;
@@ -329,28 +341,40 @@ int vge_loop()
 					if(ci.s && touch_off==0 && 2==touching
 					&& HITCHK(ci.cx-4,ci.cy-4,8,8,0,130,240,190)
 					&& HITCHK(4,i*20+130+(int)base,216,16,ci.cx-4,ci.cy-4,8,8)) {
-						vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,60);
-						vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
-						if(push) {
-							if(editmode) {
-								push=0;
-								vge_eff(2);
-								_list[i].dis=1-_list[i].dis;
-								_mylist.id[_mylist.no][i]=_list[i].dis;
-								if(_list[i].dis) {
-									_list[i].played=1;
+						ci.s=0;
+						if(selectSong!=i) {
+							selectTime=0;
+							selectSong=i;
+						} else {
+							selectTime++;
+						}
+						if(selectTime<4) {
+							vge_boxfSP(4,dp,220,i*20+146+(int)base,_list[i].col+4*_list[i].played);
+							vge_boxSP(4,dp,220,i*20+146+(int)base,105);
+						} else {
+							vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,60);
+							vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
+							if(push) {
+								if(editmode) {
+									push=0;
+									vge_eff(2);
+									_list[i].dis=1-_list[i].dis;
+									_mylist.id[_mylist.no][i]=_list[i].dis;
+									if(_list[i].dis) {
+										_list[i].played=1;
+									} else {
+										_list[i].played=0;
+									}
 								} else {
-									_list[i].played=0;
+									push=0;
+									ci.s=0;
+									mcur=i;
+									paused=0;
+									_list[i].played=1;
+									vge_bstop();
+									playwait=6;
+									playing=0;
 								}
-							} else {
-								push=0;
-								ci.s=0;
-								mcur=i;
-								paused=0;
-								_list[i].played=1;
-								vge_bstop();
-								playwait=6;
-								playing=0;
 							}
 						}
 					} else {
@@ -444,7 +468,7 @@ int vge_loop()
 	/* Configuration */
 	if(!editmode) {
 		if(ci.s && touch_off==0 && HITCHK(220,0,20,16,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0, 72,176, 16,8, 222, 2);
+			vge_putSP(0, 72,176, 16,8, 222, 3);
 			if(push) {
 				push=0;
 				editmode=1;
@@ -457,18 +481,18 @@ int vge_loop()
 				vge_eff(0);
 			}
 		} else {
-			vge_putSP(0, 72,160, 16,8, 222, 2);
+			vge_putSP(0, 72,160, 16,8, 222, 3);
 		}
 	} else {
 		if(ci.s && touch_off==0 && HITCHK(220,0,20,16,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0, 72,176, 16,8, 222, 2);
+			vge_putSP(0, 72,176, 16,8, 222, 3);
 			if(push) {
 				push=0;
 				editmode=0;
 				vge_eff(1);
 			}
 		} else {
-			vge_putSP(0, 72,160, 16,8, 222, 2);
+			vge_putSP(0, 72,160, 16,8, 222, 3);
 		}
 	}
 
