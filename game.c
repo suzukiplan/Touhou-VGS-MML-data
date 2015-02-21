@@ -130,6 +130,24 @@ static void loadlist()
 
 /*
  *----------------------------------------------------------------------------
+ * Copy list data
+ *----------------------------------------------------------------------------
+ */
+static void copylist(struct SongData* t, struct SongData* f)
+{
+	int i;
+	for(i=0;i<SONG_NUM;i++) {
+		t[i].id=f[i].id;
+		t[i].no=f[i].no;
+		t[i].loop=f[i].loop;
+		t[i].col=f[i].col;
+		t[i].dis=f[i].dis;
+		t[i].played=f[i].played;
+	}
+}
+
+/*
+ *----------------------------------------------------------------------------
  * Initialization
  *----------------------------------------------------------------------------
  */
@@ -457,8 +475,10 @@ int vge_loop()
 		if(push) {
 			if(_list==_listJ) {
 				_list=_listE;
+				copylist(_list,_listJ);
 			} else {
 				_list=_listJ;
+				copylist(_list,_listE);
 			}
 		}
 	} else {
