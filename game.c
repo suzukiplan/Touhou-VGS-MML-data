@@ -408,11 +408,11 @@ int vge_loop()
 			}
 			if(_list[i].dis) {
 				putfontSD(8,i*20+137+(int)base,"%3d.",(i+1));
-				putkanji(26,i*20+133+(_list==_listE?1:0)+(int)base,103,"%s",_list[i].text);
+				putkanji(26,i*20+133+(int)base,103,"%s",_list[i].text);
 			} else {
 				putfontS(8,i*20+137+(int)base,"%3d.",(i+1));
-				putkanji(27,i*20+134+(_list==_listE?1:0)+(int)base,1,"%s",_list[i].text);
-				putkanji(26,i*20+133+(_list==_listE?1:0)+(int)base,255,"%s",_list[i].text);
+				putkanji(27,i*20+134+(int)base,1,"%s",_list[i].text);
+				putkanji(26,i*20+133+(int)base,255,"%s",_list[i].text);
 			}
 		}
 	}
