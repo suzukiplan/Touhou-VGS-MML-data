@@ -308,10 +308,10 @@
 
 - ● 花映塚　～ Higan Retour -- タイトル画面テーマ
 - ● 春色小径　～ Colorful Path -- 博麗 霊夢のテーマ
-- △ オリエンタルダークフライト -- 霧雨 魔理沙のテーマ
+- ● オリエンタルダークフライト -- 霧雨 魔理沙のテーマ
 - ● フラワリングナイト -- 十六夜 咲夜のテーマ
-- ○ 東方妖々夢　～ Ancient Temple -- 魂魄 妖夢のテーマ
-- ○ 狂気の瞳　～ Invisible Full Moon -- 鈴仙・U・イナバのテーマ
+- ● 東方妖々夢　～ Ancient Temple -- 魂魄 妖夢のテーマ
+- ● 狂気の瞳　～ Invisible Full Moon -- 鈴仙・U・イナバのテーマ
 - △ おてんば恋娘の冒険 -- チルノのテーマ
 - ○ 幽霊楽団　～ Phantom Ensemble -- プリズムリバー三姉妹のテーマ
 - ○ もう歌しか聞こえない　～ Flower Mix -- ミスティア・ローレライのテーマ
@@ -599,3 +599,4 @@
 - bslot073.mml: 星の器　～ Casket of Star
 - bslot074.mml: 少女綺想曲　～ Capriccio
 - bslot075.mml: アリスマエステラ
+- bslot076.mml: オリエンタルダークフライト
