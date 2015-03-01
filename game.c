@@ -14,7 +14,7 @@ FILE* vge_fopen(const char*, const char*);
 
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
-#define SONG_NUM 76
+#define SONG_NUM 79
 
 /* Structure */
 struct InputInf {
@@ -193,7 +193,7 @@ int vge_loop()
 	static int mcur=-1;
 	static double base=4;
 	static double move=0;
-	static int bmin=-1414;
+	static int bmin=-1474;
 	static int bExist=SONG_NUM;
 	static int push=0;
 	static int pflag=0;
@@ -471,7 +471,11 @@ int vge_loop()
 	vge_boxfSP(0,0,240,130,3);
 	myprint(22,2,"Touhou BGM on VGS");
 	if(ci.s && touch_off==0 && HITCHK(0,0,24,12,ci.cx-4,ci.cy-4,8,8)) {
-		vge_putSP(0,88,176,16,8,4,3);
+		if(_list==_listJ) {
+			vge_putSP(0,88,176,16,8,4,3);
+		} else {
+			vge_putSP(0,104,176,16,8,4,3);
+		}
 		if(push) {
 			if(_list==_listJ) {
 				_list=_listE;
@@ -482,7 +486,11 @@ int vge_loop()
 			}
 		}
 	} else {
-		vge_putSP(0,88,160,16,8,4,3);
+		if(_list==_listJ) {
+			vge_putSP(0,88,160,16,8,4,3);
+		} else {
+			vge_putSP(0,104,160,16,8,4,3);
+		}
 	}
 
 	/* Configuration */
