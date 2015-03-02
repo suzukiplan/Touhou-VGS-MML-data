@@ -93,8 +93,8 @@
 9002,  71, 1, 35,Spring Lane@` Colorful Path
 9003,  76, 1, 35,Oriental Dark Flight
 9004,  66, 1, 35,Flowering Knight
-9005,  26, 1, 35,Mystic Oriental Dream@` Ancient Temple
-9006,  49, 1, 35,Lunatic Eyes@` Invisible Full Moon
+# 9005,  26, 1, 35,Mystic Oriental Dream@` Ancient Temple
+# 9006,  49, 1, 35,Lunatic Eyes@` Invisible Full Moon
 900B,  60, 1, 35,Fujin Maiden (ShortVersion)
 
 # “Œ•û•—_˜^(0xA0)

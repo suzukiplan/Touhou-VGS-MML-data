@@ -105,8 +105,8 @@
 9002,  71, 1, 35,春色小径　～ Colorful Path
 9003,  76, 1, 35,オリエンタルダークフライト
 9004,  66, 1, 35,フラワリングナイト
-9005,  26, 1, 35,東方妖々夢　～ Ancient Temple
-9006,  49, 1, 35,狂気の瞳　～ Invisible Full Moon
+# 9005,  26, 1, 35,東方妖々夢　～ Ancient Temple
+# 9006,  49, 1, 35,狂気の瞳　～ Invisible Full Moon
 900B,  60, 1, 35,風神少女 (ShortVersion)
 
 # 東方風神録(0xA0)
