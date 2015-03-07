@@ -14,7 +14,7 @@ FILE* vge_fopen(const char*, const char*);
 
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
-#define SONG_NUM 79
+#define SONG_NUM 78
 
 /* Structure */
 struct InputInf {
@@ -58,10 +58,12 @@ static void putkanji(int x,int y,int col, const char* msg,...);
 /* Static variables */
 int g_request=0;
 int g_playing=0;
+int g_songChanged=0;
 extern int _forcePause;
 extern int _flingY;
 static struct MyList _mylist;
 static unsigned char* _kanji;
+static int _mcur=-1;
 
 /*
  *----------------------------------------------------------------------------
@@ -190,10 +192,9 @@ int vge_loop()
 		,"NOIZE  "
 	};
 	static int pos[6];
-	static int mcur=-1;
 	static double base=4;
 	static double move=0;
-	static int bmin=-1474;
+	static int bmin=-1454;
 	static int bExist=SONG_NUM;
 	static int push=0;
 	static int pflag=0;
@@ -224,8 +225,9 @@ int vge_loop()
 	if(playwait) {
 		playwait--;
 		if(0==playwait) {
+			g_songChanged++;
 			g_playing=1;
-			vge_bplay(_list[mcur].no);
+			vge_bplay(_list[_mcur].no);
 			focus=1;
 			whourai=120;
 			playing=1;
@@ -328,12 +330,12 @@ int vge_loop()
 
 	/* Auto focus */
 	if(focus) {
-		if(mcur*20+130+(int)base<130) {
-			i=130-(mcur*20+130+(int)base);
+		if(_mcur*20+130+(int)base<130) {
+			i=130-(_mcur*20+130+(int)base);
 			if(10<i) i=10;
 			base+=i;
-		} else if(320<mcur*20+146+(int)base) {
-			i=(mcur*20+146+(int)base)-320;
+		} else if(320<_mcur*20+146+(int)base) {
+			i=(_mcur*20+146+(int)base)-320;
 			if(10<i) i=10;
 			base-=i;
 		} else {
@@ -352,7 +354,7 @@ int vge_loop()
 				vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,102);
 				vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,104);
 			} else {
-				if(mcur==i) {
+				if(_mcur==i) {
 					vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,75);
 					vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
 				} else {
@@ -386,7 +388,7 @@ int vge_loop()
 								} else {
 									push=0;
 									ci.s=0;
-									mcur=i;
+									_mcur=i;
 									paused=0;
 									_list[i].played=1;
 									vge_bstop();
@@ -505,7 +507,7 @@ int vge_loop()
 				vge_bstop();
 				_forcePause=0;
 				playing=0;
-				mcur=-1;
+				_mcur=-1;
 				vge_eff(0);
 			}
 		} else {
@@ -624,15 +626,15 @@ int vge_loop()
 	vge_lineSP(0,108,240,108,106);
 	vge_lineSP(0,129,240,129,111);
 	vge_lineSP(0,127,240,127,106);
-	if(mcur<0) {
+	if(_mcur<0) {
 		putfontS(8,16,"INDEX     %05d",_psg.nidx);
 	} else {
-		if(_list[mcur].loop) {
+		if(_list[_mcur].loop) {
 			if(infy) {
 				putfontS(8,16,"INDEX     %05d  PLAYING %d",_psg.nidx,_psg.loop+1);
 			} else {
-				if(_psg.loop<_list[mcur].loop) {
-					putfontS(8,16,"INDEX     %05d  PLAYING %d OF %d",_psg.nidx,_psg.loop+1,_list[mcur].loop);
+				if(_psg.loop<_list[_mcur].loop) {
+					putfontS(8,16,"INDEX     %05d  PLAYING %d OF %d",_psg.nidx,_psg.loop+1,_list[_mcur].loop);
 				} else {
 					putfontS(8,16,"INDEX     %05d  FADEOUT",_psg.nidx);
 				}
@@ -644,8 +646,8 @@ int vge_loop()
 	if(0==infy && (_psg.timeI || _psg.timeL)) {
 		int ss;
 		int sm;
-		if(_list[mcur].loop) {
-			ss=(int)(_psg.timeI+_psg.timeL*_list[mcur].loop);
+		if(_list[_mcur].loop) {
+			ss=(int)(_psg.timeI+_psg.timeL*_list[_mcur].loop);
 			ss+=66150;
 			ss-=_psg.timeP;
 			ss/=22050;
@@ -707,16 +709,16 @@ int vge_loop()
 	}
 
 	/* PLAY  button */
-	if(paused || mcur==-1) {
+	if(paused || _mcur==-1) {
 		if(ci.s && touch_off==0 && HITCHK(2,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
 			vge_putSP(0,48,32,24,12,2,112);
 			if(push) {
-				if(mcur==-1) {
-					mcur=0;
-					while(_list[mcur].dis) {
-						mcur++;
-						if(bExist<=mcur) {
-							mcur=0;
+				if(_mcur==-1) {
+					_mcur=0;
+					while(_list[_mcur].dis) {
+						_mcur++;
+						if(bExist<=_mcur) {
+							_mcur=0;
 						}
 					}
 					paused=0;
@@ -730,18 +732,18 @@ int vge_loop()
 					_list[i].played=1;
 					playing=0;
 				} else {
-					if(_list[mcur].dis) {
+					if(_list[_mcur].dis) {
 						do {
-							mcur++;
-							if(bExist<=mcur) {
-								mcur=0;
+							_mcur++;
+							if(bExist<=_mcur) {
+								_mcur=0;
 							}
-						} while(_list[mcur].dis);
+						} while(_list[_mcur].dis);
 						paused=0;
 						vge_bstop();
 						playing=0;
 						playwait=6;
-						_list[mcur].played=1;
+						_list[_mcur].played=1;
 						focus=1;
 						interval=0;
 					} else {
@@ -760,7 +762,7 @@ int vge_loop()
 			if(push) {
 				paused=0;
 				playwait=6;
-				_list[mcur].played=1;
+				_list[_mcur].played=1;
 				vge_bstop();
 				playing=0;
 			}
@@ -816,7 +818,7 @@ int vge_loop()
 			vge_putSP(0,144+(1-shuf)*48,96,24,12,80,112);
 		}
 		/* LOOP COUNTER */
-		if(-1==mcur || 0<=mcur && _list[mcur].loop) {
+		if(-1==_mcur || 0<=_mcur && _list[_mcur].loop) {
 			if(ci.s && touch_off==0 && HITCHK(106,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
 				vge_putSP(0,(_list[0].loop-1)*24,176,24,12,106,112);
 				if(push) {
@@ -857,21 +859,21 @@ int vge_loop()
 				if(infy==0) {
 					if(shuf) {
 						do {
-							mcur=vge_rand()%bExist;
-						} while(_list[mcur].played);
+							_mcur=vge_rand()%bExist;
+						} while(_list[_mcur].played);
 					} else {
 						do {
-							mcur++;
-							if(bExist<=mcur) {
-								mcur=0;
+							_mcur++;
+							if(bExist<=_mcur) {
+								_mcur=0;
 							}
-						} while(_list[mcur].dis);
+						} while(_list[_mcur].dis);
 					}
 				}
 				paused=0;
 				playing=0;
 				playwait=6;
-				_list[mcur].played=1;
+				_list[_mcur].played=1;
 				focus=1;
 				interval=0;
 				interval2=0;
@@ -882,7 +884,7 @@ int vge_loop()
 	}
 
 	// cyclic songs
-	if(-1!=mcur && 0==infy && _list[mcur].loop && _list[mcur].loop<=_psg.loop) {
+	if(-1!=_mcur && 0==infy && _list[_mcur].loop && _list[_mcur].loop<=_psg.loop) {
 		if(shuf) {
 			for(i=0;i<bExist;i++) if(_list[i].played==0) break;
 			if(bExist==i) {
@@ -905,21 +907,21 @@ int vge_loop()
 			} else {
 				if(shuf) {
 					do {
-						mcur=vge_rand()%bExist;
-					} while(_list[mcur].played);
+						_mcur=vge_rand()%bExist;
+					} while(_list[_mcur].played);
 				} else {
 					do {
-						mcur++;
-						if(bExist<=mcur) {
-							mcur=0;
+						_mcur++;
+						if(bExist<=_mcur) {
+							_mcur=0;
 						}
-					} while(_list[mcur].dis);
+					} while(_list[_mcur].dis);
 				}
 				paused=0;
 				vge_bstop();
 				playing=0;
 				playwait=6;
-				_list[mcur].played=1;
+				_list[_mcur].played=1;
 				focus=1;
 				interval=0;
 			}
@@ -1140,5 +1142,15 @@ static void putkanji(int x,int y,int col,const char* msg,...)
 			vge_putSPM(255,c[0]%16*4,c[0]/16*12,4,12,x,y,col);
 			x+=4;
 		}
+	}
+}
+
+void get_playing_title(const char** title)
+{
+	static const char* ns="";
+	if(-1==_mcur) {
+		*title=ns;
+	} else {
+		*title=_list[_mcur].text;
 	}
 }

@@ -215,7 +215,7 @@
 （ZUN's Strange Works）
 - △ 宵闇の魔術師 -- ふぁんたすていかに激しく
 - △ Magic of Life -- 残酷なアリス系
-- △ Plastic Space -- 秋霜玉'99（勝手に命名）１面テーマ
+- ● Plastic Space -- 秋霜玉'99（勝手に命名）１面テーマ
 - △ Inventive City -- 秋霜玉'99　２面テーマ
 - △ 夢幻回廊 -- スロウテンポにワアルド音楽
 - △ 蓬莱幻想　～ far East -- 秋霜玉　エキストラステージのテーマ（未使用）
@@ -310,8 +310,8 @@
 - ● 春色小径　～ Colorful Path -- 博麗 霊夢のテーマ
 - ● オリエンタルダークフライト -- 霧雨 魔理沙のテーマ
 - ● フラワリングナイト -- 十六夜 咲夜のテーマ
-- ● 東方妖々夢　～ Ancient Temple -- 魂魄 妖夢のテーマ
-- ● 狂気の瞳　～ Invisible Full Moon -- 鈴仙・U・イナバのテーマ
+- ○ 東方妖々夢　～ Ancient Temple -- 魂魄 妖夢のテーマ
+- ○ 狂気の瞳　～ Invisible Full Moon -- 鈴仙・U・イナバのテーマ
 - △ おてんば恋娘の冒険 -- チルノのテーマ
 - ○ 幽霊楽団　～ Phantom Ensemble -- プリズムリバー三姉妹のテーマ
 - ○ もう歌しか聞こえない　～ Flower Mix -- ミスティア・ローレライのテーマ
@@ -600,3 +600,4 @@
 - bslot074.mml: 少女綺想曲　～ Capriccio
 - bslot075.mml: アリスマエステラ
 - bslot076.mml: オリエンタルダークフライト
+- bslot077.mml: Plastic Space

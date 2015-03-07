@@ -15,6 +15,9 @@
 5010,  62, 1,196,Alice in the wonderland
 5011,  63, 1,196,the Grimoire of Alice
 
+# 東方幻想的音楽　～ ZUN's Strange Works (0x56)
+5603,  77, 1,  7,Plastic Space
+
 # 蓬莱人形(0x59)
 # ID  BGM LP COL TITLE
 5901,  59, 0,196,Legend of Hourai
@@ -93,8 +96,8 @@
 9002,  71, 1, 35,Spring Lane　～ Colorful Path
 9003,  76, 1, 35,Oriental Dark Flight
 9004,  66, 1, 35,Flowering Knight
-9005,  26, 1, 35,Mystic Oriental Dream　～ Ancient Temple
-9006,  49, 1, 35,Lunatic Eyes　～ Invisible Full Moon
+# 9005,  26, 1, 35,Mystic Oriental Dream　～ Ancient Temple
+# 9006,  49, 1, 35,Lunatic Eyes　～ Invisible Full Moon
 900B,  60, 1, 35,Fujin Maiden (ShortVersion)
 
 # 東方風神録(0xA0)
