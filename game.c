@@ -37,9 +37,9 @@ struct SongData {
 };
 
 /* play list */
-struct SongData* _list;
 struct SongData _listJ[SONG_NUM];
 struct SongData _listE[SONG_NUM];
+struct SongData* _list=_listJ;
 
 struct MyList {
 	int no;
