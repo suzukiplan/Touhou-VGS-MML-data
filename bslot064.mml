@@ -43,7 +43,7 @@ Ch5         r1024 l16
 
 #-----------------------------------------------------------------------------
 Ch0 r2(Bass)v13o1
-Ch0 b-1f1g2a2>d1 c8grc8grc8grc8gr <b-8>fr<b-8>fr<b-8>fr<b-8>fr <b-2>c2d1 r2
+Ch0 b-1f1g2a2>d1 <b-8>fr<b-8>fr<b-8>fr<b-8>fr <a8>fr<a8>fr<a8>fr<a8>fr <b-2>c2d1 r2
 
 Ch0 e-8b-e- e-e-b-e- e-ge-e- e-e-b-e-
 Ch0 fa>c<f ff>c<f8 f>c<f fa>c<f
@@ -263,8 +263,8 @@ Ch3 (CG3)v0r4v14 b-8>d8 agd8 g8f8
 Ch3 a4 f8a>c fr<a8f8a8
 Ch3 <b-8>d8f8b-r c8e8g8>cr
 Ch3 r4<f+8>de f+ede cd<ga
-Ch3 crg8 crg8 crg8 crg8
-Ch3 <b-r>f8 <b-r>f8 <b-r>f8 <b-r>f8
+Ch3 <b->rf8 <b->rf8 <b->rf8 <b->rf8
+Ch3 <ar>f8 <ar>f8 <ar>f8 <ar>f8
 Ch3 <d8f8a8>d8 <c8e8g8>c8 < df+a>d f+a>df+ af+d<a f+d<af+
 
 Ch3 r2|
@@ -336,7 +336,7 @@ Ch3 <e-gb->e- gb->e-g b-ge-<b- ge-<b-g
 Ch4 r2o4
 Ch4 (Sq3)v12
 Ch4 a4.gag4e8d8 c4<b->cdf grf8d8c8 d2e2f+2 f+ede cd<ga>
-Ch4 (CG3)v0r8v14e8r8e8r8e8r8e8 r8d8r8d8r8d8r8d8
+Ch4 (CG3)v0r8v14d8r8d8r8d8r8d8 r8c8r8c8r8c8r8c8
 Ch4 (Sq3)v12>c4.d8<b-4.a8 a1
 
 Ch4 r2
