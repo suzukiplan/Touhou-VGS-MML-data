@@ -133,7 +133,7 @@
 - △ Break the Sabbath -- ２面テーマ
 - △ 紅響曲　～ Scarlet Phoneme -- ２面ボス・くるみのテーマ
 - ● Bad Apple!! -- ３面テーマ
-- △ 霊戦　～ Perdition crisis -- ３面ボス・エリーのテーマ
+- ● 霊戦　～ Perdition crisis -- ３面ボス・エリーのテーマ
 - ● アリスマエステラ -- ４面テーマ
 - ● 少女綺想曲　～ Capriccio -- ４面ボス・靈夢のテーマ
 - ● 星の器　～ Casket of Star -- ４面ボス・魔理沙のテーマ
@@ -601,3 +601,4 @@
 - bslot075.mml: アリスマエステラ
 - bslot076.mml: オリエンタルダークフライト
 - bslot077.mml: Plastic Space
+- bslot078.mml: 霊戦　～ Perdition crisis
