@@ -5,6 +5,7 @@
 
 # “Œ•ûŒ¶‘z‹½(0x40)
 # ID  BGM LP COL TITLE
+4001,  79, 1, 35,Gensokyo@` Lotus Land Story
 4007,  61, 1, 35,Bad Apple!!
 4008,  78, 1, 35,Spirit Battle@` Perdition Crisis
 4009,  75, 1, 35,Alice Maestra
