@@ -126,7 +126,7 @@
 
 東方幻想郷
 
-- △ 幻想郷　～ Lotus Land Story -- タイトル画面テーマ
+- ● 幻想郷　～ Lotus Land Story -- タイトル画面テーマ
 - △ Witching Dream -- 靈夢１面のテーマ
 - △ Selene's light -- 魔理沙１面のテーマ
 - △ 装飾戦　～ Decoration Battle -- １面ボス・オレンジのテーマ
@@ -602,3 +602,4 @@
 - bslot076.mml: オリエンタルダークフライト
 - bslot077.mml: Plastic Space
 - bslot078.mml: 霊戦　～ Perdition crisis
+- bslot079.mml: 幻想郷　～ Lotus Land Story
