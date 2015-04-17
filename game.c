@@ -14,7 +14,7 @@ FILE* vge_fopen(const char*, const char*);
 
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
-#define SONG_NUM 80
+#define SONG_NUM 81
 
 /* Structure */
 struct InputInf {
@@ -194,7 +194,7 @@ int vge_loop()
 	static int pos[6];
 	static double base=4;
 	static double move=0;
-	static int bmin=-1494;
+	static int bmin=-1514;
 	static int bExist=SONG_NUM;
 	static int push=0;
 	static int pflag=0;
