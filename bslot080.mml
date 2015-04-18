@@ -70,7 +70,7 @@ Ch0 b-b->f<b- b->f<b-b- > ccgc cgcc <<
 
 Ch0 o2 k---
 Ch0 b-1^1 b-1^2.a-4 g-1^1 a-1 a1
-Ch0 b-1^1 b-1^2.a-4 g-1^1 a-1 a1 >
+Ch0 b-1 g+1 f+1 g+2a2 b-1 g+1 f+1 g+2a2 >
 Ch0 d-1c2r4 p-386g4p-0 <<
 
 Ch0 r2k+
@@ -232,7 +232,7 @@ Ch4 r8drd4d8dc+rc+d8 r8drd4d8dered8 r8drd4d8dc+rc+d8 r8drd8.f f<a>d<f>d<f>c<f
 Ch4 k---
 Ch4 (Brass)\s8000v11o3
 Ch4 f1^1 f1^2.e-4 d-1^1 e-1 e-1
-Ch4 f1^1 f1^2.e-4 d-1^1 e-1 e-1r
+Ch4 f1 e-1 d-1 e-2e-2 f1 e-1 d-1 e-2e-2r
 
 Ch4 >(CG3)v10
 Ch4 fd-<b-> v- fd-<b-> v- fd-<b-> v- fd-<b-> v+ fd-<b->f v++
