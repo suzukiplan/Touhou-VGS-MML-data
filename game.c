@@ -280,6 +280,15 @@ int vge_loop()
 		if((0<mv && mv<1.0) || (mv<0 && -1.0<mv)) mv=move;
 		move-=mv;
 		base+=mv;
+		if(100<base) {
+			base=100;
+			move=0;
+			_flingY=0;
+		} else if(base<bmin-100) {
+			base=bmin-100;
+			move=0;
+			_flingY=0;
+		}
 	}
 	if(ci.s==0 && touch_off) {
 		touch_off=0;
@@ -306,6 +315,15 @@ int vge_loop()
 		if(0<_flingY && mv<1) mv=_flingY;
 		base+=mv;
 		_flingY-=mv;
+		if(100<base) {
+			base=100;
+			move=0;
+			_flingY=0;
+		} else if(base<bmin-100) {
+			base=bmin-100;
+			move=0;
+			_flingY=0;
+		}
 	}
 
 	/* Overscroll */
@@ -430,6 +448,15 @@ int vge_loop()
 		base*=(-bmin*100)/166;
 		base/=100;
 		base=4-base;
+		if(100<base) {
+			base=100;
+			move=0;
+			_flingY=0;
+		} else if(base<bmin-100) {
+			base=bmin-100;
+			move=0;
+			_flingY=0;
+		}
 		i=(0-(int)base+4)*100/(-bmin)*116/100;
 		vge_boxfSP(225,142+i,238,192+i,56);
 	} else {
