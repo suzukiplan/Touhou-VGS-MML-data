@@ -8,7 +8,7 @@
 4001,  79, 1, 35,GensokyoÅ@Å` Lotus Land Story
 4002,  80, 1, 35,Witching Dream
 4003,  81, 1, 35,Selene's Light
-4004,  82  1, 35,Decoration Battle
+4004,  82, 1, 35,Decoration Battle
 4007,  61, 1, 35,Bad Apple!!
 4008,  78, 1, 35,Spirit BattleÅ@Å` Perdition Crisis
 4009,  75, 1, 35,Alice Maestra
