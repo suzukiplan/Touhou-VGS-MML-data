@@ -129,7 +129,7 @@
 - ● 幻想郷　～ Lotus Land Story -- タイトル画面テーマ
 - ● Witching Dream -- 靈夢１面のテーマ
 - ● Selene's Light -- 魔理沙１面のテーマ
-- △ 装飾戦　～ Decoration Battle -- １面ボス・オレンジのテーマ
+- ● 装飾戦　～ Decoration Battle -- １面ボス・オレンジのテーマ
 - △ Break the Sabbath -- ２面テーマ
 - △ 紅響曲　～ Scarlet Phoneme -- ２面ボス・くるみのテーマ
 - ● Bad Apple!! -- ３面テーマ
@@ -605,3 +605,4 @@
 - bslot079.mml: 幻想郷　～ Lotus Land Story
 - bslot080.mml: Witching Dream
 - bslot081.mml: Selene's Light
+- bslot082.mml: 装飾戦　～ Decoration Battle
