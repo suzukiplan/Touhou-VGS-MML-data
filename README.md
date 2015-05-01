@@ -312,7 +312,7 @@
 - ● フラワリングナイト -- 十六夜 咲夜のテーマ
 - ○ 東方妖々夢　～ Ancient Temple -- 魂魄 妖夢のテーマ
 - ○ 狂気の瞳　～ Invisible Full Moon -- 鈴仙・U・イナバのテーマ
-- △ おてんば恋娘の冒険 -- チルノのテーマ
+- ● おてんば恋娘の冒険 -- チルノのテーマ
 - ○ 幽霊楽団　～ Phantom Ensemble -- プリズムリバー三姉妹のテーマ
 - ○ もう歌しか聞こえない　～ Flower Mix -- ミスティア・ローレライのテーマ
 - × お宇佐さまの素い幡 -- 因幡 てゐのテーマ
@@ -606,3 +606,4 @@
 - bslot080.mml: Witching Dream
 - bslot081.mml: Selene's Light
 - bslot082.mml: 装飾戦　～ Decoration Battle
+- bslot083.mml: おてんば恋娘の冒険
