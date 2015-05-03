@@ -202,24 +202,24 @@ Ch2 f2r2
 Ch3 (Brass)v10\s44100o3a1^4. (CG3)v14o6dd
 Ch3 r8d8 r8d8 r8e8 r8e8
 Ch3 r8d8 r8d8 r8d8 r8d8
-Ch3 r8d8 r8d8 r8e8 r8e8
-Ch3 r8f8 r8f8 r8f8 r8f8
-Ch3 r8d8 r8d8 r8d8 r8d8 r8d8 r8dd
-Ch3 r8d8 r8d8 r8e8 r8e8
-Ch3 r8d8 r8d8 r8d8 r8d8
-Ch3 r8d8 r8d8 r8e8 r8e8
-Ch3 r8f8 r8f8 r8f8 r8f8
+Ch3 r8d8 r8v-d8 r8v-e8 r8v-e8
+Ch3 r8v+++f8 r8v-f8 r8v-f8 r8v-f8
+Ch3 r8v+++d8 r8v-d8 r8v-d8 r8v-d8 r8v-d8 r8v-dd
+Ch3 r8v+++++d8 r8v-d8 r8v-e8 r8v-e8
+Ch3 r8v+++d8 r8v-d8 r8v-d8 r8v-d8
+Ch3 r8v+++d8 r8v-d8 r8v-e8 r8v-e8
+Ch3 r8v+++f8 r8v-f8 r8v-f8 r8v-f8
 
 Ch4 (Brass)v10\s44100o3d1^4. (CG3)v14o5aa
 Ch4 r8a8 r8a8 < r8g8 r8g8 >
 Ch4 r8a8 r8a8 r8a8 r8a8
-Ch4 r8a8 r8a8 < r8g8 r8g8 >
-Ch4 r8a8 r8a8 r8a8 r8a8
-Ch4 r8a8 r8a8 r8a8 r8a8 r8a8 r8aa
-Ch4 r8a8 r8a8 < r8g8 r8g8 >
-Ch4 r8a8 r8a8 r8a8 r8a8
-Ch4 r8a8 r8a8 < r8g8 r8g8 >
-Ch4 r8a8 r8a8 r8a8 r8a8
+Ch4 r8a8 r8v-a8 < r8v-g8 r8v-g8 >
+Ch4 r8v+++a8 r8v-a8 r8v-a8 r8v-a8
+Ch4 r8v+++a8 r8v-a8 r8v-a8 r8v-a8 r8v-a8 r8v-aa
+Ch4 r8v+++++a8 r8v-a8 < r8v-g8 r8v-g8 >
+Ch4 r8v+++a8 r8v-a8 r8v-a8 r8v-a8
+Ch4 r8v+++a8 r8v-a8 < r8v-g8 r8v-g8 >
+Ch4 r8v+++a8 r8v-a8 r8v-a8 r8v-a8
 
 Ch5 r1r4.(S3)cc
 Ch5 (H3)c8(S3)c8 (B)c8(S3)c8 (B)c8(S3)c8 (B)c8(S3)c8
