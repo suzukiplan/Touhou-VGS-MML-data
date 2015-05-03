@@ -104,6 +104,7 @@
 # 9005,  26, 1, 35,Mystic Oriental Dream@` Ancient Temple
 # 9006,  49, 1, 35,Lunatic Eyes@` Invisible Full Moon
 9007,  83, 1, 35,Adventure of the Lovestruck Tomboy
+900A,  84, 1, 35,White Flag of the Usa Jingu
 900B,  60, 1, 35,Fujin Maiden (ShortVersion)
 
 # “Œ•û•—_˜^(0xA0)
