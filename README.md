@@ -315,7 +315,7 @@
 - ● おてんば恋娘の冒険 -- チルノのテーマ
 - ○ 幽霊楽団　～ Phantom Ensemble -- プリズムリバー三姉妹のテーマ
 - ○ もう歌しか聞こえない　～ Flower Mix -- ミスティア・ローレライのテーマ
-- × お宇佐さまの素い幡 -- 因幡 てゐのテーマ
+- ● お宇佐さまの素い幡 -- 因幡 てゐのテーマ
 - ● 風神少女　 (Short Version) -- 射命丸 文のテーマ
 - × ポイズンボディ　～ Forsaken Doll -- メディスン・メランコリーのテーマ
 - × 今昔幻想郷　～ Flower Land -- 風見 幽香のテーマ
@@ -607,3 +607,4 @@
 - bslot081.mml: Selene's Light
 - bslot082.mml: 装飾戦　～ Decoration Battle
 - bslot083.mml: おてんば恋娘の冒険
+- bslot084.mml: お宇佐さまの素い幡
