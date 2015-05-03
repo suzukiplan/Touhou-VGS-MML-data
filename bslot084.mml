@@ -62,8 +62,8 @@ Ch1 c8<f>c <f8>c8 e-2
 Ch1 c8<f>c <f8>c8<b-4>e-4
 Ch1 f2 <v-cv-fv-g v-cv-fv-g v-cv-g
 
-Ch2 (Sq3)v13o5
-Ch2 r1f8e-8<b-8g8
+Ch2 (Sq3)o5
+Ch2 v0c1v13f8e-8<b-8g8
 Ch2 a-8ca- c8a-8 g2
 Ch2 a-8ca- c8a-8 b-2
 Ch2 a-8ca- c8a-8 g4g4
@@ -419,7 +419,7 @@ Ch0 t153
 Ch0 d8>f+r< d8>f+r< e8>g+r< e8>g+r< f+8>ar< e8>g+r<
 Ch0 d8>f+r< d8>f+r< e8>g+r< e8>g+r< f+8>ar< e8>g+r<
 Ch1 a8g+rf+rer f+8erc+r<br> c+4.c+8^ 8<br>c+8<b8 ag+f+g+ f+re8 %99f+4.e64d64 c64<b64 a64g64 f64e64
-Ch2 a8g+rf+rer f+8erc+r<br> c+4.c+8^ 8<br>c+8<b8 ag+f+g+ f+re8 %99f+4.e64d64 c64<b64 a64g64 f64e64
+Ch2 a8g+rf+rer f+8erc+r<br> c+4.c+8^ 8<br>c+8<b8 ag+f+g+ f+re8>>(CG3)c+8v-e8v-f+8v-----f+8
 Ch3 f+8c+f+ c+8f+8 g+8f+g+ f+8g+8 a8g+8e8f+8
 Ch4 a8f+a f+8a8 b8f+b f+8b8 >c+8<b8g+8a8
 Ch3 f+8c+f+ c+8f+8 g+8f+g+ f+8g+8 a4.g+8
