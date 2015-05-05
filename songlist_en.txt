@@ -106,6 +106,7 @@
 9007,  83, 1, 35,Adventure of the Lovestruck Tomboy
 900A,  84, 1, 35,White Flag of the Usa Jingu
 900B,  60, 1, 35,Fujin Maiden (ShortVersion)
+900F,  85, 1, 35,Eastern Judgement in the Sixtieth Year
 
 # “Œ•û•—_˜^(0xA0)
 # ID  BGM LP COL TITLE
