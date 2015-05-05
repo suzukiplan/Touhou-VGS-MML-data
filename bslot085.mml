@@ -664,19 +664,19 @@ Ch2 c4.d4.f4 c4.d4.f4 <b-1^2.g8a8 b-4.a4.g4 b-4.a4.g4 b-1^1
 
 Ch3 (Brass)v14o4
 Ch3 f1e-4.f4.g32b-32>c32d32f32a-32b-32>c32d1
-Ch3 d4.c4.<b-8>c8 \s22050d1 \s4000c4.d4.<\s44100b-1^2.r4\s600<d8f8
+Ch3 d4.c4.<b-8 c8 \s22050d1 \s4000c4.d4.<\s44100b-1^2.r4\s600 d8f8
 Ch3 g8r8g8r8g8.fr8g8
 Ch3 r8grg4g8.fr8g8>
 Ch3 b-8r8b-8r8b-8.ar8b-8
-Ch3 <b-2.>d8e-8
+Ch3 <b-2.d8e-8
 Ch3 f4.e-4.d4 <b-4.a4.g4 g1^1
 Ch3 o4
 Ch3 f1e-4.f4.g32b-32>c32d32f32a-32b-32>c32d1
-Ch3 d4.c4.<b-8>c8 \s22050d1 \s4000c4.d4.<\s44100b-1^2.r4\s600<d8f8
+Ch3 d4.c4.<b-8 c8 \s22050d1 \s4000c4.d4.<\s44100b-1^2.r4\s600 d8f8
 Ch3 g8r8g8r8g8.fr8g8
 Ch3 r8grg4g8.fr8g8>
 Ch3 b-8r8b-8r8b-8.ar8b-8
-Ch3 <b-2.>d8e-8
+Ch3 <b-2.d8e-8
 Ch3 f4.e-4.d4 <b-4.a4.g4 g1^1
 
 Ch4 (Brass)o3\s22050v12
