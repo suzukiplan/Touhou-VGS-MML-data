@@ -320,7 +320,7 @@
 - × ポイズンボディ　～ Forsaken Doll -- メディスン・メランコリーのテーマ
 - × 今昔幻想郷　～ Flower Land -- 風見 幽香のテーマ
 - × 彼岸帰航　～ Riverside View -- 小野塚 小町のテーマ
-- × 六十年目の東方裁判　～ Fate of Sixty Years -- 四季映姫・ヤマザナドゥのテーマ
+- ● 六十年目の東方裁判　～ Fate of Sixty Years -- 四季映姫・ヤマザナドゥのテーマ
 - × 花の映る塚 -- 会話場面のテーマ１
 - × 此岸の塚 -- 会話場面のテーマ２
 - × 花は幻想のままに -- エンディングテーマ
@@ -608,3 +608,4 @@
 - bslot082.mml: 装飾戦　～ Decoration Battle
 - bslot083.mml: おてんば恋娘の冒険
 - bslot084.mml: お宇佐さまの素い幡
+- bslot085.mml: 六十年目の東方裁判　～ Fate of Sixty Years
