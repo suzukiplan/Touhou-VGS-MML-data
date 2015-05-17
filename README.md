@@ -130,7 +130,7 @@
 - ● Witching Dream -- 靈夢１面のテーマ
 - ● Selene's Light -- 魔理沙１面のテーマ
 - ● 装飾戦　～ Decoration Battle -- １面ボス・オレンジのテーマ
-- △ Break the Sabbath -- ２面テーマ
+- ● Break the Sabbath -- ２面テーマ
 - △ 紅響曲　～ Scarlet Phoneme -- ２面ボス・くるみのテーマ
 - ● Bad Apple!! -- ３面テーマ
 - ● 霊戦　～ Perdition crisis -- ３面ボス・エリーのテーマ
@@ -609,3 +609,4 @@
 - bslot083.mml: おてんば恋娘の冒険
 - bslot084.mml: お宇佐さまの素い幡
 - bslot085.mml: 六十年目の東方裁判　～ Fate of Sixty Years
+- bslot086.mml: Break the Sabbath
