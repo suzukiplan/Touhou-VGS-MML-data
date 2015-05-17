@@ -14,7 +14,7 @@ FILE* vge_fopen(const char*, const char*);
 
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
-#define SONG_NUM 86
+#define SONG_NUM 87
 
 /* Structure */
 struct InputInf {
