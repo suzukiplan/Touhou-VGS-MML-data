@@ -84,6 +84,9 @@ struct Preferences {
 	int base;
 	int localeId;
 	int listType;
+	int shuf;
+	int infy;
+	int loop;
 };
 static struct Preferences PRF;
 
@@ -274,6 +277,7 @@ int vge_loop()
 		memset(&PRF,0,sizeof(PRF));
 		PRF.listType=1;
 		PRF.currentTitleId=0x60;
+		PRF.loop=1;
 		FILE* fp=vge_fopen("preferences.dat","rb");
 		if(NULL!=fp) {
 			fread(&PRF,1,sizeof(PRF),fp);
@@ -298,6 +302,26 @@ int vge_loop()
 		} else {
 			_listType=0;
 		}
+		if(PRF.shuf) {
+			shuf=1;
+		} else {
+			shuf=0;
+		}
+		if(PRF.infy) {
+			infy=1;
+		} else {
+			infy=0;
+		}
+		if(PRF.loop<1) {
+			PRF.loop=1;
+		} else if(3<PRF.loop) {
+			PRF.loop=3;
+		}
+		for(i=0;i<SONG_NUM;i++) {
+			if(_list[i].loop) {
+				_list[i].loop=PRF.loop;
+			}
+		}
 	} else {
 		/* store preferences */
 		PRF.base=(int)base;
@@ -308,6 +332,9 @@ int vge_loop()
 		}
 		PRF.currentTitleId=_title[_currentTitle].id;
 		PRF.listType=_listType;
+		PRF.shuf=shuf;
+		PRF.infy=infy;
+		PRF.loop=_list[0].loop;
 	}
 
 	/* calc bmin */
