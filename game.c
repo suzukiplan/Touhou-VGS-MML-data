@@ -14,6 +14,7 @@ FILE* vge_fopen(const char*, const char*);
 
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
+#define TITLE_NUM 10
 #define SONG_NUM 87
 
 /* Structure */
@@ -36,7 +37,17 @@ struct SongData {
 	char text[64];
 };
 
+/* title data */
+struct TitleData {
+	int id;
+	int songNum;
+	char copyright[32];
+	char title[80];
+	char reserved2[8];
+};
+
 /* play list */
+struct TitleData _title[TITLE_NUM];
 struct SongData _listJ[SONG_NUM];
 struct SongData _listE[SONG_NUM];
 struct SongData* _list=_listJ;
@@ -47,6 +58,7 @@ struct MyList {
 };
 
 /* Proto types */
+static void nextSong(int shuf);
 static void myprint(int x,int y,const char* msg,...);
 static void myprintD(int x,int y,const char* msg,...);
 static void myprint2(int x,int y,const char* msg,...);
@@ -64,6 +76,8 @@ extern int _flingY;
 static struct MyList _mylist;
 static unsigned char* _kanji;
 static int _mcur=-1;
+static int _listType=1;
+static int _currentTitle=4;
 
 /*
  *----------------------------------------------------------------------------
@@ -157,11 +171,22 @@ int vge_init()
 {
 	size_t sz;
 	char* bin;
+	int i,j;
 	bin=(char*)vge_getdata(0,&sz);
 	memcpy(_listJ,bin,sizeof(_listJ));
 	bin=(char*)vge_getdata(1,&sz);
 	memcpy(_listE,bin,sizeof(_listE));
 	_list=_listJ;
+	bin=(char*)vge_getdata(2,&sz);
+	memcpy(_title,bin,sizeof(_title));
+	for(i=0;i<SONG_NUM;i++) {
+		for(j=0;j<TITLE_NUM;j++) {
+			if((_list[i].id & 0xFFFF00)>>8 == _title[j].id) {
+				_title[j].songNum++;
+				break;
+			}
+		}
+	}
 	loadlist();
 	_kanji=(unsigned char*)vge_getdata(255,&sz);
 	return 0;
@@ -192,10 +217,11 @@ int vge_loop()
 		,"NOIZE  "
 	};
 	static int pos[6];
-	static double base=4;
+	static double base=4.0;
+	static double baseX=0.0;
 	static double move=0;
-	static int bmin=-(SONG_NUM*20-106);
-	static int bExist=SONG_NUM;
+	static double moveX=0;
+	static int pageChange=0;
 	static int push=0;
 	static int pflag=0;
 	static int touch_off=0;
@@ -210,6 +236,7 @@ int vge_loop()
 	static int playing=0;
 	static int interval2=0;
 	static int slide;
+	static int slideX;
 	static int touchSB=0;
 	static struct InputInf pi;
 	static int editmode=0;
@@ -218,8 +245,20 @@ int vge_loop()
 	static int selectSong=-1;
 	struct InputInf ci;
 	int i,j,k;
+	int ii;
+	int iii;
 	int dp;
 	int wav;
+	int bmin;
+	int songNum;
+
+	/* calc bmin */
+	if(_listType) {
+		songNum=_title[_currentTitle].songNum;
+	} else {
+		songNum=SONG_NUM;
+	}
+	bmin=-(songNum*20-106+_listType*40);
 
 	/* Play after wait */
 	if(playwait) {
@@ -234,15 +273,17 @@ int vge_loop()
 		}
 	}
 
-	/* タッチ状態を取得 */
+	/* get touch state */
 	vge_touch(&ci.s,&ci.cx,&ci.cy,&ci.dx,&ci.dy);
 	if(ci.s) {
 		focus=0;
 		vge_rand();
 		pflag=1;
 		if(0==touching) {
-			if(HITCHK(ci.cx-4,ci.cy-4,8,8,224,130,16,190)) {
+			if(!_listType && HITCHK(ci.cx-4,ci.cy-4,8,8,224,130,16,190)) {
 				touching=1;
+			} else if(_listType && HITCHK(ci.cx-4,ci.cy-4,8,8,0,300,240,20)) {
+				touching=3;
 			} else {
 				touching=2;
 			}
@@ -254,18 +295,108 @@ int vge_loop()
 		ci.cx=px;
 		ci.cy=py;
 		slide=0;
+		slideX=0;
 	} else {
 		selectSong=-1;
 		touching=0;
 		pflag=0;
 		push=0;
 		slide=0;
+		slideX=0;
 	}
 
-	/* リストの上下移動 */
+	/* page change */
+	if(_listType) {
+		if(!pageChange) {
+			if(80.0<baseX) {
+				pageChange=1;
+			} else if(baseX<-80.0) {
+				pageChange=-1;
+			}
+		}
+		if(pageChange) {
+			if(0<pageChange) {
+				if(baseX<240.0) {
+					double mv=(240-baseX)/6.66666;
+					if((0<mv && mv<1.0) || (mv<0 && -1.0<mv)) {
+						baseX=240;
+					} else {
+						baseX+=mv;
+					}
+				} else {
+					_currentTitle--;
+					if(_currentTitle<0) {
+						_currentTitle=TITLE_NUM-1;
+					}
+					pageChange=0;
+					baseX=0;
+					moveX=0;
+					slideX=0;
+				}
+			} else {
+				if(-240<baseX) {
+					double mv=(-240-baseX)/6.66666;
+					if((0<mv && mv<1.0) || (mv<0 && -1.0<mv)) {
+						baseX=-240;
+					} else {
+						baseX+=mv;
+					}
+				} else {
+					_currentTitle++;
+					if(TITLE_NUM<=_currentTitle) {
+						_currentTitle=0;
+					}
+					pageChange=0;
+					baseX=0;
+					moveX=0;
+					slideX=0;
+				}
+			}
+		}
+	}
+
+	/* move list (left & right) */
+	if(!pageChange) {
+		if(_listType) {
+			if(0==slide && 0==slideX) {
+				if(4<abs(ci.dx) && abs(ci.dy)<abs(ci.dx)) {
+					slideX=1;
+				}
+			}
+		} else {
+			baseX=0;
+			moveX=0;
+			slideX=0;
+		}
+		if(slideX) {
+			moveX+=ci.cx-pi.cx;
+			push=0;
+			touch_off=1;
+			slide=0;
+		} else {
+			moveX=0;
+		}
+		if(moveX) {
+			double mv=moveX/6.66666;
+			if((0<mv && mv<1.0) || (mv<0 && -1.0<mv)) mv=moveX;
+			moveX-=mv;
+			baseX+=mv;
+		} else if(baseX) {
+			double mv=baseX/6.66666;
+			if((0<mv && mv<1.0) || (mv<0 && -1.0<mv)) {
+				baseX=0;
+			} else {
+				baseX-=mv;
+			}
+		}
+	}
+
+	/* move list (up & down) */
 	if(slide==0) {
 		if(4<ci.dy || ci.dy<-4) {
-			slide=1;
+			if(!slideX) {
+				slide=1;
+			}
 		}
 	}
 	if(slide) {
@@ -314,7 +445,7 @@ int vge_loop()
 		if(_flingY<0 && -1<mv) mv=_flingY;
 		if(0<_flingY && mv<1) mv=_flingY;
 		base+=mv;
-		_flingY-=mv;
+		_flingY-=(int)mv;
 		if(100<base) {
 			base=100;
 			move=0;
@@ -348,151 +479,253 @@ int vge_loop()
 
 	/* Auto focus */
 	if(focus) {
-		if(_mcur*20+130+(int)base<130) {
-			i=130-(_mcur*20+130+(int)base);
-			if(10<i) i=10;
-			base+=i;
-		} else if(320<_mcur*20+146+(int)base) {
-			i=(_mcur*20+146+(int)base)-320;
-			if(10<i) i=10;
-			base-=i;
+		if((_list[_mcur].id & 0xFFFF00)>>8 != _title[_currentTitle].id) {
+			pageChange=-1;
 		} else {
-			focus=0;
+			if(_listType) {
+				for(k=0,i=0;i<SONG_NUM;i++) {
+					if((_list[i].id & 0xFFFF00)>>8 == _title[_currentTitle].id) {
+						if(i==_mcur) break;
+						k++;
+					}
+				}
+				j=k*20+130+(int)base+40;
+				ii=300;
+			} else {
+				k=_mcur;
+				j=k*20+130+(int)base;
+				ii=320;
+			}
+			if(j<130) {
+				i=130-j;
+				if(10<i) i=10;
+				base+=i;
+			} else if(ii<j+16) {
+				i=j+16-ii;
+				if(10<i) i=10;
+				base-=i;
+			} else {
+				focus=0;
+			}
 		}
 	}
 
-	/* Draw music list */
-	for(i=0;i<SONG_NUM;i++) {
-		if(_list[i].dis) {
-			_list[i].played=1;
-		}
-		dp=i*20+130+(int)base;
-		if(i<bExist && 114<dp && dp<320) {
-			if(!editmode && _list[i].dis) {
-				vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,102);
-				vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,104);
+	for(iii=0;iii<2;iii++) {
+		int bx=(int)baseX;
+		int ct=_currentTitle;
+		if(iii) {
+			if(!_listType || 0==baseX) {
+				break;
+			}
+			if(0<baseX) {
+				bx-=240;
+				ct--;
+				if(ct<0) ct=TITLE_NUM-1;
 			} else {
-				if(_mcur==i) {
-					vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,75);
-					vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
+				bx+=240;
+				ct++;
+				if(TITLE_NUM<=ct) ct=0;
+			}
+		}
+		if(_listType) {
+			/* Draw song title */
+			putkanji(4+bx,134+(int)base,255,_title[ct].title);
+			putkanji(236+bx-strlen(_title[ct].copyright)*4,152+(int)base,255,_title[ct].copyright);
+		}
+		/* Draw music list */
+		for(dp=0, i=0, ii=0;i<SONG_NUM;i++) {
+			if(_list[i].dis) {
+				_list[i].played=1;
+			}
+			if(_listType) {
+				if((_list[i].id & 0xFFFF00)>>8 != _title[ct].id) {
+					continue;
+				}
+			}
+			dp=_listType*40+(ii++)*20+130+(int)base;
+			if(i<SONG_NUM && 114<dp && dp<320) {
+				if(!editmode && _list[i].dis) {
+					vge_boxfSP(4+bx, dp+(int)base, 220+_listType*16+bx, dp+16, 102);
+					vge_boxSP(4+bx, dp+(int)base, 220+_listType*16+bx, dp+16, 104);
 				} else {
-					if(ci.s && touch_off==0 && 2==touching
-					&& HITCHK(ci.cx-4,ci.cy-4,8,8,0,130,240,190)
-					&& HITCHK(4,i*20+130+(int)base,216,16,ci.cx-4,ci.cy-4,8,8)) {
-						ci.s=0;
-						if(selectSong!=i) {
-							selectTime=0;
-							selectSong=i;
-						} else {
-							selectTime++;
-						}
-						if(selectTime<4) {
-							vge_boxfSP(4,dp,220,i*20+146+(int)base,_list[i].col+4*_list[i].played);
-							vge_boxSP(4,dp,220,i*20+146+(int)base,105);
-						} else {
-							vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,60);
-							vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,111);
-							if(push) {
-								if(editmode) {
-									push=0;
-									vge_eff(2);
-									_list[i].dis=1-_list[i].dis;
-									_mylist.id[_mylist.no][i]=_list[i].dis;
-									if(_list[i].dis) {
-										_list[i].played=1;
+					if(_mcur==i) {
+						vge_boxfSP(4+bx, dp, 220+_listType*16+bx, dp+16, 75);
+						vge_boxSP(4+bx, dp, 220+_listType*16+bx, dp+16, 111);
+					} else {
+						if(ci.s && touch_off==0 && 2==touching
+						&& HITCHK(ci.cx-4,ci.cy-4,8,8,bx,130,240,190)
+						&& HITCHK(4+bx,dp,216+_listType*16,16,ci.cx-4,ci.cy-4,8,8)) {
+							ci.s=0;
+							if(selectSong!=i) {
+								selectTime=0;
+								selectSong=i;
+							} else {
+								selectTime++;
+							}
+							if(selectTime<4) {
+								vge_boxfSP(4+bx, dp, 220+_listType*16+bx, dp+16, _list[i].col+4*_list[i].played);
+								vge_boxSP(4+bx, dp, 220+_listType*16+bx, dp+16, 105);
+							} else {
+								vge_boxfSP(4+bx, dp, 220+_listType*16+bx, dp+16, 60);
+								vge_boxSP(4+bx, dp, 220+_listType*16+bx, dp+16, 111);
+								if(push) {
+									if(editmode) {
+										push=0;
+										vge_eff(2);
+										_list[i].dis=1-_list[i].dis;
+										_mylist.id[_mylist.no][i]=_list[i].dis;
+										if(_list[i].dis) {
+											_list[i].played=1;
+										} else {
+											_list[i].played=0;
+										}
 									} else {
-										_list[i].played=0;
+										push=0;
+										ci.s=0;
+										_mcur=i;
+										paused=0;
+										_list[i].played=1;
+										vge_bstop();
+										playwait=6;
+										playing=0;
 									}
-								} else {
-									push=0;
-									ci.s=0;
-									_mcur=i;
-									paused=0;
-									_list[i].played=1;
-									vge_bstop();
-									playwait=6;
-									playing=0;
 								}
 							}
-						}
-					} else {
-						if(_list[i].dis) {
-							vge_boxfSP(4,i*20+130+(int)base,220,i*20+146+(int)base,102);
-							vge_boxSP(4,i*20+130+(int)base,220,i*20+146+(int)base,104);
 						} else {
-							vge_boxfSP(4,dp,220,i*20+146+(int)base,_list[i].col+4*_list[i].played);
-							vge_boxSP(4,dp,220,i*20+146+(int)base,105);
+							if(_list[i].dis) {
+								vge_boxfSP(4+bx, dp, 220+_listType*16+bx, dp+16, 102);
+								vge_boxSP(4+bx, dp, 220+_listType*16+bx, dp+16, 104);
+							} else {
+								vge_boxfSP(4+bx, dp, 220+_listType*16+bx, dp+16, _list[i].col+4*_list[i].played);
+								vge_boxSP(4+bx, dp, 220+_listType*16+bx, dp+16, 105);
+							}
 						}
 					}
 				}
-			}
-			if(_list[i].dis) {
-				putfontSD(8,i*20+137+(int)base,"%3d.",(i+1));
-				putkanji(26,i*20+133+(int)base,103,"%s",_list[i].text);
-			} else {
-				putfontS(8,i*20+137+(int)base,"%3d.",(i+1));
-				putkanji(27,i*20+134+(int)base,1,"%s",_list[i].text);
-				putkanji(26,i*20+133+(int)base,255,"%s",_list[i].text);
+				if(_list[i].dis) {
+					putfontSD(8+bx,dp+7,"%3d.",ii);
+					putkanji(26+bx,dp+3,103,"%s",_list[i].text);
+				} else {
+					putfontS(8+bx,dp+7,"%3d.",ii);
+					putkanji(27+bx,dp+4,1,"%s",_list[i].text);
+					putkanji(26+bx,dp+3,255,"%s",_list[i].text);
+				}
 			}
 		}
+		dp+=20;
+		myprint(4+bx,dp+5,"Composed by ZUN.");
+		putkanji(4+bx,dp+15,255,"This app is an alternative fiction of Touhou Project.");
+		if(_listType) {
+			putkanji(140+bx,dp+30,255,"Arranged by Yoji Suzuki.");
+			putkanji(100+bx,dp+42,255,"(c)2013, Presented by SUZUKI PLAN.");
+		} else {
+			vge_putSP(0,0,112,136,48,4+bx,dp+30);
+		}
 	}
-	myprint(4,i*20+135+(int)base,"Composed by ZUN.");
-	putkanji(4,i*20+145+(int)base,255,"This app is an alternative fiction of Touhou Project.");
-	vge_putSP(0,0,112,136,48,4,i*20+160+(int)base);
 
 	/* Scroll bar */
-	vge_boxfSP(224,130,240,320,103);
-	if(1==touching) {
-		touchSB=30;
-		base=ci.cy-142;
-		base*=(-bmin*100)/166;
-		base/=100;
-		base=4-base;
-		if(100<base) {
-			base=100;
-			move=0;
-			_flingY=0;
-		} else if(base<bmin-100) {
-			base=bmin-100;
-			move=0;
-			_flingY=0;
+	if(!_listType) {
+		vge_boxfSP(224,130,240,320,103);
+		if(1==touching) {
+			touchSB=30;
+			base=ci.cy-142;
+			base*=(-bmin*100)/166;
+			base/=100;
+			base=4-base;
+			if(100<base) {
+				base=100;
+				move=0;
+				_flingY=0;
+			} else if(base<bmin-100) {
+				base=bmin-100;
+				move=0;
+				_flingY=0;
+			}
+			i=(0-(int)base+4)*100/(-bmin)*116/100;
+			vge_boxfSP(225,142+i,238,192+i,56);
+		} else {
+			i=(0-(int)base+4)*100/(-bmin)*116/100;
+			vge_boxfSP(225,142+i,238,192+i,108);
 		}
-		i=(0-(int)base+4)*100/(-bmin)*116/100;
-		vge_boxfSP(225,142+i,238,192+i,56);
-	} else {
-		i=(0-(int)base+4)*100/(-bmin)*116/100;
-		vge_boxfSP(225,142+i,238,192+i,108);
+
+		/* Cursor(Top) */
+		if(base>=4) {
+			vge_putSP(0,208,32,16,12,224,130);
+		} else {
+			if(1==touching && HITCHK(224,130,16,12,ci.cx-8,ci.cy-8,16,16)) {
+				touchSB=30;
+				vge_putSP(0,176,32,16,12,224,130);
+				if(push) {
+					base=4;
+					push=0;
+				}
+			} else {
+				vge_putSP(0,144,32,16,12,224,130);
+			}
+		}
+
+		/* Cursor(Bottom) */
+		if(base<=bmin) {
+			vge_putSP(0,224,32,16,12,224,308);
+		} else {
+			if(1==touching && HITCHK(224,308,16,12,ci.cx-8,ci.cy-8,16,16)) {
+				touchSB=30;
+				vge_putSP(0,192,32,16,12,224,308);
+				if(push) {
+					base=bmin;
+					push=0;
+				}
+			} else {
+				vge_putSP(0,160,32,16,12,224,308);
+			}
+		}
 	}
 
-	/* Cursor(Top) */
-	if(base>=4) {
-		vge_putSP(0,208,32,16,12,224,130);
-	} else {
-		if(1==touching && HITCHK(224,130,16,12,ci.cx-8,ci.cy-8,16,16)) {
-			touchSB=30;
-			vge_putSP(0,176,32,16,12,224,130);
-			if(push) {
-				base=4;
-				push=0;
+	/* Title list */
+	if(_listType) {
+		vge_boxfSP(0,300,240,320,3);
+		vge_lineSP(0,300,240,300,111);
+		vge_lineSP(0,302,240,302,106);
+		ii=(240-TITLE_NUM*8)/2;
+		j=ii-1;
+		for(i=0;i<TITLE_NUM;i++,ii+=8) {
+			vge_putSP(0,216,64,8,8,ii,307);
+			if(_currentTitle==i) {
+				int bx=(int)baseX/32;
+				if(bx<-8) bx=-8;
+				else if(8<bx) bx=8;
+				vge_putSP(0,224,64,8,8,ii-bx,307);
+				vge_putSP(0,224,64,8,8,ii-bx+TITLE_NUM*8,307);
+				vge_putSP(0,224,64,8,8,ii-bx-TITLE_NUM*8,307);
 			}
-		} else {
-			vge_putSP(0,144,32,16,12,224,130);
 		}
-	}
-
-	/* Cursor(Bottom) */
-	if(base<=bmin) {
-		vge_putSP(0,224,32,16,12,224,308);
-	} else {
-		if(1==touching && HITCHK(224,308,16,12,ci.cx-8,ci.cy-8,16,16)) {
-			touchSB=30;
-			vge_putSP(0,192,32,16,12,224,308);
+		vge_boxfSP(0,307,j,315,3);
+		vge_boxfSP(ii,307,240,315,3);
+		/* left button */
+		if(0==touch_off && 3==touching
+		&& HITCHK(ci.cx-4,ci.cy-4,8,8,0,304,16,16)) {
+			vge_putSP(0,16,192,16,16, 0,304);
 			if(push) {
-				base=bmin;
-				push=0;
+				_currentTitle--;
+				if(_currentTitle<0) {
+					_currentTitle=TITLE_NUM-1;
+				}
 			}
 		} else {
-			vge_putSP(0,160,32,16,12,224,308);
+			vge_putSP(0,0,192,16,16, 0,304);
+		}
+		/* right button */
+		if(0==touch_off && 3==touching
+		&& HITCHK(ci.cx-4,ci.cy-4,8,8,224,304,16,16)) {
+			vge_putSP(0,48,192,16,16, 224,304);
+			if(push) {
+				_currentTitle++;
+				if(TITLE_NUM<=_currentTitle) {
+					_currentTitle=0;
+				}
+			}
+		} else {
+			vge_putSP(0,32,192,16,16, 224,304);
 		}
 	}
 
@@ -744,7 +977,7 @@ int vge_loop()
 					_mcur=0;
 					while(_list[_mcur].dis) {
 						_mcur++;
-						if(bExist<=_mcur) {
+						if(SONG_NUM<=_mcur) {
 							_mcur=0;
 						}
 					}
@@ -762,7 +995,7 @@ int vge_loop()
 					if(_list[_mcur].dis) {
 						do {
 							_mcur++;
-							if(bExist<=_mcur) {
+							if(SONG_NUM<=_mcur) {
 								_mcur=0;
 							}
 						} while(_list[_mcur].dis);
@@ -849,7 +1082,7 @@ int vge_loop()
 			if(ci.s && touch_off==0 && HITCHK(106,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
 				vge_putSP(0,(_list[0].loop-1)*24,176,24,12,106,112);
 				if(push) {
-					for(i=0;i<bExist;i++) {
+					for(i=0;i<SONG_NUM;i++) {
 						if(_list[i].loop) {
 							_list[i].loop++;
 							if(3<_list[i].loop) {
@@ -869,8 +1102,8 @@ int vge_loop()
 		if(0==interval2) {
 			interval2=1;
 			if(shuf) {
-				for(i=0;i<bExist;i++) if(_list[i].played==0) break;
-				if(bExist==i) {
+				for(i=0;i<SONG_NUM;i++) if(_list[i].played==0) break;
+				if(SONG_NUM==i) {
 					for(j=0;j<SONG_NUM;j++) {
 						if(_list[j].dis) {
 							_list[j].played=1;
@@ -884,18 +1117,7 @@ int vge_loop()
 			interval2++;
 			if(60<=interval2) {
 				if(infy==0) {
-					if(shuf) {
-						do {
-							_mcur=vge_rand()%bExist;
-						} while(_list[_mcur].played);
-					} else {
-						do {
-							_mcur++;
-							if(bExist<=_mcur) {
-								_mcur=0;
-							}
-						} while(_list[_mcur].dis);
-					}
+					nextSong(shuf);
 				}
 				paused=0;
 				playing=0;
@@ -913,8 +1135,8 @@ int vge_loop()
 	// cyclic songs
 	if(-1!=_mcur && 0==infy && _list[_mcur].loop && _list[_mcur].loop<=_psg.loop) {
 		if(shuf) {
-			for(i=0;i<bExist;i++) if(_list[i].played==0) break;
-			if(bExist==i) {
+			for(i=0;i<SONG_NUM;i++) if(_list[i].played==0) break;
+			if(SONG_NUM==i) {
 				for(j=0;j<SONG_NUM;j++) {
 					if(_list[j].dis) {
 						_list[j].played=1;
@@ -932,18 +1154,7 @@ int vge_loop()
 			if(interval<30) {
 				interval++;
 			} else {
-				if(shuf) {
-					do {
-						_mcur=vge_rand()%bExist;
-					} while(_list[_mcur].played);
-				} else {
-					do {
-						_mcur++;
-						if(bExist<=_mcur) {
-							_mcur=0;
-						}
-					} while(_list[_mcur].dis);
-				}
+				nextSong(shuf);
 				paused=0;
 				vge_bstop();
 				playing=0;
@@ -958,6 +1169,56 @@ int vge_loop()
 	px=ci.cx;
 	py=ci.cy;
 	return 0;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * change to the next song
+ *----------------------------------------------------------------------------
+ */
+static void nextSong(int shuf)
+{
+	int i;
+	int songTop;
+	if(shuf) {
+		if(_listType) {
+			while(1) {
+				for(songTop=0;;songTop++) {
+					if((_list[songTop].id & 0xFFFF00)>>8 == _title[_currentTitle].id) {
+						break;
+					}
+				}
+				for(i=0;i<_title[_currentTitle].songNum;i++) {
+					if(!_list[songTop+i].played && !_list[songTop+i].dis) {
+						break;
+					}
+				}
+				if(i==_title[_currentTitle].songNum) {
+					_currentTitle++;
+					if(TITLE_NUM<=_currentTitle) {
+						_currentTitle=0;
+					}
+				} else {
+					break;
+				}
+			}
+			do {
+				_mcur=vge_rand() % _title[_currentTitle].songNum;
+				_mcur+=songTop;
+			} while(_list[_mcur].played);
+		} else {
+			do {
+				_mcur=vge_rand()%SONG_NUM;
+			} while(_list[_mcur].played);
+		}
+	} else {
+		do {
+			_mcur++;
+			if(SONG_NUM<=_mcur) {
+				_mcur=0;
+			}
+		} while(_list[_mcur].dis);
+	}
 }
 
 /*
