@@ -564,7 +564,7 @@ int vge_loop()
 
 	/* Auto focus */
 	if(focus) {
-		if((_list[_mcur].id & 0xFFFF00)>>8 != _title[_currentTitle].id) {
+		if(_listType && ((_list[_mcur].id & 0xFFFF00)>>8 != _title[_currentTitle].id)) {
 			pageChange=-1;
 		} else {
 			if(_listType) {
