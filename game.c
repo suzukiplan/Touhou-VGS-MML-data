@@ -73,6 +73,7 @@ int g_playing=0;
 int g_songChanged=0;
 extern int _forcePause;
 extern int _flingY;
+extern int _flingX;
 static struct MyList _mylist;
 static unsigned char* _kanji;
 static int _mcur=-1;
@@ -441,6 +442,16 @@ int vge_loop()
 	}
 
 	/* move list (left & right) */
+	if(_flingX) {
+		if(_listType && abs(_flingY)<abs(_flingX) && 100<abs(_flingX)) {
+			if(_flingX<0) {
+				pageChange=-1;
+			} else {
+				pageChange=1;
+			}
+		}
+		_flingX=0;
+	}
 	if(!pageChange) {
 		if(_listType) {
 			if(0==slide && 0==slideX) {
