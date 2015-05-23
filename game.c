@@ -923,15 +923,15 @@ int vge_loop()
 			}
 		}
 
-		myprint(8,64,"CHANGE ALL");
+		myprint(4,64,"CHANGE ALL");
 		if(k==SONG_NUM) {
-			vge_boxfSP(34,76,106,96, 102);
-			vge_boxSP(34,76,106,96, 104);
-			myprintD(42,82,"ENABLED");
+			vge_boxfSP(4,76,46,96, 102);
+			vge_boxSP(4,76,46,96, 104);
+			putkanji(12,81,105,"ENABLED");
 		} else {
-			if(ci.s && touch_off==0 && HITCHK(34,76,72,20,ci.cx-4,ci.cy-4,8,8)) {
-				vge_boxfSP(34,76,106,96, 58);
-				vge_boxSP(34,76,106,96, 63);
+			if(ci.s && touch_off==0 && HITCHK(4,76,42,20,ci.cx-4,ci.cy-4,8,8)) {
+				vge_boxfSP(4,76,46,96, 58);
+				vge_boxSP(4,76,46,96, 63);
 				if(push) {
 					vge_eff(0);
 					for(i=0;i<SONG_NUM;i++) {
@@ -940,20 +940,20 @@ int vge_loop()
 					}
 				}
 			} else {
-				vge_boxfSP(34,76,106,96, 4);
-				vge_boxSP(34,76,106,96, 8);
+				vge_boxfSP(4,76,46,96, 4);
+				vge_boxSP(4,76,46,96, 8);
 			}
-			myprint(42,82,"ENABLED");
+			putkanji(12,81,111,"ENABLED");
 		}
 
 		if(j==SONG_NUM) {
-			vge_boxfSP(134,76,206,96, 102);
-			vge_boxSP(134,76,206,96, 104);
-			myprintD(138,82,"DISABLED");
+			vge_boxfSP(50,76,92,96, 102);
+			vge_boxSP(50,76,92,96, 104);
+			putkanji(56,81,105,"DISABLED");
 		} else {
-			if(ci.s && touch_off==0 && HITCHK(134,76,72,20,ci.cx-4,ci.cy-4,8,8)) {
-				vge_boxfSP(134,76,206,96, 58);
-				vge_boxSP(134,76,206,96, 63);
+			if(ci.s && touch_off==0 && HITCHK(50,76,42,20,ci.cx-4,ci.cy-4,8,8)) {
+				vge_boxfSP(50,76,92,96, 58);
+				vge_boxSP(50,76,92,96, 63);
 				if(push) {
 					vge_eff(1);
 					for(i=0;i<SONG_NUM;i++) {
@@ -962,10 +962,10 @@ int vge_loop()
 					}
 				}
 			} else {
-				vge_boxfSP(134,76,206,96, 4);
-				vge_boxSP(134,76,206,96, 8);
+				vge_boxfSP(50,76,92,96, 4);
+				vge_boxSP(50,76,92,96, 8);
 			}
-			myprint(138,82,"DISABLED");
+			putkanji(56,81,111,"DISABLED");
 		}
 
 		putfontS(8,114,"PLEASE TAP A SONG TO ENABLE OR DISABLE.");
