@@ -71,6 +71,7 @@ static void putkanji(int x,int y,int col, const char* msg,...);
 int g_request=0;
 int g_playing=0;
 int g_songChanged=0;
+int g_background=0;
 extern int _forcePause;
 extern int _flingY;
 extern int _flingX;
@@ -603,6 +604,10 @@ int vge_loop()
 		}
 	}
 
+	if(g_background) {
+		goto SKIP_DRAW_PROC;
+	}
+
 	for(iii=0;iii<2;iii++) {
 		int bx=(int)baseX;
 		int ct=_currentTitle;
@@ -1095,6 +1100,8 @@ int vge_loop()
 			}
 		}
 	}
+
+SKIP_DRAW_PROC:
 
 	/* Check all disabled */
 	for(i=0,j=0;i<SONG_NUM;i++) {
