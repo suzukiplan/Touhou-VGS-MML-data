@@ -79,6 +79,14 @@ static int _mcur=-1;
 static int _listType=1;
 static int _currentTitle=4;
 
+struct Preferences {
+	int currentTitleId;
+	int base;
+	int localeId;
+	int listType;
+};
+static struct Preferences PRF;
+
 /*
  *----------------------------------------------------------------------------
  * Save play list
@@ -199,6 +207,12 @@ int vge_init()
  */
 int vge_term()
 {
+	FILE* fp;
+	fp=vge_fopen("preferences.dat","wb");
+	if(NULL!=fp) {
+		fwrite(&PRF,sizeof(PRF),1,fp);
+		fclose(fp);
+	}
 	savelist();
 	return 0;
 }
@@ -216,6 +230,7 @@ int vge_loop()
 		,"KUKEI  "
 		,"NOIZE  "
 	};
+	static int isFirst=1;
 	static int pos[6];
 	static double base=4.0;
 	static double baseX=0.0;
@@ -251,6 +266,49 @@ int vge_loop()
 	int wav;
 	int bmin;
 	int songNum;
+
+	/* preferences */
+	if(isFirst) {
+		/* load preferences and setup */
+		isFirst=0;
+		memset(&PRF,0,sizeof(PRF));
+		PRF.listType=1;
+		PRF.currentTitleId=0x60;
+		FILE* fp=vge_fopen("preferences.dat","rb");
+		if(NULL!=fp) {
+			fread(&PRF,1,sizeof(PRF),fp);
+			fclose(fp);
+		}
+		base=(double)PRF.base;
+		if(PRF.localeId) {
+			_list=_listE;
+		} else {
+			_list=_listJ;
+		}
+		for(i=0;i<TITLE_NUM;i++) {
+			if(_title[i].id==PRF.currentTitleId) break;
+		}
+		if(i==TITLE_NUM) {
+			_currentTitle=0;
+		} else {
+			_currentTitle=i;
+		}
+		if(PRF.listType) {
+			_listType=1;
+		} else {
+			_listType=0;
+		}
+	} else {
+		/* store preferences */
+		PRF.base=(int)base;
+		if(_list==_listE) {
+			PRF.localeId=1;
+		} else {
+			PRF.localeId=0;
+		}
+		PRF.currentTitleId=_title[_currentTitle].id;
+		PRF.listType=_listType;
+	}
 
 	/* calc bmin */
 	if(_listType) {
