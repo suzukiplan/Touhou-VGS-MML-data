@@ -968,119 +968,74 @@ int vge_loop()
 		return 0;
 	}
 
-	/* PLAY  button */
-	if(paused || _mcur==-1) {
-		if(ci.s && touch_off==0 && HITCHK(2,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0,48,32,24,12,2,112);
-			if(push) {
-				if(_mcur==-1) {
-					_mcur=0;
-					while(_list[_mcur].dis) {
-						_mcur++;
-						if(SONG_NUM<=_mcur) {
-							_mcur=0;
-						}
-					}
-					paused=0;
-					playwait=6;
-					vge_bstop();
-					for(i=0;i<SONG_NUM;i++) {
-						if(!_list[i].dis) {
-							break;
-						}
-					}
-					_list[i].played=1;
-					playing=0;
-				} else {
-					if(_list[_mcur].dis) {
-						do {
-							_mcur++;
-							if(SONG_NUM<=_mcur) {
-								_mcur=0;
-							}
-						} while(_list[_mcur].dis);
-						paused=0;
-						vge_bstop();
-						playing=0;
-						playwait=6;
-						_list[_mcur].played=1;
-						focus=1;
-						interval=0;
-					} else {
-						paused=0;
-						vge_bresume();
-						playing=1;
-					}
-				}
-			}
-		} else {
-			vge_putSP(0,0,32,24,12,2,112);
-		}
-	} else {
-		if(ci.s && touch_off==0 && HITCHK(2,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0,48,32,24,12,2,112);
-			if(push) {
-				paused=0;
-				playwait=6;
-				_list[_mcur].played=1;
-				vge_bstop();
-				playing=0;
-			}
-		} else {
-			vge_putSP(0,0,32,24,12,2,112);
-		}
+	/* force pause */
+	if(_forcePause) {
+		paused=1;
+		g_playing=0;
+		vge_bstop();
+		_forcePause=0;
+		playing=0;
 	}
 
-	/* PAUSE button */
+	/* PLAY button */
 	if(paused) {
-		vge_putSP(0,120,32,24,12,28,112);
-		if(_forcePause) {
-			_forcePause=0;
+		if(-1==_mcur) {
+			vge_putSP(0,120,32,24,12,2,112);
+		} else {
+			if(ci.s && touch_off==0 && HITCHK(2,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
+				vge_putSP(0,48,32,24,12,2,112);
+				if(push) {
+					paused=0;
+					vge_bresume();
+					playing=1;
+				}
+			} else {
+				vge_putSP(0,0,32,24,12,2,112);
+			}
 		}
 	} else {
-		if(_forcePause) {
-			paused=1;
-			g_playing=0;
-			vge_bstop();
-			_forcePause=0;
-			playing=0;
-		} else if(ci.s && touch_off==0 && HITCHK(28,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0,72,32,24,12,28,112);
-			if(push) {
-				g_playing=0;
-				paused=1;
-				vge_bstop();
-				playing=0;
-			}
+		/* PAUSE button */
+		if(-1==_mcur) {
+			vge_putSP(0,24,32,24,12,2,112);
 		} else {
-			vge_putSP(0,24,32,24,12,28,112);
+			if(ci.s && touch_off==0 && HITCHK(2,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
+				vge_putSP(0,72,32,24,12,2,112);
+				if(push) {
+					g_playing=0;
+					paused=1;
+					vge_bstop();
+					playing=0;
+				}
+			} else {
+				vge_putSP(0,24,32,24,12,2,112);
+			}
 		}
 	}
 
 	/* INFINITE button */
-	if(ci.s && touch_off==0 && HITCHK(54,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
-		vge_putSP(0,168,80,24,12,54,112);
+	if(ci.s && touch_off==0 && HITCHK(28,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
+		vge_putSP(0,168,80,24,12,28,112);
 		if(push) {
 			infy=1-infy;
 		}
 	} else {
-		vge_putSP(0,144+(1-infy)*48,80,24,12,54,112);
+		vge_putSP(0,144+(1-infy)*48,80,24,12,28,112);
 	}
 
 	if(!infy) {
 		/* SHUFFLE button */
-		if(ci.s && touch_off==0 && HITCHK(80,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
-			vge_putSP(0,168,96,24,12,80,112);
+		if(ci.s && touch_off==0 && HITCHK(54,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
+			vge_putSP(0,168,96,24,12,54,112);
 			if(push) {
 				shuf=1-shuf;
 			}
 		} else {
-			vge_putSP(0,144+(1-shuf)*48,96,24,12,80,112);
+			vge_putSP(0,144+(1-shuf)*48,96,24,12,54,112);
 		}
 		/* LOOP COUNTER */
 		if(-1==_mcur || 0<=_mcur && _list[_mcur].loop) {
-			if(ci.s && touch_off==0 && HITCHK(106,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
-				vge_putSP(0,(_list[0].loop-1)*24,176,24,12,106,112);
+			if(ci.s && touch_off==0 && HITCHK(80,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
+				vge_putSP(0,(_list[0].loop-1)*24,176,24,12,80,112);
 				if(push) {
 					for(i=0;i<SONG_NUM;i++) {
 						if(_list[i].loop) {
@@ -1092,7 +1047,7 @@ int vge_loop()
 					}
 				}
 			} else {
-				vge_putSP(0,(_list[0].loop-1)*24,160,24,12,106,112);
+				vge_putSP(0,(_list[0].loop-1)*24,160,24,12,80,112);
 			}
 		}
 	}
