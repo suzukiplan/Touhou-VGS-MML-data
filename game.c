@@ -248,6 +248,7 @@ int vge_loop()
 	static int paused=1;
 	static int infy=0;
 	static int shuf=0;
+	static int loop=1;
 	static int focus=0;
 	static int interval=0;
 	static int playwait=0;
@@ -318,11 +319,7 @@ int vge_loop()
 		} else if(3<PRF.loop) {
 			PRF.loop=3;
 		}
-		for(i=0;i<SONG_NUM;i++) {
-			if(_list[i].loop) {
-				_list[i].loop=PRF.loop;
-			}
-		}
+		loop=PRF.loop;
 	} else {
 		/* store preferences */
 		PRF.base=(int)base;
@@ -335,7 +332,7 @@ int vge_loop()
 		PRF.listType=_listType;
 		PRF.shuf=shuf;
 		PRF.infy=infy;
-		PRF.loop=_list[0].loop;
+		PRF.loop=loop;
 	}
 
 	/* calc bmin */
@@ -1039,8 +1036,8 @@ int vge_loop()
 			if(infy) {
 				putfontS(8,16,"INDEX     %05d  PLAYING %d",_psg.nidx,_psg.loop+1);
 			} else {
-				if(_psg.loop<_list[_mcur].loop) {
-					putfontS(8,16,"INDEX     %05d  PLAYING %d OF %d",_psg.nidx,_psg.loop+1,_list[_mcur].loop);
+				if(_psg.loop<loop) {
+					putfontS(8,16,"INDEX     %05d  PLAYING %d OF %d",_psg.nidx,_psg.loop+1,loop);
 				} else {
 					putfontS(8,16,"INDEX     %05d  FADEOUT",_psg.nidx);
 				}
@@ -1053,7 +1050,7 @@ int vge_loop()
 		int ss;
 		int sm;
 		if(_list[_mcur].loop) {
-			ss=(int)(_psg.timeI+_psg.timeL*_list[_mcur].loop);
+			ss=(int)(_psg.timeI+_psg.timeL*loop);
 			ss+=66150;
 			ss-=_psg.timeP;
 			ss/=22050;
@@ -1181,19 +1178,13 @@ int vge_loop()
 		/* LOOP COUNTER */
 		if(-1==_mcur || 0<=_mcur && _list[_mcur].loop) {
 			if(ci.s && touch_off==0 && HITCHK(80,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
-				vge_putSP(0,(_list[0].loop-1)*24,176,24,12,80,112);
+				vge_putSP(0,(loop-1)*24,176,24,12,80,112);
 				if(push) {
-					for(i=0;i<SONG_NUM;i++) {
-						if(_list[i].loop) {
-							_list[i].loop++;
-							if(3<_list[i].loop) {
-								_list[i].loop=1;
-							}
-						}
-					}
+					loop++;
+					if(3<loop) loop=1;
 				}
 			} else {
-				vge_putSP(0,(_list[0].loop-1)*24,160,24,12,80,112);
+				vge_putSP(0,(loop-1)*24,160,24,12,80,112);
 			}
 		}
 	}
@@ -1234,7 +1225,7 @@ int vge_loop()
 	}
 
 	// cyclic songs
-	if(-1!=_mcur && 0==infy && _list[_mcur].loop && _list[_mcur].loop<=_psg.loop) {
+	if(-1!=_mcur && 0==infy && _list[_mcur].loop && loop<=_psg.loop) {
 		if(shuf) {
 			for(i=0;i<SONG_NUM;i++) if(_list[i].played==0) break;
 			if(SONG_NUM==i) {
