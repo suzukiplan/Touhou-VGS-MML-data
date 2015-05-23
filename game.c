@@ -968,6 +968,46 @@ int vge_loop()
 			putkanji(56,81,111,"DISABLED");
 		}
 
+		myprint(108,64,"TYPE OF LIST");
+
+		if(_listType) {
+			vge_boxfSP(108,76,152,96,58);
+			vge_boxSP(108,76,152,96,63);
+			putkanji(113,82,3,"PER TITLE");
+		} else {
+			if(ci.s && touch_off==0 && HITCHK(108,76,44,20,ci.cx-4,ci.cy-4,8,8)) {
+				vge_boxfSP(108,76,152,96,58);
+				vge_boxSP(108,76,152,96,63);
+				if(push) {
+					vge_eff(1);
+					_listType=1;
+				}
+			} else {
+				vge_boxfSP(108,76,152,96,4);
+				vge_boxSP(108,76,152,96,8);
+			}
+		}
+		putkanji(112,81,111,"PER TITLE");
+
+		if(!_listType) {
+			vge_boxfSP(156,76,200,96,58);
+			vge_boxSP(156,76,200,96,63);
+			putkanji(161,82,3,"ALL SONGS");
+		} else {
+			if(ci.s && touch_off==0 && HITCHK(156,76,44,20,ci.cx-4,ci.cy-4,8,8)) {
+				vge_boxfSP(156,76,200,96,58);
+				vge_boxSP(156,76,200,96,63);
+				if(push) {
+					vge_eff(1);
+					_listType=0;
+				}
+			} else {
+				vge_boxfSP(156,76,200,96,4);
+				vge_boxSP(156,76,200,96,8);
+			}
+		}
+		putkanji(160,81,111,"ALL SONGS");
+
 		putfontS(8,114,"PLEASE TAP A SONG TO ENABLE OR DISABLE.");
 		px=ci.cx;
 		py=ci.cy;
