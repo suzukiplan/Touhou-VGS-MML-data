@@ -1179,31 +1179,32 @@ int vge_loop()
 static void nextSong(int shuf)
 {
 	int i;
+	int ct=_currentTitle;
 	int songTop;
 	if(shuf) {
 		if(_listType) {
 			while(1) {
 				for(songTop=0;;songTop++) {
-					if((_list[songTop].id & 0xFFFF00)>>8 == _title[_currentTitle].id) {
+					if((_list[songTop].id & 0xFFFF00)>>8 == _title[ct].id) {
 						break;
 					}
 				}
-				for(i=0;i<_title[_currentTitle].songNum;i++) {
+				for(i=0;i<_title[ct].songNum;i++) {
 					if(!_list[songTop+i].played && !_list[songTop+i].dis) {
 						break;
 					}
 				}
-				if(i==_title[_currentTitle].songNum) {
-					_currentTitle++;
-					if(TITLE_NUM<=_currentTitle) {
-						_currentTitle=0;
+				if(i==_title[ct].songNum) {
+					ct++;
+					if(TITLE_NUM<=ct) {
+						ct=0;
 					}
 				} else {
 					break;
 				}
 			}
 			do {
-				_mcur=vge_rand() % _title[_currentTitle].songNum;
+				_mcur=vge_rand() % _title[ct].songNum;
 				_mcur+=songTop;
 			} while(_list[_mcur].played);
 		} else {
