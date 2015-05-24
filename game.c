@@ -80,6 +80,7 @@ static unsigned char* _kanji;
 static int _mcur=-1;
 static int _listType=1;
 static int _currentTitle=4;
+static char _msg[256];
 
 struct Preferences {
 	int currentTitleId;
@@ -199,6 +200,16 @@ int vge_init()
 				break;
 			}
 		}
+	}
+	memset(_msg,0,sizeof(_msg));
+	bin=(char*)vge_getdata(3,&sz);
+	if(NULL!=bin) {
+		if(sizeof(_msg)<=sz) {
+			sz=sizeof(_msg)-1;
+		}
+		memcpy(_msg,bin,sz);
+	} else {
+		strcpy(_msg,"Touhou BGM on VGS");
 	}
 	loadlist();
 	_kanji=(unsigned char*)vge_getdata(255,&sz);
@@ -629,6 +640,9 @@ int vge_loop()
 			/* Draw song title */
 			putkanji(4+bx,134+(int)base,255,_title[ct].title);
 			putkanji(236+bx-strlen(_title[ct].copyright)*4,152+(int)base,255,_title[ct].copyright);
+			if(_title[ct].id == 0x60) {
+				putkanji((240-(strlen(_msg)*4))/2+bx,40+(int)base,255,"%s",_msg);
+			}
 		}
 		/* Draw music list */
 		for(dp=0, i=0, ii=0;i<SONG_NUM;i++) {
