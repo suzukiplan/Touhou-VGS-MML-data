@@ -657,8 +657,8 @@ int vge_loop()
 			dp=_listType*40+(ii++)*20+130+(int)base;
 			if(i<SONG_NUM && 114<dp && dp<320) {
 				if(!editmode && _list[i].dis) {
-					vge_boxfSP(4+bx, dp+(int)base, 220+_listType*16+bx, dp+16, 102);
-					vge_boxSP(4+bx, dp+(int)base, 220+_listType*16+bx, dp+16, 104);
+					vge_boxfSP(4+bx, dp, 220+_listType*16+bx, dp+16, 102);
+					vge_boxSP(4+bx, dp, 220+_listType*16+bx, dp+16, 104);
 				} else {
 					if(_mcur==i) {
 						vge_boxfSP(4+bx, dp, 220+_listType*16+bx, dp+16, 75);
