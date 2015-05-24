@@ -727,7 +727,7 @@ int vge_loop()
 		dp+=20;
 		myprint(4+bx,dp+5,"Composed by ZUN.");
 		if(_listType) {
-			putkanji(4+bx,dp+15,255,"This app is an alternative fiction of the Touhou Project.");
+			putkanji(8+bx,dp+15,255,"This app is an alternative fiction of the Touhou Project.");
 			putkanji(140+bx,dp+30,255,"Arranged by Yoji Suzuki.");
 			putkanji(100+bx,dp+42,255,"(c)2013, Presented by SUZUKI PLAN.");
 		} else {
