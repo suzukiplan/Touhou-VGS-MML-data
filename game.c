@@ -715,10 +715,18 @@ int vge_loop()
 					}
 				}
 				if(_list[i].dis) {
-					putfontSD(8+bx,dp+7,"%3d.",ii);
+					if(_listType) {
+						putfontSD(8+bx,dp+7,"%3d.",_list[i].id & 0xff);
+					} else {
+						putfontSD(8+bx,dp+7,"%3d.",ii);
+					}
 					putkanji(26+bx,dp+3,103,"%s",_list[i].text);
 				} else {
-					putfontS(8+bx,dp+7,"%3d.",ii);
+					if(_listType) {
+						putfontS(8+bx,dp+7,"%3d.",_list[i].id & 0xff);
+					} else {
+						putfontS(8+bx,dp+7,"%3d.",ii);
+					}
 					putkanji(27+bx,dp+4,1,"%s",_list[i].text);
 					putkanji(26+bx,dp+3,255,"%s",_list[i].text);
 				}
