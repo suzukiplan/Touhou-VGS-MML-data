@@ -10,6 +10,7 @@
 4003,  81, 1, 35,Selene's Light
 4004,  82, 1, 35,Decoration Battle
 4005,  86, 1, 35,Break the Sabbath
+4006,  87, 1, 35,Scarlet SymphonyÅ@Å` Scarlet Phoneme
 4007,  61, 1, 35,Bad Apple!!
 4008,  78, 1, 35,Spirit BattleÅ@Å` Perdition Crisis
 4009,  75, 1, 35,Alice Maestra
