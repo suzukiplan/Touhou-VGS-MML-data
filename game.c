@@ -15,7 +15,7 @@ FILE* vge_fopen(const char*, const char*);
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
 #define TITLE_NUM 10
-#define SONG_NUM 87
+#define SONG_NUM 88
 
 /* Structure */
 struct InputInf {
@@ -715,10 +715,18 @@ int vge_loop()
 					}
 				}
 				if(_list[i].dis) {
-					putfontSD(8+bx,dp+7,"%3d.",ii);
+					if(_listType) {
+						putfontSD(8+bx,dp+7,"%3d.",_list[i].id & 0xff);
+					} else {
+						putfontSD(8+bx,dp+7,"%3d.",ii);
+					}
 					putkanji(26+bx,dp+3,103,"%s",_list[i].text);
 				} else {
-					putfontS(8+bx,dp+7,"%3d.",ii);
+					if(_listType) {
+						putfontS(8+bx,dp+7,"%3d.",_list[i].id & 0xff);
+					} else {
+						putfontS(8+bx,dp+7,"%3d.",ii);
+					}
 					putkanji(27+bx,dp+4,1,"%s",_list[i].text);
 					putkanji(26+bx,dp+3,255,"%s",_list[i].text);
 				}
