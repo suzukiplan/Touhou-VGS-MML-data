@@ -868,39 +868,41 @@ int vge_loop()
 		}
 		vge_boxfSP(0,307,j,315,3);
 		vge_boxfSP(ii,307,240,315,3);
-		/* left button */
-		if(0<pageChange) {
-			vge_putSP(0,16,192,16,16, 0,304);
-		} else {
-			if(pageChange) {
-				vge_putSP(0,0,192,16,16, 0,304);
+		if(!PRF.lock) {
+			/* left button */
+			if(0<pageChange) {
+				vge_putSP(0,16,192,16,16, 0,304);
 			} else {
-				if(0==touch_off && 3==touching
-				&& HITCHK(ci.cx-4,ci.cy-4,8,8,0,304,16,16)) {
-					vge_putSP(0,16,192,16,16, 0,304);
-					if(push) {
-						pageChange=1;
-					}
-				} else {
+				if(pageChange) {
 					vge_putSP(0,0,192,16,16, 0,304);
+				} else {
+					if(0==touch_off && 3==touching
+					&& HITCHK(ci.cx-4,ci.cy-4,8,8,0,304,16,16)) {
+						vge_putSP(0,16,192,16,16, 0,304);
+						if(push) {
+							pageChange=1;
+						}
+					} else {
+						vge_putSP(0,0,192,16,16, 0,304);
+					}
 				}
 			}
-		}
-		/* right button */
-		if(pageChange<0) {
-			vge_putSP(0,48,192,16,16, 224,304);
-		} else {
-			if(pageChange) {
-				vge_putSP(0,32,192,16,16, 224,304);
+			/* right button */
+			if(pageChange<0) {
+				vge_putSP(0,48,192,16,16, 224,304);
 			} else {
-				if(0==touch_off && 3==touching
-				&& HITCHK(ci.cx-4,ci.cy-4,8,8,224,304,16,16)) {
-					vge_putSP(0,48,192,16,16, 224,304);
-					if(push) {
-						pageChange=-1;
-					}
-				} else {
+				if(pageChange) {
 					vge_putSP(0,32,192,16,16, 224,304);
+				} else {
+					if(0==touch_off && 3==touching
+					&& HITCHK(ci.cx-4,ci.cy-4,8,8,224,304,16,16)) {
+						vge_putSP(0,48,192,16,16, 224,304);
+						if(push) {
+							pageChange=-1;
+						}
+					} else {
+						vge_putSP(0,32,192,16,16, 224,304);
+					}
 				}
 			}
 		}
