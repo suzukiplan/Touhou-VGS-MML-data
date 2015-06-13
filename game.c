@@ -1387,7 +1387,7 @@ static void nextSong(int shuf)
 		}
 	}
 
-	if(shuf && PRF.lock) {
+	if(_listType && shuf && PRF.lock) {
 		for(i=0;i<_title[ct].songNum;i++) {
 			if(!_list[songTop+i].played && !_list[songTop+i].dis) {
 				break;
