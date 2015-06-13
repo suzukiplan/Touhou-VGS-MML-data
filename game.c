@@ -1181,7 +1181,7 @@ SKIP_DRAW_PROC:
 		}
 	}
 	if(j==SONG_NUM) {
-		putfontS(8,114,"THE ALL OF SONGS ARE DISABLED.");
+		if(!g_background) putfontS(8,114,"THE ALL OF SONGS ARE DISABLED.");
 		px=ci.cx;
 		py=ci.cy;
 		return 0;
@@ -1195,6 +1195,9 @@ SKIP_DRAW_PROC:
 		_forcePause=0;
 		playing=0;
 	}
+
+	/* skip buttons in background */
+	if(g_background) goto SKIP_DRAW_PROC2;
 
 	/* set X position of the buttons */
 	if(_listType) {
@@ -1282,6 +1285,8 @@ SKIP_DRAW_PROC:
 		}
 	}
 
+SKIP_DRAW_PROC2:
+
 	// acyclic song
 	if(0==playwait && playing && 0==_psg.waitTime) {
 		if(0==interval2) {
@@ -1349,6 +1354,10 @@ SKIP_DRAW_PROC:
 				interval=0;
 			}
 		}
+	}
+
+	if(g_background) {
+		myprint(44,152,"I'll be background!");
 	}
 
 	px=ci.cx;
