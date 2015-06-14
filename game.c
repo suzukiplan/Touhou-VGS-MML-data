@@ -1406,6 +1406,11 @@ static void nextSong(int shuf)
 		/* shuffle mode */
 		if(_listType) {
 			while(1) {
+				for(songTop=0;;songTop++) {
+					if((_list[songTop].id & 0xFFFF00)>>8 == _title[ct].id) {
+						break;
+					}
+				}
 				for(i=0;i<_title[ct].songNum;i++) {
 					if(!_list[songTop+i].played && !_list[songTop+i].dis) {
 						break;
