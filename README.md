@@ -342,7 +342,7 @@
 東方風神録
 
 - × 1. 封印されし神々 -- タイトル画面テーマ
-- × 2. 人恋し神様　～ Romantic Fall -- １面テーマ
+- ● 2. 人恋し神様　～ Romantic Fall -- １面テーマ
 - ● 3. 稲田姫様に叱られるから -- １面ボス・秋 穣子のテーマ
 - × 4. 厄神様の通り道　～ Dark Road -- ２面テーマ
 - × 5. 運命のダークサイド -- ２面ボス・鍵山 雛のテーマ
@@ -615,3 +615,4 @@
 - bslot085.mml: 六十年目の東方裁判　～ Fate of Sixty Years
 - bslot086.mml: Break the Sabbath
 - bslot087.mml: 紅響曲　～ Scarlet Phoneme
+- bslot088.mml: 人恋し神様　～ Romantic Fall
