@@ -344,7 +344,7 @@
 - × 1. 封印されし神々 -- タイトル画面テーマ
 - ● 2. 人恋し神様　～ Romantic Fall -- １面テーマ
 - ● 3. 稲田姫様に叱られるから -- １面ボス・秋 穣子のテーマ
-- × 4. 厄神様の通り道　～ Dark Road -- ２面テーマ
+- ● 4. 厄神様の通り道　～ Dark Road -- ２面テーマ
 - × 5. 運命のダークサイド -- ２面ボス・鍵山 雛のテーマ
 - ● 6. 神々が恋した幻想郷 -- ３面テーマ
 - ● 7. 芥川龍之介の河童　～ Candid Friend -- ３面ボス・河城 にとりのテーマ
@@ -616,3 +616,4 @@
 - bslot086.mml: Break the Sabbath
 - bslot087.mml: 紅響曲　～ Scarlet Phoneme
 - bslot088.mml: 人恋し神様　～ Romantic Fall
+- bslot089.mml: 厄神様の通り道　～ Dark Road

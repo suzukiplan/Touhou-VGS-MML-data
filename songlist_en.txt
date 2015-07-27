@@ -114,6 +114,7 @@
 # ID  BGM LP COL TITLE
 A002,  88, 1,  7,A god that misses peopleÅ@Å` Romantic Fall
 A003,  69, 1,  7,Because Princess Inada is Scolding Me
+A004,  89, 1,  7,the Road of the Apotropaic GodÅ@Å` Dark Road
 A006,  64, 1,  7,the Gensokyo the Gods Loved
 A007,  65, 1,  7,Akutagawa Ryuunosuke's 'Kappa'Å@Å` Candid Friend
 A00E,  67, 1,  7,Tomorrow will be SpecialÅCYesterday was not
