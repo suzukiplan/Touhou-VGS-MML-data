@@ -118,6 +118,7 @@ A004,  89, 1,  7,the Road of the Apotropaic GodÅ@Å` Dark Road
 A005,  90, 1,  7,Darkside of Fate
 A006,  64, 1,  7,the Gensokyo the Gods Loved
 A007,  65, 1,  7,Akutagawa Ryuunosuke's 'Kappa'Å@Å` Candid Friend
+A008,  91, 1,  7,Fall of FallÅ@Å` Autumnal Waterfall
 A00E,  67, 1,  7,Tomorrow will be SpecialÅCYesterday was not
 A00F,  68, 1,  7,Native Faith
 
