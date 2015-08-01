@@ -242,10 +242,24 @@ int vge_term()
 int vge_loop()
 {
 	static const char* tn[4]={
-		 "SANKAKU"
-		,"NOKOGIR"
-		,"KUKEI  "
-		,"NOIZE  "
+		 "TRI"
+		,"SAW"
+		,"SQ"
+		,"NOZ"
+	};
+	static const int pianoPos[12]={
+		 0
+		,2
+		,4
+		,8
+		,10
+		,12
+		,14
+		,16
+		,18
+		,22
+		,24
+		,26
 	};
 	static int isFirst=1;
 	static int pos[6];
@@ -280,8 +294,8 @@ int vge_loop()
 	int i,j,k;
 	int ii;
 	int iii;
+	unsigned int u;
 	int dp;
-	int wav;
 	int bmin;
 	int songNum;
 	int playingTitle;
@@ -1145,29 +1159,56 @@ int vge_loop()
 	} else {
 		putfontS(8,24,"WAIT TIME %05d",_psg.waitTime);
 	}
-	putfontS(8,32,"CH0 COUNT %05d  CH1 COUNT %05d  CH2 COUNT %05d",_psg.ch[0].count,_psg.ch[1].count,_psg.ch[2].count);
-	putfontS(8,40,"CH3 COUNT %05d  CH4 COUNT %05d  CH5 COUNT %05d",_psg.ch[3].count,_psg.ch[4].count,_psg.ch[5].count);
+	/* seek */
+	vge_boxSP(4,34,235,42,53);
+	vge_lineSP(4,34,4,42,48);
+	vge_lineSP(4,34,235,34,48);
+	vge_lineSP(8,37,229,37,53);
+	vge_lineSP(8,39,229,39,48);
+	u=_psg.timeI+_psg.timeL;
+	if(u) {
+		if(u<_psg.timeP) {
+			ii=(_psg.timeP-u)%_psg.timeL;
+			ii=(ii+_psg.timeI)%u * 220 / u;
+		} else {
+			ii=_psg.timeP*220 / u;
+		}
+		vge_lineSP(8+ii,35,8+ii,41,109);
+		vge_lineSP(9+ii,35,9+ii,41,103);
 
-	/* Clac wav pow */
+		if(push && 0==touch_off && HITCHK(ci.cx-4,ci.cy-4,8,8, 8,26,220,24)) {
+			i=ci.cx;
+			i-=8;
+			if(i<0) i=0;
+			if(220<i) i=220;
+			vge_bpos(u*i/220);
+		}
+	}
+
+	/* piano */
 	for(i=0;i<6;i++) {
-		wav=_psg.wav[i];
-		if(wav<0)wav=-wav;
-		wav*=_psg.ch[i].vol;
-		wav/=10;
-		for(k=0;k<3;k++) {
-			if(pos[i]<wav) {
-				pos[i]=wav;
-			} else {
-				pos[i]--;
+		putfontS(4,46+i*10,"CH%d %s",i,tn[_psg.ch[i].toneT]);
+		vge_putSP(0,0,208,200,8,36,46+i*10);
+		if(_psg.wav[i]!=0 || _psg.ch[i].keyOn) {
+			k=_psg.ch[i].toneK;
+			switch(k%12) {
+				case 0: j=0; ii=0; break;
+				case 2: j=0; ii=1; break;
+				case 3: j=0; ii=2; break;
+				case 5: j=0; ii=3; break;
+				case 7: j=0; ii=4; break;
+				case 8: j=0; ii=5; break;
+				case 10:j=0; ii=6; break;
+				case 1: j=1; ii=-1; break;
+				case 4: j=1; ii=2; break;
+				case 6: j=1; ii=3; break;
+				case 9: j=1; ii=5; break;
+				case 11:j=1; ii=6; break;
 			}
-		}
-		if(164<pos[i]) {
-			pos[i]=164;
-		}
-		putfontS(8,56+i*8,"CH%d %s %02d ",i,tn[_psg.ch[i].toneT],_psg.ch[i].toneK);
-		for(j=0;j<pos[i];j++) {
-			if(j%2) {
-				vge_lineSP(68+j,57+i*8,68+j,63+i*8,46);
+			if(0==j) {
+				vge_boxfSP(k/12*28+ii*4+36,46+i*10,k/12*28+ii*4+38,52+i*10,31);
+			} else {
+				vge_boxfSP(k/12*28+ii*4+38,46+i*10,k/12*28+ii*4+40,51+i*10,31);
 			}
 		}
 	}
