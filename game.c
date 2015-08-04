@@ -1199,7 +1199,7 @@ int vge_loop()
 				case 7: j=0; ii=4; break;
 				case 8: j=0; ii=5; break;
 				case 10:j=0; ii=6; break;
-				case 1: j=1; ii=-1; break;
+				case 1: j=1; ii=0; break;
 				case 4: j=1; ii=2; break;
 				case 6: j=1; ii=3; break;
 				case 9: j=1; ii=5; break;
