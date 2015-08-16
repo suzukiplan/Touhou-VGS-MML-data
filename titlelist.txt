@@ -1,26 +1,25 @@
 #=============================================================================
-# “Œ•ûBGM on VGS - songtitle source
+# æ±æ–¹BGM on VGS - songtitle source
 #-----------------------------------------------------------------------------
-# [Žd—l]
-# - ‚±‚Ìƒtƒ@ƒCƒ‹‚ÍSJIS‚Å•Û‘¶‚µ‚È‚¢‚ÆƒoƒO‚é ¦‚¤‚Á‚©‚èUTF8•Û‘¶‚µ‚È‚¢‚æ‚¤‚É’ˆÓ
-# - ‹ós‚Í–³Ž‹
-# - #‚Í\0‚É’uŠ·‚³‚ê‚éi‹È–¼‚É‚ ‚éê‡‚Í‘SŠp‚ÅŽw’è‚·‚é‚±‚Æj
-# - ã‚©‚ç‡‚É“Œ•ûVGS‚ÌƒŠƒXƒg‚É•\Ž¦‚³‚ê‚éiID‚Ì¸‡‚Æ‚©‚Å‚Í‚È‚¢‚Ì‚Å’ˆÓj
+# [ä»•æ§˜]
+# - ç©ºè¡Œã¯ç„¡è¦–
+# - #ã¯Â¥0ã«ç½®æ›ã•ã‚Œã‚‹ï¼ˆæ›²åã«ã‚ã‚‹å ´åˆã¯å…¨è§’ã§æŒ‡å®šã™ã‚‹ã“ã¨ï¼‰
+# - ä¸Šã‹ã‚‰é †ã«æ±æ–¹VGSã®ãƒªã‚¹ãƒˆã«è¡¨ç¤ºã•ã‚Œã‚‹ï¼ˆIDã®æ˜‡é †ã¨ã‹ã§ã¯ãªã„ã®ã§æ³¨æ„ï¼‰
 # - ID:
-#  * ƒ†ƒj[ƒN‚Å‚ ‚é‚±‚Æi–³ŒøƒŠƒXƒg‚ÅŽQÆ‚µ‚Ä‚¢‚éj
-#  * 16bit‚Å‘‚¢‚Ä‚¢‚é‚ª32bitŽg‚¦‚é
-#  * ID‚ÌãˆÊ24bit‚ªì•iŽ¯•ÊŽqA‰ºˆÊ8bit‚ªì•i•Ê’Ê‚µ”Ô†
-# - BGM: bslot‚Ì”Ô†
-# - COL: ƒŠƒXƒg‚Ì”wŒiFiƒpƒŒƒbƒg”Ô†‚ÅŽw’èj
-# - TITLE: JISX0201 or JISX0208‚Ì”ÍˆÍ‚ÅŽw’è‚Å‚«‚é
+#  * ãƒ¦ãƒ‹ãƒ¼ã‚¯ã§ã‚ã‚‹ã“ã¨ï¼ˆç„¡åŠ¹ãƒªã‚¹ãƒˆã§å‚ç…§ã—ã¦ã„ã‚‹ï¼‰
+#  * 16bitã§æ›¸ã„ã¦ã„ã‚‹ãŒ32bitä½¿ãˆã‚‹
+#  * IDã®ä¸Šä½24bitãŒä½œå“è­˜åˆ¥å­ã€ä¸‹ä½8bitãŒä½œå“åˆ¥é€šã—ç•ªå·
+# - BGM: bslotã®ç•ªå·
+# - COL: ãƒªã‚¹ãƒˆã®èƒŒæ™¯è‰²ï¼ˆãƒ‘ãƒ¬ãƒƒãƒˆç•ªå·ã§æŒ‡å®šï¼‰
+# - TITLE: JISX0201 or JISX0208ã®ç¯„å›²ã§æŒ‡å®šã§ãã‚‹
 #=============================================================================
-0040,(c)1997 ZUN Soft,“Œ•ûŒ¶‘z‹½@` Lotus Land Story
-0050,(c)1997 ZUN Soft,“Œ•û‰öãY’k@` Mystic Square
-0056,(c)2000 ZUN,“Œ•ûŒ¶‘z“I‰¹Šy@` ZUN's Strange Works
-0059,(c)2002 ãŠCƒAƒŠƒXŒ¶žÙ’c,–H—‰lŒ`@` Dolls in Pseudo Paradise
-0060,(c)2002 ãŠCƒAƒŠƒXŒ¶žÙ’c,“Œ•ûg–‚‹½@` the Embodiment of Scarlet Devil.
-0070,(c)2003 ãŠCƒAƒŠƒXŒ¶žÙ’c,“Œ•û—dX–²@` Perfect Cherry Blossom.
-0080,(c)2004 ãŠCƒAƒŠƒXŒ¶žÙ’c,“Œ•û‰i–é´@` Imperishable Night.
-0090,(c)2005 ãŠCƒAƒŠƒXŒ¶žÙ’c,“Œ•û‰Ô‰f’Ë@` Phantasmagoria of Flower View.
-00A0,(c)2007 ãŠCƒAƒŠƒXŒ¶žÙ’c,“Œ•û•—_˜^@` Mountain of Faith.
-00B0,(c)2008 ãŠCƒAƒŠƒXŒ¶žÙ’c,“Œ•û’n—ì“a@` Subterranean Animism.
+0040,(c)1997 ZUN Soft,æ±æ–¹å¹»æƒ³éƒ·ã€€ã€œ Lotus Land Story
+0050,(c)1997 ZUN Soft,æ±æ–¹æ€ªç¶ºè«‡ã€€ã€œ Mystic Square
+0056,(c)2000 ZUN,æ±æ–¹å¹»æƒ³çš„éŸ³æ¥½ã€€ã€œ ZUN's Strange Works
+0059,(c)2002 ä¸Šæµ·ã‚¢ãƒªã‚¹å¹»æ¨‚å›£,è“¬èŽ±äººå½¢ã€€ã€œ Dolls in Pseudo Paradise
+0060,(c)2002 ä¸Šæµ·ã‚¢ãƒªã‚¹å¹»æ¨‚å›£,æ±æ–¹ç´…é­”éƒ·ã€€ã€œ the Embodiment of Scarlet Devil.
+0070,(c)2003 ä¸Šæµ·ã‚¢ãƒªã‚¹å¹»æ¨‚å›£,æ±æ–¹å¦–ã€…å¤¢ã€€ã€œ Perfect Cherry Blossom.
+0080,(c)2004 ä¸Šæµ·ã‚¢ãƒªã‚¹å¹»æ¨‚å›£,æ±æ–¹æ°¸å¤œæŠ„ã€€ã€œ Imperishable Night.
+0090,(c)2005 ä¸Šæµ·ã‚¢ãƒªã‚¹å¹»æ¨‚å›£,æ±æ–¹èŠ±æ˜ å¡šã€€ã€œ Phantasmagoria of Flower View.
+00A0,(c)2007 ä¸Šæµ·ã‚¢ãƒªã‚¹å¹»æ¨‚å›£,æ±æ–¹é¢¨ç¥žéŒ²ã€€ã€œ Mountain of Faith.
+00B0,(c)2008 ä¸Šæµ·ã‚¢ãƒªã‚¹å¹»æ¨‚å›£,æ±æ–¹åœ°éœŠæ®¿ã€€ã€œ Subterranean Animism.

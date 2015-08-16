@@ -1,45 +1,45 @@
 #=============================================================================
-# “Œ•ûBGM on VGS - songlist source (English)
+# æ±æ–¹BGM on VGS - songlist source (English)
 # NOTICE: this English translation is unofficial.
 #=============================================================================
 
-# “Œ•ûŒ¶‘z‹½(0x40)
+# æ±æ–¹å¹»æƒ³éƒ·(0x40)
 # ID  BGM LP COL TITLE
-4001,  79, 1, 35,Gensokyo@` Lotus Land Story
+4001,  79, 1, 35,Gensokyoã€€ã€œ Lotus Land Story
 4002,  80, 1, 35,Witching Dream
 4003,  81, 1, 35,Selene's Light
 4004,  82, 1, 35,Decoration Battle
 4005,  86, 1, 35,Break the Sabbath
-4006,  87, 1, 35,Scarlet Symphony@` Scarlet Phoneme
+4006,  87, 1, 35,Scarlet Symphonyã€€ã€œ Scarlet Phoneme
 4007,  61, 1, 35,Bad Apple!!
-4008,  78, 1, 35,Spirit Battle@` Perdition Crisis
+4008,  78, 1, 35,Spirit Battleã€€ã€œ Perdition Crisis
 4009,  75, 1, 35,Alice Maestra
 400A,  74, 1, 35,Maiden's Capriccio
 400B,  73, 1, 35,Casket of Star
 
-# “Œ•û‰öãY’k(0x50)
+# æ±æ–¹æ€ªç¶ºè«‡(0x50)
 # ID  BGM LP COL TITLE
 5010,  62, 1,196,Alice in the wonderland
 5011,  63, 1,196,the Grimoire of Alice
 
-# “Œ•ûŒ¶‘z“I‰¹Šy@` ZUN's Strange Works (0x56)
+# æ±æ–¹å¹»æƒ³çš„éŸ³æ¥½ã€€ã€œ ZUN's Strange Works (0x56)
 5603,  77, 1,  7,Plastic Space
 
-# –H—‰lŒ`(0x59)
+# è“¬è±äººå½¢(0x59)
 # ID  BGM LP COL TITLE
 5901,  59, 0,196,Legend of Hourai
 
-# “Œ•ûg–‚‹½(0x60)
+# æ±æ–¹ç´…é­”éƒ·(0x60)
 # ID  BGM LP COL TITLE
 6001,   0, 1,  7,a Dream that is more Scarlet than Red
 6002,   1, 1,  7,a Soul Red like Ground Cherry
 6003,   2, 1,  7,Mystics Night
 6004,   3, 1,  7,Lunate Elf
 6005,   4, 1,  7,Beloved Tomboyish Daughter
-6006,   5, 1,  7,Shanghai Teahouse@` Chinese Tea
+6006,   5, 1,  7,Shanghai Teahouseã€€ã€œ Chinese Tea
 6007,   6, 1,  7,Shanghai Alice in 1884
-6008,   7, 1,  7,VoileCthe Magic Library
-6009,   8, 1,  7,Locked Girl@` the Girl's Secret Room
+6008,   7, 1,  7,Voileï¼Œthe Magic Library
+6009,   8, 1,  7,Locked Girlã€€ã€œ the Girl's Secret Room
 600A,   9, 1,  7,the Maid and the Pocket Watch of Blood
 600B,  10, 1,  7,Luna Dial
 600C,  11, 1,  7,the Young Descendant of Tepes
@@ -47,12 +47,12 @@
 600E,  13, 1,  7,the Centennial Festival for Magical Girls
 600F,  14, 1,  7,U.N.Owen was her?
 6010,  15, 1,  7,Crimson Beyond a Fleeting Eternity
-6011,  16, 1,  7,Crimson Belvedere@` Eastern Dream...
+6011,  16, 1,  7,Crimson Belvedereã€€ã€œ Eastern Dream...
 
-# “Œ•û—dX–²(0x70)
+# æ±æ–¹å¦–ã€…å¤¢(0x70)
 # ID  BGM LP COL TITLE
-7001,  17, 1, 35,Mystic Dream@` Snow or Cherry Petal
-7002,  18, 1, 35,Paradise@` Deep Mountain
+7001,  17, 1, 35,Mystic Dreamã€€ã€œ Snow or Cherry Petal
+7002,  18, 1, 35,Paradiseã€€ã€œ Deep Mountain
 7003,  19, 1, 35,Crystalize Silver
 7004,  20, 1, 35,the Fantastic Legend of Tohno
 7005,  21, 1, 35,Diao Ye Zong (Withered Leaf)
@@ -60,68 +60,69 @@
 7007,  23, 1, 35,Doll Judgement
 7008,  24, 1, 35,the Capital City of Flowers in the Sky
 7009,  25, 1, 35,Phantom Ensemble 
-700A,  26, 1, 35,Mystic Oriental Dream@` Ancient Temple
-700B,  27, 1, 35,Hiroari Shoots a Strange Bird@` Till When?
+700A,  26, 1, 35,Mystic Oriental Dreamã€€ã€œ Ancient Temple
+700B,  27, 1, 35,Hiroari Shoots a Strange Birdã€€ã€œ Till When?
 700C,  28, 1, 35,Ultimate truth
-700D,  29, 1, 35,Bloom NoblyCInk-black Cherry Blossom
+700D,  29, 1, 35,Bloom Noblyï¼ŒInk-black Cherry Blossom
 700E,  30, 1, 35,Boarder of Life
 700F,  31, 1, 35,Charming Domination
-7010,  32, 1, 35,a Maiden's Illusionary Funeral@` Necro-Fantasy
-7011,  33, 1, 35,Charming Domination@` Who done it!
+7010,  32, 1, 35,a Maiden's Illusionary Funeralã€€ã€œ Necro-Fantasy
+7011,  33, 1, 35,Charming Dominationã€€ã€œ Who done it!
 7012,  34, 1, 35,Necro Fantasia
 7013,  35, 1, 35,Dream of a Spring Breeze
-7014,  36, 1, 35,Sakura Sakura@` Japanize Dream...
-7015,  37, 1, 35,Flower of Past Days@` Fairy of Flower
+7014,  36, 1, 35,Sakura Sakuraã€€ã€œ Japanize Dream...
+7015,  37, 1, 35,Flower of Past Daysã€€ã€œ Fairy of Flower
 
-# “Œ•û‰i–é´(0x80)
+# æ±æ–¹æ°¸å¤œæŠ„(0x80)
 # ID  BGM LP COL TITLE
-8001,  38, 1,196,Imperishable Night@` Eastern Night
-8002,  39, 1,196,Illusionary Night@` Ghostly Eyes
-8003,  40, 1,196,Stirring an Autumn Moon@` Mooned Insect
-8004,  41, 1,196,Song of the Night Sparrow@` Night Bird
-8005,  42, 1,196,UnwittinglyCDistracted with her Song
-8006,  43, 1,196,Nostalgic Blood of the Eastern@` Old World
+8001,  38, 1,196,Imperishable Nightã€€ã€œ Eastern Night
+8002,  39, 1,196,Illusionary Nightã€€ã€œ Ghostly Eyes
+8003,  40, 1,196,Stirring an Autumn Moonã€€ã€œ Mooned Insect
+8004,  41, 1,196,Song of the Night Sparrowã€€ã€œ Night Bird
+8005,  42, 1,196,Unwittinglyï¼ŒDistracted with her Song
+8006,  43, 1,196,Nostalgic Blood of the Easternã€€ã€œ Old World
 8007,  44, 1,196,Plain Asia
 8008,  45, 1,196,Retribution for the Imperishable Night
-8009,  46, 1,196,Maiden's Capriccio@` Dream Battle
+8009,  46, 1,196,Maiden's Capriccioã€€ã€œ Dream Battle
 800A,  47, 1,196,Love-coloured Master Spark
-800B,  48, 1,196,Cinderella Cage@` Kagome-Kagome
-800C,  49, 1,196,Lunatic Eyes@` Invisible Full Moon
+800B,  48, 1,196,Cinderella Cageã€€ã€œ Kagome-Kagome
+800C,  49, 1,196,Lunatic Eyesã€€ã€œ Invisible Full Moon
 800D,  50, 1,196,Voyage 1969
-800E,  51, 1,196,Gensokyo Millenium@` History of the Moon
-800F,  52, 1,196,Flight of the Bamboo Cutter@` Lunatic Princess
+800E,  51, 1,196,Gensokyo Milleniumã€€ã€œ History of the Moon
+800F,  52, 1,196,Flight of the Bamboo Cutterã€€ã€œ Lunatic Princess
 8010,  53, 1,196,Voyage 1970
-8011,  54, 1,196,Extend Ash@` Hourai Victim
-8012,  55, 1,196,Reach for the MoonCImmortal Smoke
+8011,  54, 1,196,Extend Ashã€€ã€œ Hourai Victim
+8012,  55, 1,196,Reach for the Moonï¼ŒImmortal Smoke
 8013,  56, 1,196,Evening Primrose
-8014,  57, 1,196,Eternal Dream@` Mystic Maple
+8014,  57, 1,196,Eternal Dreamã€€ã€œ Mystic Maple
 8015,  58, 1,196,Eastern Youkai Beauty
 
-# “Œ•û‰Ô‰f’Ë(0x90)
+# æ±æ–¹èŠ±æ˜ å¡š(0x90)
 # ID  BGM LP COL TITLE
-9001,  70, 1, 35,Kaeidzuka@` Higan Retour
-9002,  71, 1, 35,Spring Lane@` Colorful Path
+9001,  70, 1, 35,Kaeidzukaã€€ã€œ Higan Retour
+9002,  71, 1, 35,Spring Laneã€€ã€œ Colorful Path
 9003,  76, 1, 35,Oriental Dark Flight
 9004,  66, 1, 35,Flowering Knight
-# 9005,  26, 1, 35,Mystic Oriental Dream@` Ancient Temple
-# 9006,  49, 1, 35,Lunatic Eyes@` Invisible Full Moon
+# 9005,  26, 1, 35,Mystic Oriental Dreamã€€ã€œ Ancient Temple
+# 9006,  49, 1, 35,Lunatic Eyesã€€ã€œ Invisible Full Moon
 9007,  83, 1, 35,Adventure of the Lovestruck Tomboy
 900A,  84, 1, 35,White Flag of the Usa Jingu
 900B,  60, 1, 35,Fujin Maiden (ShortVersion)
 900F,  85, 1, 35,Eastern Judgement in the Sixtieth Year
 
-# “Œ•û•—_˜^(0xA0)
+# æ±æ–¹é¢¨ç¥éŒ²(0xA0)
 # ID  BGM LP COL TITLE
-A002,  88, 1,  7,A god that misses people@` Romantic Fall
+A002,  88, 1,  7,A god that misses peopleã€€ã€œ Romantic Fall
 A003,  69, 1,  7,Because Princess Inada is Scolding Me
-A004,  89, 1,  7,the Road of the Apotropaic God@` Dark Road
+A004,  89, 1,  7,the Road of the Apotropaic Godã€€ã€œ Dark Road
 A005,  90, 1,  7,Darkside of Fate
 A006,  64, 1,  7,the Gensokyo the Gods Loved
-A007,  65, 1,  7,Akutagawa Ryuunosuke's 'Kappa'@` Candid Friend
-A008,  91, 1,  7,Fall of Fall@` Autumnal Waterfall
-A00E,  67, 1,  7,Tomorrow will be SpecialCYesterday was not
+A007,  65, 1,  7,Akutagawa Ryuunosuke's 'Kappa'ã€€ã€œ Candid Friend
+A008,  91, 1,  7,Fall of Fallã€€ã€œ Autumnal Waterfall
+A009,  92, 1,  7,The Youkai Mountainã€€ï½ Mysterious Mountain
+A00E,  67, 1,  7,Tomorrow will be Specialï¼ŒYesterday was not
 A00F,  68, 1,  7,Native Faith
 
-# “Œ•û’n—ì“a(0xB0)
+# æ±æ–¹åœ°éœŠæ®¿(0xB0)
 # ID  BGM LP COL TITLE
-B009,  72, 1,196,Satori Maiden@` 3rd eye
+B009,  72, 1,196,Satori Maidenã€€ã€œ 3rd eye
