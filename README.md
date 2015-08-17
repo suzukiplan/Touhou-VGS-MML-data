@@ -346,7 +346,7 @@
 - ● 6. 神々が恋した幻想郷 -- ３面テーマ
 - ● 7. 芥川龍之介の河童　～ Candid Friend -- ３面ボス・河城 にとりのテーマ
 - ● 8. フォールオブフォール　～ 秋めく滝 -- ４面テーマ
-- × 9. 妖怪の山　～ Mysterious Mountain -- ４面ボス・射命丸 文のテーマ
+- ● 9. 妖怪の山　～ Mysterious Mountain -- ４面ボス・射命丸 文のテーマ
 - × 10. 少女が見た日本の原風景 -- ５面テーマ
 - × 11. 信仰は儚き人間の為に -- ５面ボス・東風谷 早苗のテーマ
 - × 12. 御柱の墓場　～ Grave of Being -- ６面テーマ
@@ -524,95 +524,96 @@
 - 以前、別の形で公開していたMMLについては、ここの使用許諾を適用しません。各公開ドキュメントに付随している方の使用許諾を優先してください。
 
 (4) ファイルと曲の対応関係
-- bslot000.mml: 赤より紅い夢
-- bslot001.mml: ほおずきみたいに紅い魂
-- bslot002.mml: 妖魔夜行
-- bslot003.mml: ルーネイトエルフ
-- bslot004.mml: おてんば恋娘
-- bslot005.mml: 上海紅茶館 ～ Chinese Tea
-- bslot006.mml: 明治十七年の上海アリス
-- bslot007.mml: ヴワル魔法図書館
-- bslot008.mml: ラクトガール ～ 少女密室
-- bslot009.mml: メイドと血の懐中時計
-- bslot010.mml: 月時計 ～ ルナ・ダイアル
-- bslot011.mml: ツェペシュの幼き末裔
-- bslot012.mml: 亡き王女の為のセプテット
-- bslot013.mml: 魔法少女達の百年祭
-- bslot014.mml: U.N.オーエンは彼女なのか？
-- bslot015.mml: 紅より儚い永遠
-- bslot016.mml: 紅楼 ～ Eastern Dream...
-- bslot017.mml: 妖々夢 ～ Snow or Cherry Petal
-- bslot018.mml: 無何有の郷 ～ Deep Mountain
-- bslot019.mml: クリスタライズシルバー
-- bslot020.mml: 遠野幻想物語
-- bslot021.mml: ティアオイエツォン(withered leaf)
-- bslot022.mml: ブクレシュティの人形師
-- bslot023.mml: 人形裁判 ～ 人の形弄びし少女
-- bslot024.mml: 天空の花の都
-- bslot025.mml: 幽霊楽団 ～ Phantom Ensemble
-- bslot026.mml: 東方妖々夢 ～ Ancient Temple
-- bslot027.mml: 広有射怪鳥事 ～ Till When?
-- bslot028.mml: アルティメットトゥルース
-- bslot029.mml: 幽雅に咲かせ、墨染の桜 ～ Border of Life
-- bslot030.mml: ボーダーオブライフ
-- bslot031.mml: 妖々跋扈
-- bslot032.mml: 少女幻葬 ～ Necro-Fantasy
-- bslot033.mml: 妖々跋扈 ～ Who done it!
-- bslot034.mml: ネクロファンタジア
-- bslot035.mml: 春風の夢
-- bslot036.mml: さくらさくら ～ Japanize Dream...
-- bslot037.mml: 過去の花 ～ Fairy of Flower
-- bslot038.mml: 永夜抄 ～ Eastern Night.
-- bslot039.mml: 幻視の夜 ～ Ghostly Eyes
-- bslot040.mml: 蠢々秋月 ～ Mooned Insect
-- bslot041.mml: 夜雀の歌声 ～ Night Bird
-- bslot042.mml: もう歌しか聞こえない
-- bslot043.mml: 懐かしき東方の血 ～ Old World
-- bslot044.mml: プレインエイジア
-- bslot045.mml: 永夜の報い ～ Imperishable Night.
-- bslot046.mml: 少女綺想曲 ～ Dream Battle
-- bslot047.mml: 恋色マスタースパーク
-- bslot048.mml: シンデレラケージ ～ Kagome-Kagome
-- bslot049.mml: 狂気の瞳 ～ Invisible Full Moon
-- bslot050.mml: ヴォヤージュ1969
-- bslot051.mml: 千年幻想郷 ～ History of the Moon
-- bslot052.mml: 竹取飛翔 ～ Lunatic Princess
-- bslot053.mml: ヴォヤージュ1970
-- bslot054.mml: エクステンドアッシュ ～ 蓬莱人
-- bslot055.mml: 月まで届け、不死の煙
-- bslot056.mml: 月見草
-- bslot057.mml: Eternal Dream ～ 幽玄の槭樹
-- bslot058.mml: 東方妖怪小町
-- bslot059.mml: 蓬莱伝説
-- bslot060.mml: 風神少女
-- bslot061.mml: Bad Apple!!
-- bslot062.mml: 不思議の国のアリス
-- bslot063.mml: the Grimoire of Alice
-- bslot064.mml: 神々が恋した幻想郷
-- bslot065.mml: 芥川龍之介の河童 ～ Candid Friend
-- bslot066.mml: フラワリングナイト
-- bslot067.mml: 明日ハレの日、ケの昨日
-- bslot068.mml: ネイティブフェイス
-- bslot069.mml: 稲田姫様に叱られるから
-- bslot070.mml: 花映塚 ～ Higan Retour
-- bslot071.mml: 春色小径 ～ Colorful Path
-- bslot072.mml: 少女さとり　～ 3rd eye
-- bslot073.mml: 星の器　～ Casket of Star
-- bslot074.mml: 少女綺想曲　～ Capriccio
-- bslot075.mml: アリスマエステラ
-- bslot076.mml: オリエンタルダークフライト
-- bslot077.mml: Plastic Space
-- bslot078.mml: 霊戦　～ Perdition crisis
-- bslot079.mml: 幻想郷　～ Lotus Land Story
-- bslot080.mml: Witching Dream
-- bslot081.mml: Selene's Light
-- bslot082.mml: 装飾戦　～ Decoration Battle
-- bslot083.mml: おてんば恋娘の冒険
-- bslot084.mml: お宇佐さまの素い幡
-- bslot085.mml: 六十年目の東方裁判　～ Fate of Sixty Years
-- bslot086.mml: Break the Sabbath
-- bslot087.mml: 紅響曲　～ Scarlet Phoneme
-- bslot088.mml: 人恋し神様　～ Romantic Fall
-- bslot089.mml: 厄神様の通り道　～ Dark Road
-- bslot090.mml: 運命のダークサイド
-- bslot091.mml: フォールオブフォール　～ 秋めく滝
+- BSLOT000.mml: 赤より紅い夢
+- BSLOT001.mml: ほおずきみたいに紅い魂
+- BSLOT002.mml: 妖魔夜行
+- BSLOT003.mml: ルーネイトエルフ
+- BSLOT004.mml: おてんば恋娘
+- BSLOT005.mml: 上海紅茶館 ～ Chinese Tea
+- BSLOT006.mml: 明治十七年の上海アリス
+- BSLOT007.mml: ヴワル魔法図書館
+- BSLOT008.mml: ラクトガール ～ 少女密室
+- BSLOT009.mml: メイドと血の懐中時計
+- BSLOT010.mml: 月時計 ～ ルナ・ダイアル
+- BSLOT011.mml: ツェペシュの幼き末裔
+- BSLOT012.mml: 亡き王女の為のセプテット
+- BSLOT013.mml: 魔法少女達の百年祭
+- BSLOT014.mml: U.N.オーエンは彼女なのか？
+- BSLOT015.mml: 紅より儚い永遠
+- BSLOT016.mml: 紅楼 ～ Eastern Dream...
+- BSLOT017.mml: 妖々夢 ～ Snow or Cherry Petal
+- BSLOT018.mml: 無何有の郷 ～ Deep Mountain
+- BSLOT019.mml: クリスタライズシルバー
+- BSLOT020.mml: 遠野幻想物語
+- BSLOT021.mml: ティアオイエツォン(withered leaf)
+- BSLOT022.mml: ブクレシュティの人形師
+- BSLOT023.mml: 人形裁判 ～ 人の形弄びし少女
+- BSLOT024.mml: 天空の花の都
+- BSLOT025.mml: 幽霊楽団 ～ Phantom Ensemble
+- BSLOT026.mml: 東方妖々夢 ～ Ancient Temple
+- BSLOT027.mml: 広有射怪鳥事 ～ Till When?
+- BSLOT028.mml: アルティメットトゥルース
+- BSLOT029.mml: 幽雅に咲かせ、墨染の桜 ～ Border of Life
+- BSLOT030.mml: ボーダーオブライフ
+- BSLOT031.mml: 妖々跋扈
+- BSLOT032.mml: 少女幻葬 ～ Necro-Fantasy
+- BSLOT033.mml: 妖々跋扈 ～ Who done it!
+- BSLOT034.mml: ネクロファンタジア
+- BSLOT035.mml: 春風の夢
+- BSLOT036.mml: さくらさくら ～ Japanize Dream...
+- BSLOT037.mml: 過去の花 ～ Fairy of Flower
+- BSLOT038.mml: 永夜抄 ～ Eastern Night.
+- BSLOT039.mml: 幻視の夜 ～ Ghostly Eyes
+- BSLOT040.mml: 蠢々秋月 ～ Mooned Insect
+- BSLOT041.mml: 夜雀の歌声 ～ Night Bird
+- BSLOT042.mml: もう歌しか聞こえない
+- BSLOT043.mml: 懐かしき東方の血 ～ Old World
+- BSLOT044.mml: プレインエイジア
+- BSLOT045.mml: 永夜の報い ～ Imperishable Night.
+- BSLOT046.mml: 少女綺想曲 ～ Dream Battle
+- BSLOT047.mml: 恋色マスタースパーク
+- BSLOT048.mml: シンデレラケージ ～ Kagome-Kagome
+- BSLOT049.mml: 狂気の瞳 ～ Invisible Full Moon
+- BSLOT050.mml: ヴォヤージュ1969
+- BSLOT051.mml: 千年幻想郷 ～ History of the Moon
+- BSLOT052.mml: 竹取飛翔 ～ Lunatic Princess
+- BSLOT053.mml: ヴォヤージュ1970
+- BSLOT054.mml: エクステンドアッシュ ～ 蓬莱人
+- BSLOT055.mml: 月まで届け、不死の煙
+- BSLOT056.mml: 月見草
+- BSLOT057.mml: Eternal Dream ～ 幽玄の槭樹
+- BSLOT058.mml: 東方妖怪小町
+- BSLOT059.mml: 蓬莱伝説
+- BSLOT060.mml: 風神少女
+- BSLOT061.mml: Bad Apple!!
+- BSLOT062.mml: 不思議の国のアリス
+- BSLOT063.mml: the Grimoire of Alice
+- BSLOT064.mml: 神々が恋した幻想郷
+- BSLOT065.mml: 芥川龍之介の河童 ～ Candid Friend
+- BSLOT066.mml: フラワリングナイト
+- BSLOT067.mml: 明日ハレの日、ケの昨日
+- BSLOT068.mml: ネイティブフェイス
+- BSLOT069.mml: 稲田姫様に叱られるから
+- BSLOT070.mml: 花映塚 ～ Higan Retour
+- BSLOT071.mml: 春色小径 ～ Colorful Path
+- BSLOT072.mml: 少女さとり　～ 3rd eye
+- BSLOT073.mml: 星の器　～ Casket of Star
+- BSLOT074.mml: 少女綺想曲　～ Capriccio
+- BSLOT075.mml: アリスマエステラ
+- BSLOT076.mml: オリエンタルダークフライト
+- BSLOT077.mml: Plastic Space
+- BSLOT078.mml: 霊戦　～ Perdition crisis
+- BSLOT079.mml: 幻想郷　～ Lotus Land Story
+- BSLOT080.mml: Witching Dream
+- BSLOT081.mml: Selene's Light
+- BSLOT082.mml: 装飾戦　～ Decoration Battle
+- BSLOT083.mml: おてんば恋娘の冒険
+- BSLOT084.mml: お宇佐さまの素い幡
+- BSLOT085.mml: 六十年目の東方裁判　～ Fate of Sixty Years
+- BSLOT086.mml: Break the Sabbath
+- BSLOT087.mml: 紅響曲　～ Scarlet Phoneme
+- BSLOT088.mml: 人恋し神様　～ Romantic Fall
+- BSLOT089.mml: 厄神様の通り道　～ Dark Road
+- BSLOT090.mml: 運命のダークサイド
+- BSLOT091.mml: フォールオブフォール　～ 秋めく滝
+- BSLOT092.mml: 妖怪の山　～ Mysterious Mountain
