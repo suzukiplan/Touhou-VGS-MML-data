@@ -1,9 +1,12 @@
 *.png
 *.bgm
-makefile
+*.BGM
 *.pcm
+*.PCM
 *.chr
+*.CHR
 DSLOT000.DAT
 DSLOT001.DAT
 DSLOT002.DAT
+romdata.bin
 
