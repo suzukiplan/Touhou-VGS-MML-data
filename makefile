@@ -115,7 +115,7 @@ mklist2: mklist2.c
 
 .SUFFIXES: .bmp .CHR
 .bmp.CHR:
-	vgs2bmp $< $@
+	vgsbmp $< $@
 
 .SUFFIXES: .wav .PCM
 .wav.PCM:
