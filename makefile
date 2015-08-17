@@ -1,4 +1,7 @@
 ASSETS=\
+	DSLOT000.DAT\
+	DSLOT001.DAT\
+	DSLOT002.DAT\
 	GSLOT000.CHR\
 	GSLOT255.CHR\
 	ESLOT000.PCM\
@@ -98,7 +101,17 @@ ASSETS=\
 	BSLOT091.BGM\
 	BSLOT092.BGM
 
-all: romdata.bin 
+all: mklist mklist2 romdata.bin 
+
+clean:
+	rm -f mklist mklist2
+	rm -f $(ASSETS)
+
+mklist: mklist.c
+	gcc -o mklist mklist.c
+
+mklist2: mklist2.c
+	gcc -o mklist2 mklist2.c
 
 .SUFFIXES: .bmp .CHR
 .bmp.CHR:
@@ -114,4 +127,16 @@ all: romdata.bin
 
 romdata.bin: $(ASSETS)
 	vgs2rom ./ romdata.bin 
+
+DSLOT000.DAT: songlist.txt
+	iconv -f UTF-8 -t SJIS < songlist.txt > songlist.txt.sjis
+	./mklist songlist.txt.sjis DSLOT000.DAT
+
+DSLOT001.DAT: songlist_en.txt
+	iconv -f UTF-8 -t SJIS < songlist_en.txt > songlist_en.txt.sjis
+	./mklist songlist_en.txt.sjis DSLOT001.DAT
+
+DSLOT002.DAT: titlelist.txt
+	iconv -f UTF-8 -t SJIS < titlelist.txt > titlelist.txt.sjis
+	./mklist2 titlelist.txt.sjis DSLOT002.DAT
 

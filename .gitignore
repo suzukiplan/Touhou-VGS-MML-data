@@ -5,8 +5,11 @@
 *.PCM
 *.chr
 *.CHR
+*.sjis
 DSLOT000.DAT
 DSLOT001.DAT
 DSLOT002.DAT
 romdata.bin
+mklist
+mklist2
 

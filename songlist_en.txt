@@ -119,7 +119,7 @@ A005,  90, 1,  7,Darkside of Fate
 A006,  64, 1,  7,the Gensokyo the Gods Loved
 A007,  65, 1,  7,Akutagawa Ryuunosuke's 'Kappa'　〜 Candid Friend
 A008,  91, 1,  7,Fall of Fall　〜 Autumnal Waterfall
-A009,  92, 1,  7,The Youkai Mountain　～ Mysterious Mountain
+A009,  92, 1,  7,The Youkai Mountain　〜 Mysterious Mountain
 A00E,  67, 1,  7,Tomorrow will be Special，Yesterday was not
 A00F,  68, 1,  7,Native Faith
 
