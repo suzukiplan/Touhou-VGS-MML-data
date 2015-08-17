@@ -2,6 +2,8 @@
 *.bgm
 makefile
 *.pcm
-*.wav
-*.bmp
 *.chr
+DSLOT000.DAT
+DSLOT001.DAT
+DSLOT002.DAT
+
