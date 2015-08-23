@@ -99,9 +99,12 @@ ASSETS=\
 	BSLOT089.BGM\
 	BSLOT090.BGM\
 	BSLOT091.BGM\
-	BSLOT092.BGM
+	BSLOT092.BGM\
+	BSLOT093.BGM
 
 all: mklist mklist2 romdata.bin 
+
+build: $(ASSETS)
 
 clean:
 	rm -f mklist mklist2
