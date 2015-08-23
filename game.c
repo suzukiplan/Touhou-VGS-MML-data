@@ -1160,11 +1160,12 @@ int vge_loop()
 		putfontS(8,24,"WAIT TIME %05d",_psg.waitTime);
 	}
 	/* seek */
-	vge_boxSP(4,34,235,42,53);
-	vge_lineSP(4,34,4,42,48);
-	vge_lineSP(4,34,235,34,48);
-	vge_lineSP(8,37,229,37,53);
-	vge_lineSP(8,39,229,39,48);
+	vge_boxSP(12,34,235,42,53);
+	vge_lineSP(12,34,12,42,48);
+	vge_lineSP(12,34,235,34,48);
+	vge_lineSP(16,37,229,37,53);
+	vge_lineSP(16,39,229,39,48);
+	vge_putSP(0,232,64,8,8,4,34);
 	u=_psg.timeI+_psg.timeL;
 	if(u) {
 		if(u<_psg.timeP) {
@@ -1173,15 +1174,28 @@ int vge_loop()
 		} else {
 			ii=_psg.timeP*220 / u;
 		}
-		vge_lineSP(8+ii,35,8+ii,41,109);
-		vge_lineSP(9+ii,35,9+ii,41,103);
+		vge_lineSP(16+ii,35,16+ii,41,109);
+		vge_lineSP(17+ii,35,17+ii,41,103);
 
-		if(push && 0==touch_off && HITCHK(ci.cx-4,ci.cy-4,8,8, 8,26,220,24)) {
-			i=ci.cx;
-			i-=8;
-			if(i<0) i=0;
-			if(220<i) i=220;
-			vge_bpos(u*i/220);
+		if(0==touch_off) {
+			if(HITCHK(ci.cx-4,ci.cy-4,8,8, 4,34,8,8)) {
+				vge_putSP(0,240,64,8,8,4,34);
+				if(push) {
+					ci.s=0;
+					paused=0;
+					vge_bstop();
+					playwait=6;
+					playing=0;
+					push=0;
+				}
+			} if(push && HITCHK(ci.cx-4,ci.cy-4,8,8, 16,26,212,24)) {
+				i=ci.cx;
+				i-=16;
+				if(i<0) i=0;
+				if(212<i) i=212;
+				vge_bpos(u*i/212);
+				push=0;
+			}
 		}
 	}
 
