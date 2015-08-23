@@ -6,10 +6,13 @@
 *.chr
 *.CHR
 *.sjis
+*.swp
 DSLOT000.DAT
 DSLOT001.DAT
 DSLOT002.DAT
 romdata.bin
 mklist
 mklist2
+test
+edit
 
