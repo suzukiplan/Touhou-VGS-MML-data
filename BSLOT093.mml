@@ -1,4 +1,4 @@
-# The Primal Scene of Japan the Girl Saw
+# The Japanese Wilderness the Girl Saw
 $Brass \s600 \e22050 @1 %75
 $Brass2 \s600 \e6000 @1 %75
 $Brass3 \s200 \e8000 @1 %75
@@ -139,14 +139,14 @@ Ch0 d8b-rd8b-rd8b-rd8b-r d-8a-rd-8a-rd-8a-re-8b-r
 Ch1 (Brass6)o5v14
 Ch1 c4.f2r8 c4.g2r8 c4.a-2ga- g4e-4<b-2>
 Ch1 c4.f4.c8r8 c4.g4.c8r8 c4.a-4.g8a-8 b-8a-8g8a-8b-8>c4<
-Ch1 f2>c2r8 <b-4.>c4.e-8r8 <f4.>c2r4 <b-8>c8<a-8b-8g8a-8
+Ch1 f2>c2r8 <b-4.>c4.e-8r8 <f4.>(Brass)c2r4 <b-8>c8<a-8b-8g8a-8(Brass6)
 Ch1 f2>c4.<b-4 a-2g8a-8g8e-8 f1
 Ch1 cf<b->f<a->f<gb->c4<p-600f4p-0
 
 Ch2 (Brass6)o4v14
 Ch2 a-4.>c2r8< g4.>c2r8< a-4.>c2r8 <b-4b-4g2
 Ch2 a-4.>c4.<a-8r8 g4.>c4.<g8r8 f4.>c4.<b-8>c8 d-8c8<b-8>c8d-8e-4
-Ch2 c2f2r8 d-4.e-4.g8r8 c4.f2r4 g8a-8f8g8e-8f8
+Ch2 c2f2r8 d-4.e-4.g8r8 c4.(Brass)f2r4 g8a-8f8g8e-8f8(Brass6)
 Ch2 c2f4.g4 f2<b-8>c8<b-8g8 a-1
 Ch2 cf<b->f<a->fce- f4p-600c4p-0
 
@@ -182,7 +182,7 @@ Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (S3)c8v--------c32v++c32v++c32v++c32v++ cccc
-Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
+Ch5 (H3)c4 (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(B)c8
@@ -219,7 +219,7 @@ Ch4 v12b-v-----b- v13a-v-----a- v14>cv-----c v13e-v-----e-
 Ch4 v12fv-----f v13e-v-----e- v14cv-----c v15e-v-----e-
 Ch4 v14<e-v-----e- v13av-----a> v12e-v-----e- v11av-----a
 
-Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
+Ch5 (H3)c4 (B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
 Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
 Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
 Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8<g8
@@ -271,7 +271,7 @@ Ch4 o3 g-b->d-g- b->d-g-b- >d-<g-b-d- g-<b->d-<g-
 Ch4 o3 a->ce-a- >ce-a->c e-<a->c<e- a-ce-<a-
 Ch4 o3 d-fb->d- fb->d-f b-fb-d- f<b->d-f b-fd-f d-<b->d-<f b-d-f<b-> d-<fb-f
 
-Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
+Ch5 (H3)c4 (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
@@ -280,7 +280,7 @@ Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c8 (S3)c32c32ccc (S)c32c32ccc c4
 
-Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
+Ch5 (H3)c4 (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
@@ -309,14 +309,14 @@ Ch0 d8b-rd8b-rd8b-rd8b-r d-8a-rd-8a-rd-8a-re-8b-r
 Ch1 (Brass6)o5v14
 Ch1 c4.f2r8 c4.g2r8 c4.a-2ga- g4e-4<b-2>
 Ch1 c4.f4.c8r8 c4.g4.c8r8 c4.a-4.g8a-8 b-8a-8g8a-8b-8>c4<
-Ch1 f2>c2r8 <b-4.>c4.e-8r8 <f4.>c2r4 <b-8>c8<a-8b-8g8a-8
+Ch1 f2>c2r8 <b-4.>c4.e-8r8 <f4.>(Brass)c2r4 <b-8>c8<a-8b-8g8a-8(Brass6)
 Ch1 f2>c4.<b-4 a-2g8a-8g8e-8 f1
 Ch1 cf<b->f<a->f<gb->c4<p-600f4p-0
 
 Ch2 (Brass6)o4v14
 Ch2 a-4.>c2r8< g4.>c2r8< a-4.>c2r8 <b-4b-4g2
 Ch2 a-4.>c4.<a-8r8 g4.>c4.<g8r8 f4.>c4.<b-8>c8 d-8c8<b-8>c8d-8e-4
-Ch2 c2f2r8 d-4.e-4.g8r8 c4.f2r4 g8a-8f8g8e-8f8
+Ch2 c2f2r8 d-4.e-4.g8r8 c4.(Brass)f2r4 g8a-8f8g8e-8f8(Brass6)
 Ch2 c2f4.g4 f2<b-8>c8<b-8g8 a-1
 Ch2 cf<b->f<a->fce- f4p-600c4p-0
 
@@ -344,7 +344,7 @@ Ch4 v13cv-----c v12<b-v-----b-> v11cv-----c v10e-v-----e- v11cv-----c v12<b-v---
 Ch4 v13cv-----c v12<b-v-----b-> v11cv-----c v10e-v-----e- v11cv-----c v12<b-v-----b-> v13cv-----c v12fv-----f
 Ch4 v13cv-----c v12<b-v-----b-> v11cv-----c v10e-v-----e- v11cv-----c v12<b-v-----b-> v13cv-----c v12fv-----f
 
-Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
+Ch5 (H3)c4 (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(B)c8
@@ -352,7 +352,7 @@ Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (S3)c8v--------c32v++c32v++c32v++c32v++ cccc
-Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
+Ch5 (H3)c4 (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(H)c8
 Ch5 (B)c8(H2)cc (S3)c8(H2)c(S3)v-------c (H2)c(B)c(H)c8 (S3)c8(B)c8
@@ -389,7 +389,7 @@ Ch4 v12b-v-----b- v13a-v-----a- v14>cv-----c v13e-v-----e-
 Ch4 v12fv-----f v13e-v-----e- v14cv-----c v15e-v-----e-
 Ch4 v14<e-v-----e- v13av-----a> v12e-v-----e- v11av-----a
 
-Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
+Ch5 (H4)c4(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
 Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
 Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8(H2)cc
 Ch5 (B)c8(H2)cc(B)c8(H2)cc (B)c(S3)c8(H2)c (S3)c8<g8
@@ -521,7 +521,7 @@ Ch4 g8.a8.f8d8.<a8.b-r b-2.r4>
 Ch4 (Brass7)o3v13
 Ch4 \s22050e-1f1g2>\s600d8.b-8.>dr d1
 
-Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
+Ch5 (H3)c4 (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
@@ -530,7 +530,7 @@ Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c8 (S3)c32c32ccc (S)c32c32ccc (S)c4
 
-Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
+Ch5 (H3)c4 (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (B)c(H2)c(S)c(H2)c
 Ch5 (B)c(H)c(S)c(H)c (B)cc(S)c(H2)c (B)c(H)c(S)c(H)c (S)cccc
@@ -538,3 +538,4 @@ Ch5 (H3)c8.(S3)c8.c8 c8.c8.c8
 Ch5 (H3)c8.(S3)c8.c8 c8.c8.cc
 Ch5 (H3)c8.(S3)c8.c8 c8.c8.c8
 Ch5 (B)c(H)c(S)c8 (S3)c32c32ccc (S)c32c32ccc (S)c4
+
