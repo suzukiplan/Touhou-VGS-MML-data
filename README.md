@@ -349,7 +349,7 @@
 - ● 9. 妖怪の山　～ Mysterious Mountain -- ４面ボス・射命丸 文のテーマ
 - ● 10. 少女が見た日本の原風景 -- ５面テーマ
 - ● 11. 信仰は儚き人間の為に -- ５面ボス・東風谷 早苗のテーマ
-- × 12. 御柱の墓場　～ Grave of Being -- ６面テーマ
+- ● 12. 御柱の墓場　～ Grave of Being -- ６面テーマ
 - × 13. 神さびた古戦場　～ Suwa Foughten Field -- ６面ボス・八坂 神奈子のテーマ
 - ● 14. 明日ハレの日、ケの昨日 -- EXTRAテーマ
 - ● 15. ネイティブフェイス -- EXTRAボス・洩矢 諏訪子のテーマ
@@ -619,4 +619,5 @@
 - BSLOT092.mml: 妖怪の山　～ Mysterious Mountain
 - BSLOT093.mml: 少女が見た日本の原風景
 - BSLOT094.mml: 信仰は儚き人間の為に
+- BSLOT095.mml: 御柱の墓場　～ Grave of Being
 
