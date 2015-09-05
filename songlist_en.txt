@@ -122,6 +122,7 @@ A008,  91, 1,  7,Fall of Fall　〜 Autumnal Waterfall
 A009,  92, 1,  7,The Youkai Mountain　〜 Mysterious Mountain
 A00A,  93, 1,  7,The Japanese Wilderness the Girl Saw
 A00B,  94, 1,  7,Faith is for the Transient People
+A00C,  95, 1,  7,Cemetery of Onbashira　〜 Grave of Being
 A00E,  67, 1,  7,Tomorrow will be Special，Yesterday was not
 A00F,  68, 1,  7,Native Faith
 

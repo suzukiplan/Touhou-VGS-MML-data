@@ -15,7 +15,7 @@ FILE* vge_fopen(const char*, const char*);
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
 #define TITLE_NUM 10
-#define SONG_NUM 95
+#define SONG_NUM 96
 
 /* Structure */
 struct InputInf {
@@ -184,7 +184,7 @@ static void copylist(struct SongData* t, struct SongData* f)
  */
 int vge_init()
 {
-	size_t sz;
+	unsigned int sz;
 	char* bin;
 	int i,j;
 	bin=(char*)vge_getdata(0,&sz);
@@ -247,22 +247,7 @@ int vge_loop()
 		,"SQ"
 		,"NOZ"
 	};
-	static const int pianoPos[12]={
-		 0
-		,2
-		,4
-		,8
-		,10
-		,12
-		,14
-		,16
-		,18
-		,22
-		,24
-		,26
-	};
 	static int isFirst=1;
-	static int pos[6];
 	static double base=4.0;
 	static double baseX=0.0;
 	static double move=0;
@@ -699,9 +684,9 @@ int vge_loop()
 		if(_listType) {
 			/* Draw song title */
 			putkanji(4+bx,134+(int)base,255,_title[ct].title);
-			putkanji(236+bx-strlen(_title[ct].copyright)*4,152+(int)base,255,_title[ct].copyright);
+			putkanji(236+bx-((int)strlen(_title[ct].copyright))*4,152+(int)base,255,_title[ct].copyright);
 			if(_title[ct].id == 0x60) {
-				putkanji((240-(strlen(_msg)*4))/2+bx,40+(int)base,255,"%s",_msg);
+				putkanji((240-(((int)strlen(_msg))*4))/2+bx,40+(int)base,255,"%s",_msg);
 			}
 		}
 		/* Draw music list */
@@ -1329,7 +1314,7 @@ SKIP_DRAW_PROC:
 			vge_putSP(0,144+(1-shuf)*48,96,24,12,54+ii,112);
 		}
 		/* LOOP COUNTER */
-		if(-1==_mcur || 0<=_mcur && _list[_mcur].loop) {
+		if(-1==_mcur || (0<=_mcur && _list[_mcur].loop)) {
 			if(ci.s && touch_off==0 && HITCHK(80+ii,92,24,32,ci.cx-4,ci.cy-4,8,8)) {
 				vge_putSP(0,(loop-1)*24,176,24,12,80+ii,112);
 				if(push) {
