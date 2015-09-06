@@ -1155,9 +1155,9 @@ int vge_loop()
 	if(u) {
 		if(u<_psg.timeP) {
 			ii=(_psg.timeP-u)%_psg.timeL;
-			ii=(ii+_psg.timeI)%u * 220 / u;
+			ii=(ii+_psg.timeI)%u * 214 / u;
 		} else {
-			ii=_psg.timeP*220 / u;
+			ii=_psg.timeP*214 / u;
 		}
 		vge_lineSP(16+ii,35,16+ii,41,109);
 		vge_lineSP(17+ii,35,17+ii,41,103);
