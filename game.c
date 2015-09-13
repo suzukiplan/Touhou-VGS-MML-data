@@ -15,7 +15,7 @@ FILE* vge_fopen(const char*, const char*);
 /* Macro */
 #define HITCHK(X1,Y1,XS1,YS1,X2,Y2,XS2,YS2) (X1<X2+XS2 && X2<X1+XS1 &&  Y1<Y2+YS2 && Y2<Y1+YS1)
 #define TITLE_NUM 10
-#define SONG_NUM 96
+#define SONG_NUM 97
 
 /* Structure */
 struct InputInf {
@@ -1155,9 +1155,9 @@ int vge_loop()
 	if(u) {
 		if(u<_psg.timeP) {
 			ii=(_psg.timeP-u)%_psg.timeL;
-			ii=(ii+_psg.timeI)%u * 220 / u;
+			ii=(ii+_psg.timeI)%u * 214 / u;
 		} else {
-			ii=_psg.timeP*220 / u;
+			ii=_psg.timeP*214 / u;
 		}
 		vge_lineSP(16+ii,35,16+ii,41,109);
 		vge_lineSP(17+ii,35,17+ii,41,103);
