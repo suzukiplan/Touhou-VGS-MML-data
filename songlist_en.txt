@@ -126,6 +126,7 @@ A00C,  95, 1,  7,Cemetery of Onbashira　〜 Grave of Being
 A00D,  96, 1,  7,VenerableAncientBattlefield 〜 SuwaFoughtenField
 A00E,  67, 1,  7,Tomorrow will be Special，Yesterday was not
 A00F,  68, 1,  7,Native Faith
+A010,  97, 1,  7,Shrine at the Foot of the Mountain
 
 # 東方地霊殿(0xB0)
 # ID  BGM LP COL TITLE

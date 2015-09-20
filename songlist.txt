@@ -138,6 +138,7 @@ A00C,  95, 1,  7,御柱の墓場　〜 Grave of Being
 A00D,  96, 1,  7,神さびた古戦場　〜 Suwa Foughten Field
 A00E,  67, 1,  7,明日ハレの日、ケの昨日
 A00F,  68, 1,  7,ネイティブフェイス
+A010,  97, 1,  7,麓の神社
 
 # 東方地霊殿(0xB0)
 # ID  BGM LP COL TITLE
