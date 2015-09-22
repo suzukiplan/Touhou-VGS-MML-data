@@ -112,6 +112,7 @@
 
 # 東方風神録(0xA0)
 # ID  BGM LP COL TITLE
+A001,  98, 1,  7,Sealed Gods
 A002,  88, 1,  7,A god that misses people　〜 Romantic Fall
 A003,  69, 1,  7,Because Princess Inada is Scolding Me
 A004,  89, 1,  7,the Road of the Apotropaic God　〜 Dark Road
