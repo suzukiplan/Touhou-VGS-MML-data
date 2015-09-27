@@ -129,6 +129,7 @@ A00E,  67, 1,  7,Tomorrow will be Special，Yesterday was not
 A00F,  68, 1,  7,Native Faith
 A010,  97, 1,  7,Shrine at the Foot of the Mountain
 A011,  99, 1,  7,the Gods give us Blessed Rain　〜 Sylphid Dream
+A012, 100, 1,  7,Player's Score
 
 # 東方地霊殿(0xB0)
 # ID  BGM LP COL TITLE
