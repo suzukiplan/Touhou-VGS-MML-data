@@ -60,8 +60,6 @@ struct MyList {
 /* Proto types */
 static void nextSong(int shuf);
 static void myprint(int x,int y,const char* msg,...);
-static void myprintD(int x,int y,const char* msg,...);
-static void myprint2(int x,int y,const char* msg,...);
 static void putfontS(int x,int y,const char* msg,...);
 static void putfontSD(int x,int y,const char* msg,...);
 static unsigned short getcode(unsigned char sjis[2]);
@@ -1203,6 +1201,7 @@ int vge_loop()
 				case 6: j=1; ii=3; break;
 				case 9: j=1; ii=5; break;
 				case 11:j=1; ii=6; break;
+                default:j=0; ii=0;
 			}
 			if(0==j) {
 				vge_boxfSP(k/12*28+ii*4+36,46+i*10,k/12*28+ii*4+38,52+i*10,31);
@@ -1416,7 +1415,7 @@ static void nextSong(int shuf)
 {
 	int i;
 	int ct=_currentTitle;
-	int songTop;
+	int songTop=0;
 
 	/* calc songTop */
 	if(_listType) {
@@ -1526,48 +1525,6 @@ static void myprint(int x,int y,const char* msg,...)
 		d=c>>5;
 		vge_putSPM(0,(c-(d<<5))<<3,d<<3,8,8,x+1,y+1,1);
 		vge_putSP(0,(c-(d<<5))<<3,d<<3,8,8,x,y);
-	}
-}
-
-static void myprintD(int x,int y,const char* msg,...)
-{
-	char buf[256];
-	int i;
-	int c;
-	int d;
-	va_list args;
-
-	va_start(args,msg);
-	vsprintf(buf,msg,args);
-	va_end(args);
-
-	for(i=0;'\0'!=(c=(int)buf[i]);i++,x+=8) {
-		c-=0x20;
-		c&=0x7f;
-		d=c>>5;
-		vge_putSPM(0,(c-(d<<5))<<3,d<<3,8,8,x+1,y+1,103);
-		vge_putSPM(0,(c-(d<<5))<<3,d<<3,8,8,x,y,103);
-	}
-}
-
-static void myprint2(int x,int y,const char* msg,...)
-{
-	char buf[256];
-	int i;
-	int c;
-	int d;
-	va_list args;
-
-	va_start(args,msg);
-	vsprintf(buf,msg,args);
-	va_end(args);
-
-	for(i=0;'\0'!=(c=(int)buf[i]);i++,x+=8) {
-		c-=0x20;
-		c&=0x7f;
-		d=c>>5;
-		vge_putSPM(0,(c-(d<<5))<<3,d<<3,8,8,x+1,y+1,1);
-		vge_putSPM(0,(c-(d<<5))<<3,d<<3,8,8,x,y,106);
 	}
 }
 
