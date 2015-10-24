@@ -116,10 +116,9 @@ build: $(ASSETS)
 clean:
 	rm -f mklist mklist2 mkmeta
 	rm -f $(ASSETS)
-	rm -f data/*.meta
 	rm -f data/*.vgs
-	rm -f data/*.vgspack
 	rm -f *.sjis
+	rm -f tohovgs.pkg
 
 mklist: mklist.c
 	gcc -o mklist mklist.c
@@ -146,6 +145,7 @@ mkmeta: mkmeta.c
 
 romdata.bin: $(ASSETS)
 	vgs2rom ./data romdata.bin 
+	vgs2tar tohovgs.pkg data/*.vgs
 
 data/DSLOT000.DAT: songlist.txt
 	iconv -f UTF-8 -t SJIS < songlist.txt > songlist.txt.sjis
