@@ -109,19 +109,25 @@ ASSETS=\
 	BSLOT099.BGM\
 	BSLOT100.BGM
 
-all: mklist mklist2 romdata.bin 
+all: mklist mklist2 mkmeta romdata.bin 
 
 build: $(ASSETS)
 
 clean:
-	rm -f mklist mklist2
+	rm -f mklist mklist2 mkmeta
 	rm -f $(ASSETS)
+	rm -f *.meta
+	rm -f *.vgs
+	rm -f *.vgspack
 
 mklist: mklist.c
 	gcc -o mklist mklist.c
 
 mklist2: mklist2.c
 	gcc -o mklist2 mklist2.c
+
+mkmeta: mkmeta.c
+	gcc -o mkmeta mkmeta.c
 
 .SUFFIXES: .bmp .CHR
 .bmp.CHR:
@@ -134,6 +140,8 @@ mklist2: mklist2.c
 .SUFFIXES: .mml .BGM
 .mml.BGM:
 	vgs2mml $< $@
+	./mkmeta $<
+	vgs2pack $<
 
 romdata.bin: $(ASSETS)
 	vgs2rom ./ romdata.bin 
