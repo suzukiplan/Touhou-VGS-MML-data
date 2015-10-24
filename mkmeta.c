@@ -37,14 +37,14 @@ int main(int argc, char* argv[])
     int year;
     struct SongData* curS;
     struct TitleData* curT;
-    char metafile[16];
+    char metafile[64];
 
-    if (argc < 2 || strncmp("BSLOT", argv[1], 5) != 0) {
+    if (argc < 2 || strncmp("data/BSLOT", argv[1], 10) != 0) {
         puts("usage: mkmeta bgm-file");
         return 1;
     }
-    bgmNo = atoi(&argv[1][5]);
-    sprintf(metafile, "BSLOT%03d.meta", bgmNo);
+    bgmNo = atoi(&argv[1][10]);
+    sprintf(metafile, "data/BSLOT%03d.meta", bgmNo);
 
     if (make_song_data()) {
         return 2;
