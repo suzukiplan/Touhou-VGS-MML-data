@@ -109,7 +109,7 @@ ASSETS=\
 	data/BSLOT099.BGM\
 	data/BSLOT100.BGM
 
-all: mklist mklist2 mkmeta romdata.bin 
+all: mklist mklist2 mkmeta mkpack romdata.bin 
 
 build: $(ASSETS)
 
@@ -119,6 +119,7 @@ clean:
 	rm -f data/*.vgs
 	rm -f *.sjis
 	rm -f tohovgs.pkg
+	rm -rf vgspack
 
 mklist: mklist.c
 	gcc -o mklist mklist.c
@@ -128,6 +129,9 @@ mklist2: mklist2.c
 
 mkmeta: mkmeta.c
 	gcc -o mkmeta mkmeta.c
+
+mkpack: mkpack.c vgs2tar.c vgs2tar.h vgs2pack.h
+	gcc -o mkpack mkpack.c vgs2tar.c
 
 .SUFFIXES: .bmp .CHR
 .bmp.CHR:
@@ -146,6 +150,7 @@ mkmeta: mkmeta.c
 romdata.bin: $(ASSETS)
 	vgs2rom ./data romdata.bin 
 	vgs2tar tohovgs.pkg data/*.vgs
+	./mkpack
 
 data/DSLOT000.DAT: songlist.txt
 	iconv -f UTF-8 -t SJIS < songlist.txt > songlist.txt.sjis

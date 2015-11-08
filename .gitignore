@@ -7,8 +7,8 @@
 *.CHR
 *.sjis
 *.swp
-*.vgs
-*.vgspack
+data/*.vgs
+tohovgs.pkg
 DSLOT000.DAT
 DSLOT001.DAT
 DSLOT002.DAT
@@ -16,6 +16,8 @@ romdata.bin
 mklist
 mklist2
 mkmeta
+mkpack
 test
 edit
+.DS_Store
 
