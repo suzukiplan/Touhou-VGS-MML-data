@@ -1,6 +1,7 @@
 このリポジトリは、東方BGM on VGSのソースコード、各種情報（バグ、エンハンス、レビュー等）を管理する目的のものです。
 
 【VGS BGM Playerでの利用方法】
+
 [vgspackディレクトリ](https://github.com/suzukiplan/Touhou-VGS-MML-data/tree/master/vgspack) の内容をDropboxに保存してアプリからアクセスすれば、インポートすることができます。
 
 【mmlの視聴方法】
