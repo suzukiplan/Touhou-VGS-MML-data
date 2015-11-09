@@ -6,7 +6,7 @@
 
 【mmlの視聴方法】
 
-ここで公開しているmmlファイルは、Macintosh（Mac OS X 10.3以降推奨） か Linux（CentOS7推奨）を搭載したパソコンを持っていれば簡単に視聴できます。詳しい手順は[こちら](https://gist.github.com/suzukiplan/ce6126d5344dd9a46e56)のシェルスクリプトを参照してください。（なお、Windowsのパソコンでは、必ずしも無理ではないけど、一定のプログラミング知識と環境を揃えなければできないため、解説は省略します）
+ここで公開しているmmlファイルは、Mac（OS X 10.3以降推奨） か Linux（CentOS7推奨）を搭載したパソコンを持っていれば簡単に視聴できます。詳しい手順は[こちら](https://gist.github.com/suzukiplan/ce6126d5344dd9a46e56)のシェルスクリプトを参照してください。（なお、Windowsのパソコンでは、必ずしも無理ではないけど、一定のプログラミング知識と環境を揃えなければできないため、解説は省略します）
 
 【各種報告について】
 
@@ -566,19 +566,12 @@
 - 利用により当方（SUZUKI PLAN）以外の第三者と何らかのトラブルが生じた場合、利用者が全ての責任を負うものとします。
 
 (2) 使用方法
-- vectorで公開しているSUZUKI PLAN - Video Game Systemで本MMLをコンパイルしたものを利用できます。
-- 本MMLのコンパイルには、ここで公開しているvgsmmlコマンド（Kオペランド対応）が必要です。
-- SUZUKI PLAN - Video Game System mk-II（※Professional Editionを除く）には波形メモリ音源システムを組み込んでいないため利用できません。
-
-(3) 補足事項
-- MMLの仕様（Kオペランドを除く）は、VGSのマニュアルを参照してください。
-- VGSマニュアル(MML仕様) http://hp.vector.co.jp/authors/VA040196/vgs/docs/mml.htm
-- Kオペランドはチャネル単位での移調をします。
-- Kオペランドの書き方： K+で半音上、K++で全音上、K-で半音下、K--で全音下
-- なお、Kオペランドは数字指定（K+2など）はできません。
+- [SUZUKI PLAN - Video Game System MK-II SR](https://github.com/suzukiplan/vgs2) で本MMLをコンパイルしたものを利用できます。
+- 本MMLのコンパイルには [vgs2mmlコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) を用います。
+- MMLの仕様は [こちらのドキュメント](https://github.com/suzukiplan/vgs2/blob/master/MML.md) を参照してください。
 - 以前、別の形で公開していたMMLについては、ここの使用許諾を適用しません。各公開ドキュメントに付随している方の使用許諾を優先してください。
 
-(4) ファイルと曲の対応関係
+(3) ファイルと曲の対応関係
 - BSLOT000.mml: 赤より紅い夢
 - BSLOT001.mml: ほおずきみたいに紅い魂
 - BSLOT002.mml: 妖魔夜行
