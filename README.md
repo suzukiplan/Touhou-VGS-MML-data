@@ -7,12 +7,21 @@
 ここで公開しているmmlファイルは、Mac（OS X 10.3以降推奨） か Linux（CentOS7推奨）を搭載したパソコンを持っていれば簡単に視聴できます。詳しい手順は[こちら](https://gist.github.com/suzukiplan/ce6126d5344dd9a46e56)のシェルスクリプトを参照してください。（なお、Windowsのパソコンでは、必ずしも無理ではないけど、一定のプログラミング知識と環境を揃えなければできないため、解説は省略します）
 
 # MMLの書き方＆演奏方法
+### MMLとは？
 - MML（Music Macro Language）とは、テキストで記述する音楽データのことです。
-- midi等の祖先だと思っておけば概ね間違いありません
+- midi等の祖先だと思っておけば概ね間違いありません。
+- 標準的な規格は存在しないので、色々な方言が存在します。
+
+### VGSのMMLの書き方＆鳴らし方
 - VGSのMMLの仕様は [こちらのドキュメント](https://github.com/suzukiplan/vgs2/blob/master/MML.md) を参照してください。
 - [SUZUKI PLAN - Video Game System MK-II SR](https://github.com/suzukiplan/vgs2) をインストールすればMMLをコンパイル＆演奏することができます。
 - MMLのコンパイルには [vgs2mmlコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) を用います。
-- コンパイルしたMMLの演奏には [vgs2playコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) を用います。
+- コンパイルしたMMLの演奏には [vgs2playコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2play) を用います。
+
+### 作成した音楽データをVGS BGM Playerで演奏
+- [vgs2mmlコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) で作成した音楽データは、そのままの状態では VGS BGM Player で演奏することができません。
+- 作成した音楽データを VGS BGM Player で演奏するには meta data を記述する必要があります。
+- meta dataの詳細については[こちらのドキュメント](https://github.com/suzukiplan/vgs2/blob/master/META.md)を参照してください。
 
 # サポート情報
 ### 各種報告について
