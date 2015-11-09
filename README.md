@@ -7,10 +7,12 @@
 ここで公開しているmmlファイルは、Mac（OS X 10.3以降推奨） か Linux（CentOS7推奨）を搭載したパソコンを持っていれば簡単に視聴できます。詳しい手順は[こちら](https://gist.github.com/suzukiplan/ce6126d5344dd9a46e56)のシェルスクリプトを参照してください。（なお、Windowsのパソコンでは、必ずしも無理ではないけど、一定のプログラミング知識と環境を揃えなければできないため、解説は省略します）
 
 # MMLの書き方＆演奏方法
-- [SUZUKI PLAN - Video Game System MK-II SR](https://github.com/suzukiplan/vgs2) で本MMLをコンパイルしたものを利用できます。
-- 本MMLのコンパイルには [vgs2mmlコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) を用います。
-- MMLの仕様は [こちらのドキュメント](https://github.com/suzukiplan/vgs2/blob/master/MML.md) を参照してください。
-- 以前、別の形で公開していたMMLについては、ここの使用許諾を適用しません。各公開ドキュメントに付随している方の使用許諾を優先してください。
+- MML（Music Macro Language）とは、テキストで記述する音楽データのことです。
+- midi等の祖先だと思っておけば概ね間違いありません
+- VGSのMMLの仕様は [こちらのドキュメント](https://github.com/suzukiplan/vgs2/blob/master/MML.md) を参照してください。
+- [SUZUKI PLAN - Video Game System MK-II SR](https://github.com/suzukiplan/vgs2) をインストールすればMMLをコンパイル＆演奏することができます。
+- MMLのコンパイルには [vgs2mmlコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) を用います。
+- コンパイルしたMMLの演奏には [vgs2playコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) を用います。
 
 # サポート情報
 ### 各種報告について
@@ -48,6 +50,8 @@
 - 利用者は、GitHubアカウントを有し、本リポジトリを必ずforkするものとします。
 - 利用により当方（SUZUKI PLAN）が不利益を被ると判断できる事由があった場合、利用を差し止めることがあります。
 - 利用により当方（SUZUKI PLAN）以外の第三者と何らかのトラブルが生じた場合、利用者が全ての責任を負うものとします。
+
+_※以前、別の形で公開していたMMLについては、ここの使用許諾を適用しません。各公開ドキュメントに付随している方の使用許諾を優先してください。_
 
 # 対応予定リスト
 ### 凡例
