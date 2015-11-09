@@ -121,17 +121,17 @@ clean:
 	rm -f tohovgs.pkg
 	rm -rf vgspack
 
-mklist: mklist.c
-	gcc -o mklist mklist.c
+mklist: src/mklist.c
+	gcc -o mklist src/mklist.c
 
-mklist2: mklist2.c
-	gcc -o mklist2 mklist2.c
+mklist2: src/mklist2.c
+	gcc -o mklist2 src/mklist2.c
 
-mkmeta: mkmeta.c
-	gcc -o mkmeta mkmeta.c
+mkmeta: src/mkmeta.c
+	gcc -o mkmeta src/mkmeta.c
 
-mkpack: mkpack.c vgs2tar.c vgs2tar.h vgs2pack.h
-	gcc -o mkpack mkpack.c vgs2tar.c
+mkpack: src/mkpack.c src/vgs2tar.c src/vgs2tar.h src/vgs2pack.h
+	gcc -o mkpack src/mkpack.c src/vgs2tar.c
 
 .SUFFIXES: .bmp .CHR
 .bmp.CHR:
