@@ -20,7 +20,7 @@
 
 ### 作成した音楽データをVGS BGM Playerで演奏
 - [vgs2mmlコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2mml) で作成した音楽データは、そのままの状態では VGS BGM Player で演奏することができません。
-- 作成した音楽データを VGS BGM Player で演奏するには meta data を記述する必要があります。
+- 作成した音楽データを VGS BGM Player で演奏するには meta data を記述して、[vgs2packコマンド](https://github.com/suzukiplan/vgs2/blob/master/Command.md#vgs2pack)でBGMファイルとmetaファイルを結合する必要があります。
 - meta dataの詳細については[こちらのドキュメント](https://github.com/suzukiplan/vgs2/blob/master/META.md)を参照してください。
 
 # サポート情報
