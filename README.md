@@ -1,7 +1,8 @@
 このリポジトリは、東方BGM on VGSのソースコード、各種情報（バグ、エンハンス、レビュー等）を管理する目的のものです。
 
 # VGS BGM Playerでの利用方法
-[vgspackディレクトリ](https://github.com/suzukiplan/Touhou-VGS-MML-data/tree/master/vgspack) の内容をDropboxに保存してアプリからアクセスすれば、インポートすることができます。
+- [vgspackディレクトリ](https://github.com/suzukiplan/Touhou-VGS-MML-data/tree/master/vgspack) の内容をDropboxに保存してアプリからアクセスすれば、インポートすることができます。
+- VGS BGM Player について詳しいことは [こちら](https://github.com/suzukiplan/vgs-bgm-player) を参照してください。
 
 # PC（Mac or Linux）での利用方法
 ここで公開しているmmlファイルは、Mac（OS X 10.3以降推奨） か Linux（CentOS7推奨）を搭載したパソコンを持っていれば簡単に視聴できます。詳しい手順は[こちら](https://gist.github.com/suzukiplan/ce6126d5344dd9a46e56)のシェルスクリプトを参照してください。（なお、Windowsのパソコンでは、必ずしも無理ではないけど、一定のプログラミング知識と環境を揃えなければできないため、解説は省略します）
