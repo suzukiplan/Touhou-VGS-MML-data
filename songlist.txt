@@ -17,12 +17,12 @@
 # 東方幻想郷(0x40)
 # ID  BGM LP COL TITLE
 4001,  79, 1, 35,幻想郷　〜 Lotus Land Story
-4002,  80, 1, 35,Ｗｉｔｃｈｉｎｇ Ｄｒｅａｍ
-4003,  81, 1, 35,Ｓｅｌｅｎｅ'ｓ Ｌｉｇｈｔ
+4002,  80, 1, 35,Witching Dream
+4003,  81, 1, 35,Selene's Light
 4004,  82, 1, 35,装飾戦　〜 Decoration Battle
-4005,  86, 1, 35,Ｂｒｅａｋ ｔｈｅ Ｓａｂｂａｔｈ
+4005,  86, 1, 35,Break the Sabbath
 4006,  87, 1, 35,紅響曲　〜 Scarlet Phoneme
-4007,  61, 1, 35,Ｂａｄ Ａｐｐｌｅ!!
+4007,  61, 1, 35,Bad Apple!!
 4008,  78, 1, 35,霊戦　〜 Perdition crisis
 4009,  75, 1, 35,アリスマエステラ
 400A,  74, 1, 35,少女綺想曲　〜 Capriccio
@@ -31,11 +31,11 @@
 # 東方怪綺談(0x50)
 # ID  BGM LP COL TITLE
 5010,  62, 1,196,不思議の国のアリス
-5011,  63, 1,196,ｔｈｅ Ｇｒｉｍｏｉｒｅ ｏｆ Ａｌｉｃｅ
+5011,  63, 1,196,the Grimoire of Alice
 
 
 # 東方幻想的音楽　〜 ZUN's Strange Works (0x56)
-5603,  77, 1,  7,Ｐｌａｓｔｉｃ Ｓｐａｃｅ
+5603,  77, 1,  7,Plastic Space
 
 # 蓬莱人形(0x59)
 # ID  BGM LP COL TITLE
