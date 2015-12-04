@@ -107,7 +107,8 @@ ASSETS=\
 	data/BSLOT097.BGM\
 	data/BSLOT098.BGM\
 	data/BSLOT099.BGM\
-	data/BSLOT100.BGM
+	data/BSLOT100.BGM\
+	data/BSLOT101.BGM
 
 all: mklist mklist2 mkmeta mkpack romdata.bin 
 
