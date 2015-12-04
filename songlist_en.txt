@@ -133,4 +133,5 @@ A012, 100, 1,  7,Player's Score
 
 # 東方地霊殿(0xB0)
 # ID  BGM LP COL TITLE
+B005, 101, 1,196,Green-Eyed Jealousy
 B009,  72, 1,196,Satori Maiden　〜 3rd eye
