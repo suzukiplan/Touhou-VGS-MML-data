@@ -676,8 +676,8 @@ int vge_loop()
         }
         if (_listType) {
             /* Draw song title */
-            putkanji(4 + bx, 134 + (int)base, 255, _title[ct].title);
-            putkanji(236 + bx - ((int)strlen(_title[ct].copyright)) * 4, 152 + (int)base, 255, _title[ct].copyright);
+            putkanji(4 + bx, 134 + (int)base, 255, "%s", _title[ct].title);
+            putkanji(236 + bx - ((int)strlen(_title[ct].copyright)) * 4, 152 + (int)base, 255, "%s", _title[ct].copyright);
             if (_title[ct].id == 0x60) {
                 putkanji((240 - (((int)strlen(_msg)) * 4)) / 2 + bx, 40 + (int)base, 255, "%s", _msg);
             }
