@@ -243,7 +243,7 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 - × Magical and Hopeless -- シューのテーマ
 - × Sacred Battle -- コアントローのテーマ
 
-#### （ZUN's Strange Works）(1/6)
+#### （ZUN's Strange Works）(2/6)
 - ● 宵闇の魔術師 -- ふぁんたすていかに激しく
 - × Magic of Life -- 残酷なアリス系
 - ● Plastic Space -- 秋霜玉'99（勝手に命名）１面テーマ
