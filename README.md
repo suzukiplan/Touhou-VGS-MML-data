@@ -244,7 +244,7 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 - × Sacred Battle -- コアントローのテーマ
 
 #### （ZUN's Strange Works）(1/6)
-- × 宵闇の魔術師 -- ふぁんたすていかに激しく
+- ● 宵闇の魔術師 -- ふぁんたすていかに激しく
 - × Magic of Life -- 残酷なアリス系
 - ● Plastic Space -- 秋霜玉'99（勝手に命名）１面テーマ
 - × Inventive City -- 秋霜玉'99　２面テーマ
@@ -648,6 +648,7 @@ _※妖精大戦争　～ Fairy WarsのFairyの表記は、ゲーム中及び音
 - BSLOT100.mml: プレイヤーズスコア（東方風神録版）
 - BSLOT101.mml: 緑眼のジェラシー
 - BSLOT102.mml: 死体旅行　～ Be of good cheer!
+- BSLOT103.mml: 宵闇の魔術師
 
 # 連絡先
 - Twitter https://twitter.com/suzukiplan

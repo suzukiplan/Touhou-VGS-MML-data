@@ -23,6 +23,7 @@
 5011,  63, 1,196,the Grimoire of Alice
 
 # 東方幻想的音楽　〜 ZUN's Strange Works (0x56)
+5601, 103, 0,  7,Magician of the Evening Darkness
 5603,  77, 1,  7,Plastic Space
 
 # 蓬莱人形(0x59)
