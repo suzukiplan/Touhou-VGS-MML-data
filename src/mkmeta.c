@@ -109,7 +109,8 @@ static int getYearFromBgmNo(int no)
 {
     if (no < 60) return 2013;
     if (no < 69) return 2014;
-    return 2015;
+	if (no < 103) return 2015;
+    return 2016;
 }
 
 static void trimstring(char* src)
