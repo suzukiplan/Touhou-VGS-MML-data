@@ -2,6 +2,7 @@
 
 # VGS BGM Playerでの利用方法
 - [vgspackディレクトリ](https://github.com/suzukiplan/Touhou-VGS-MML-data/tree/master/vgspack) の内容をDropboxに保存してアプリからアクセスすれば、インポートすることができます。
+- Version 2.00以降なら ポータルサイト `suzukiplan.com` からインポートすることもできます。
 - VGS BGM Player について詳しいことは [こちら](https://github.com/suzukiplan/vgs-bgm-player) を参照してください。
 
 # PC（Mac or Linux）での利用方法
