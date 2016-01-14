@@ -244,13 +244,13 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 - × Magical and Hopeless -- シューのテーマ
 - × Sacred Battle -- コアントローのテーマ
 
-#### （ZUN's Strange Works）(2/6)
+#### （ZUN's Strange Works）(3/6)
 - ● 宵闇の魔術師 -- ふぁんたすていかに激しく
 - × Magic of Life -- 残酷なアリス系
 - ● Plastic Space -- 秋霜玉'99（勝手に命名）１面テーマ
 - × Inventive City -- 秋霜玉'99　２面テーマ
 - × 夢幻回廊 -- スロウテンポにワアルド音楽
-- × 蓬莱幻想　～ far East -- 秋霜玉　エキストラステージのテーマ（未使用）
+- ● 蓬莱幻想　～ far East -- 秋霜玉　エキストラステージのテーマ（未使用）
 
 ### 蓬莱人形 (1/13)
 - ● 蓬莱伝説 -- オリジナル
@@ -650,6 +650,7 @@ _※妖精大戦争　～ Fairy WarsのFairyの表記は、ゲーム中及び音
 - BSLOT101.mml: 緑眼のジェラシー
 - BSLOT102.mml: 死体旅行　～ Be of good cheer!
 - BSLOT103.mml: 宵闇の魔術師
+- BSLOT104.mml: 蓬莱幻想　～ far East
 
 # 連絡先
 - Twitter https://twitter.com/suzukiplan
