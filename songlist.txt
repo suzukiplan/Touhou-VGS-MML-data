@@ -37,6 +37,7 @@
 # 東方幻想的音楽　〜 ZUN's Strange Works (0x56)
 5601, 103, 0,  7,宵闇の魔術師
 5603,  77, 1,  7,Plastic Space
+5606, 104, 0,  7,蓬莱幻想　〜 far East
 
 # 蓬莱人形(0x59)
 # ID  BGM LP COL TITLE
