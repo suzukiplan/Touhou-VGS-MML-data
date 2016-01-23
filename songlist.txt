@@ -27,6 +27,7 @@
 4009,  75, 1, 35,アリスマエステラ
 400A,  74, 1, 35,少女綺想曲　〜 Capriccio
 400B,  73, 1, 35,星の器　〜 Casket of Star
+400C, 105, 1, 35,Lotus Love
 
 # 東方怪綺談(0x50)
 # ID  BGM LP COL TITLE
