@@ -158,7 +158,7 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 - × スターボウドリーム -- 未使用曲
 - × Phantasmagoria -- 未使用曲
 
-### 東方幻想郷 (11/22)
+### 東方幻想郷 (12/22)
 - ● 幻想郷　～ Lotus Land Story -- タイトル画面テーマ
 - ● Witching Dream -- 靈夢１面のテーマ
 - ● Selene's Light -- 魔理沙１面のテーマ
@@ -170,7 +170,7 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 - ● アリスマエステラ -- ４面テーマ
 - ● 少女綺想曲　～ Capriccio -- ４面ボス・靈夢のテーマ
 - ● 星の器　～ Casket of Star -- ４面ボス・魔理沙のテーマ
-- × Lotus Love -- ５面テーマ
+- ● Lotus Love -- ５面テーマ
 - × 眠れる恐怖　～ Sleeping Terror -- ５面ボス・幽香のテーマ１
 - × Dream Land -- 最終面テーマ
 - × 幽夢　～ Inanimate Dream -- 最終面ボス・幽香のテーマ２
@@ -651,6 +651,7 @@ _※妖精大戦争　～ Fairy WarsのFairyの表記は、ゲーム中及び音
 - BSLOT102.mml: 死体旅行　～ Be of good cheer!
 - BSLOT103.mml: 宵闇の魔術師
 - BSLOT104.mml: 蓬莱幻想　～ far East
+- BSLOT105.mml: Lotus Love
 
 # 連絡先
 - Twitter https://twitter.com/suzukiplan

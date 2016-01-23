@@ -16,6 +16,7 @@
 4009,  75, 1, 35,Alice Maestra
 400A,  74, 1, 35,Maiden's Capriccio
 400B,  73, 1, 35,Casket of Star
+400C, 105, 1, 35,Lotus Love
 
 # 東方怪綺談(0x50)
 # ID  BGM LP COL TITLE
