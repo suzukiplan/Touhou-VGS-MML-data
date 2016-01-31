@@ -7,8 +7,8 @@
 - 多分、これが一番簡単だと思います
 
 ### VGS BGM Player（iPhone）
+- https://itunes.apple.com/us/app/vgs-bgm-player/id1056898557?mt=8
 - [vgspackディレクトリ](https://github.com/suzukiplan/Touhou-VGS-MML-data/tree/master/vgspack) の内容をDropboxに保存してアプリからアクセスすれば、インポートすることができます
-- VGS BGM Player について詳しいことは [こちら](https://github.com/suzukiplan/vgs-bgm-player) を参照してください
 - 東方BGM on VGSより若干まどるっこしいですが、最新の曲や自作の曲が再生できたりします
 
 ### VGS mk-II SR（Mac or Linux）
