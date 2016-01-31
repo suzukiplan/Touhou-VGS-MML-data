@@ -278,26 +278,28 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |12|-|永遠の巫女|東方霊異伝より|
 |13|-|空飛ぶ巫女の不思議な毎日|オリジナル|
 
-# TODO: 以下のテーブル化
-
 ### 東方紅魔郷 (17/17)
-- ● 赤より紅い夢 -- タイトル画面テーマ
-- ● ほおずきみたいに紅い魂 -- １面テーマ
-- ● 妖魔夜行 -- １面ボス・ルーミアのテーマ
-- ● ルーネイトエルフ -- ２面テーマ
-- ● おてんば恋娘 -- ２面ボス・チルノのテーマ
-- ● 上海紅茶館　～ Chinese Tea -- ３面テーマ
-- ● 明治十七年の上海アリス -- ３面ボス・紅 美鈴のテーマ
-- ● ヴワル魔法図書館 -- ４面テーマ
-- ● ラクトガール　～ 少女密室 -- ４面ボス・パチュリー・ノーレッジのテーマ
-- ● メイドと血の懐中時計 -- ５面テーマ
-- ● 月時計　～ ルナ・ダイアル -- ５面ボス・十六夜 咲夜のテーマ
-- ● ツェペシュの幼き末裔 -- ６面テーマ
-- ● 亡き王女の為のセプテット -- ６面ボス・レミリア・スカーレットのテーマ
-- ● 魔法少女達の百年祭 -- EXTRAテーマ
-- ● U.N.オーエンは彼女なのか？ -- EXTRAボス・フランドール・スカーレットのテーマ
-- ● 紅より儚い永遠 -- エンディングテーマ
-- ● 紅楼　～ Eastern Dream... -- スタッフロールテーマ
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|[BSLOT000.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT000.mml)|赤より紅い夢|タイトル画面テーマ|
+|2|[BSLOT001.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT001.mml)|ほおずきみたいに紅い魂|１面テーマ|
+|3|[BSLOT002.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT002.mml)|妖魔夜行|１面ボス・ルーミアのテーマ|
+|4|[BSLOT003.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT003.mml)|ルーネイトエルフ|２面テーマ|
+|5|[BSLOT004.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT004.mml)|おてんば恋娘|２面ボス・チルノのテーマ|
+|6|[BSLOT005.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT005.mml)|上海紅茶館　～ Chinese Tea|３面テーマ|
+|7|[BSLOT006.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT006.mml)|明治十七年の上海アリス|３面ボス・紅 美鈴のテーマ|
+|8|[BSLOT007.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT007.mml)|ヴワル魔法図書館|４面テーマ|
+|9|[BSLOT008.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT008.mml)|ラクトガール　～ 少女密室|４面ボス・パチュリー・ノーレッジのテーマ|
+|10|[BSLOT009.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT009.mml)|メイドと血の懐中時計|５面テーマ|
+|11|[BSLOT010.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT010.mml)|月時計　～ ルナ・ダイアル|５面ボス・十六夜 咲夜のテーマ|
+|12|[BSLOT011.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT011.mml)|ツェペシュの幼き末裔|６面テーマ|
+|13|[BSLOT012.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT012.mml)|亡き王女の為のセプテット|６面ボス・レミリア・スカーレットのテーマ|
+|14|[BSLOT013.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT013.mml)|魔法少女達の百年祭|EXTRAテーマ|
+|15|[BSLOT014.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT014.mml)|U.N.オーエンは彼女なのか？|EXTRAボス・フランドール・スカーレットのテーマ|
+|16|[BSLOT015.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT015.mml)|紅より儚い永遠|エンディングテーマ|
+|17|[BSLOT016.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT016.mml)|紅楼　～ Eastern Dream...|スタッフロールテーマ|
+
+# TODO: 以下のテーブル化
 
 ### 東方妖々夢 (20/20)
 - ● 妖々夢　～ Snow or Cherry Petal -- タイトル画面テーマ
