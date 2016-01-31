@@ -28,6 +28,7 @@
 400A,  74, 1, 35,少女綺想曲　〜 Capriccio
 400B,  73, 1, 35,星の器　〜 Casket of Star
 400C, 105, 1, 35,Lotus Love
+400D, 106, 1, 35,眠れる恐怖　〜 Sleeping Terror
 
 # 東方怪綺談(0x50)
 # ID  BGM LP COL TITLE

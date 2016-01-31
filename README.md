@@ -154,7 +154,7 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |23|-|_スターボウドリーム_|未使用曲|
 |24|-|_Phantasmagoria_|未使用曲|
 
-### 東方幻想郷 (12/28)
+### 東方幻想郷 (13/28)
 
 |No|MML file|Title|Description|
 |---:|---|---|---|
@@ -170,7 +170,7 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |10|[BSLOT074.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT074.mml)|少女綺想曲　～ Capriccio|４面ボス・靈夢のテーマ|
 |11|[BSLOT073.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT073.mml)|星の器　～ Casket of Star|４面ボス・魔理沙のテーマ|
 |12|[BSLOT105.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT105.mml)|Lotus Love|５面テーマ|
-|13|-|眠れる恐怖　～ Sleeping Terror|５面ボス・幽香のテーマ１|
+|13|[BSLOT106.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT106.mml)|眠れる恐怖　～ Sleeping Terror|５面ボス・幽香のテーマ１|
 |14|-|Dream Land|最終面テーマ|
 |15|-|幽夢　～ Inanimate Dream|最終面ボス・幽香のテーマ２|
 |16|-|禁じざるをえない遊戯|エキストラステージテーマ|
@@ -653,6 +653,7 @@ _※妖精大戦争　～ Fairy WarsのFairyの表記は、ゲーム中及び音
 - BSLOT103.mml: 宵闇の魔術師
 - BSLOT104.mml: 蓬莱幻想　～ far East
 - BSLOT105.mml: Lotus Love
+- BSLOT106.mml: 眠れる恐怖　～ Sleeping Terror
 
 # 連絡先
 - Twitter https://twitter.com/suzukiplan
