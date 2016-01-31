@@ -248,15 +248,17 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |2|-|Magical and Hopeless|シューのテーマ|
 |3|-|Sacred Battle|コアントローのテーマ|
 
-# TODO: 以下のテーブル化
-
 #### （ZUN's Strange Works）(3/6)
-- ● 宵闇の魔術師 -- ふぁんたすていかに激しく
-- × Magic of Life -- 残酷なアリス系
-- ● Plastic Space -- 秋霜玉'99（勝手に命名）１面テーマ
-- × Inventive City -- 秋霜玉'99　２面テーマ
-- × 夢幻回廊 -- スロウテンポにワアルド音楽
-- ● 蓬莱幻想　～ far East -- 秋霜玉　エキストラステージのテーマ（未使用）
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|[BSLOT103.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT103.mml)|宵闇の魔術師|ふぁんたすていかに激しく|
+|2|-|Magic of Life|残酷なアリス系|
+|3|[BSLOT077.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT077.mml)|Plastic Space|秋霜玉'99（勝手に命名）１面テーマ|
+|4|-|Inventive City|秋霜玉'99 ２面テーマ|
+|5|-|夢幻回廊|スロウテンポにワアルド音楽|
+|6|[BSLOT104.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT104.mml)|蓬莱幻想　～ far East|秋霜玉　エキストラステージのテーマ（未使用）|
+
+# TODO: 以下のテーブル化
 
 ### 蓬莱人形 (1/13)
 - ● 蓬莱伝説 -- オリジナル
