@@ -279,6 +279,7 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |13|-|空飛ぶ巫女の不思議な毎日|オリジナル|
 
 ### 東方紅魔郷 (17/17)
+
 |No|MML file|Title|Description|
 |---:|---|---|---|
 |1|[BSLOT000.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT000.mml)|赤より紅い夢|タイトル画面テーマ|
@@ -299,30 +300,33 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |16|[BSLOT015.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT015.mml)|紅より儚い永遠|エンディングテーマ|
 |17|[BSLOT016.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT016.mml)|紅楼　～ Eastern Dream...|スタッフロールテーマ|
 
-# TODO: 以下のテーブル化
+### 東方妖々夢 (21/21)
 
-### 東方妖々夢 (20/20)
-- ● 妖々夢　～ Snow or Cherry Petal -- タイトル画面テーマ
-- ● 無何有の郷　～ Deep Mountain -- １面テーマ
-- ● クリスタライズシルバー -- １面ボス・レティ・ホワイトロックのテーマ
-- ● 遠野幻想物語 -- ２面テーマ
-- ● ティアオイエツォン(withered leaf) -- ２面ボス・橙のテーマ
-- ● ブクレシュティの人形師 -- ３面テーマ
-- ● 人形裁判　～ 人の形弄びし少女 -- ３面ボス・アリス・マーガトロイドのテーマ
-- ● 天空の花の都 -- ４面テーマ
-- ● 幽霊楽団　～ Phantom Ensemble -- ４面ボス・プリズムリバー三姉妹のテーマ
-- ● 東方妖々夢　～ Ancient Temple -- ５面テーマ
-- ● 広有射怪鳥事　～ Till When? -- ５面ボス・魂魄 妖夢のテーマ
-- ● アルティメットトゥルース -- ６面テーマ
-- ● 幽雅に咲かせ、墨染の桜　～ Border of Life -- ６面ボス・西行寺 幽々子のテーマ
-- ● ボーダーオブライフ -- ６面ボス・西行寺 幽々子のテーマ２
-- ● 妖々跋扈 -- EXTRAテーマ
-- ● 少女幻葬　～ Necro-Fantasy -- EXTRAボス・八雲 藍のテーマ
-- ● 妖々跋扈　～ Who done it! -- PHANTASMテーマ
-- ● ネクロファンタジア -- PHANTASMボス・八雲 紫のテーマ
-- ● 春風の夢 -- エンディングテーマ
-- ● さくらさくら　～ Japanize Dream... -- スタッフロールテーマ
-- ● 過去の花　～ Fairy of Flower -- 未使用曲
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|[BSLOT017.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT017.mml)|妖々夢　～ Snow or Cherry Petal|タイトル画面テーマ|
+|2|[BSLOT018.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT018.mml)|無何有の郷　～ Deep Mountain|１面テーマ|
+|3|[BSLOT019.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT019.mml)|クリスタライズシルバー|１面ボス・レティ・ホワイトロックのテーマ|
+|4|[BSLOT020.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT020.mml)|遠野幻想物語|２面テーマ|
+|5|[BSLOT021.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT021.mml)|ティアオイエツォン(withered leaf)|２面ボス・橙のテーマ|
+|6|[BSLOT022.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT022.mml)|ブクレシュティの人形師|３面テーマ|
+|7|[BSLOT023.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT023.mml)|人形裁判　～ 人の形弄びし少女|３面ボス・アリス・マーガトロイドのテーマ|
+|8|[BSLOT024.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT024.mml)|天空の花の都|４面テーマ|
+|9|[BSLOT025.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT025.mml)|幽霊楽団　～ Phantom Ensemble|４面ボス・プリズムリバー三姉妹のテーマ|
+|10|[BSLOT026.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT026.mml)|東方妖々夢　～ Ancient Temple|５面テーマ|
+|11|[BSLOT027.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT027.mml)|広有射怪鳥事　～ Till When?|５面ボス・魂魄 妖夢のテーマ|
+|12|[BSLOT028.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT028.mml)|アルティメットトゥルース|６面テーマ|
+|13|[BSLOT029.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT029.mml)|幽雅に咲かせ、墨染の桜　～ Border of Life|６面ボス・西行寺 幽々子のテーマ|
+|14|[BSLOT030.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT030.mml)|ボーダーオブライフ|６面ボス・西行寺 幽々子のテーマ２|
+|15|[BSLOT031.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT031.mml)|妖々跋扈|EXTRAテーマ|
+|16|[BSLOT032.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT032.mml)|少女幻葬　～ Necro-Fantasy|EXTRAボス・八雲 藍のテーマ|
+|17|[BSLOT033.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT033.mml)|妖々跋扈　～ Who done it!|PHANTASMテーマ|
+|18|[BSLOT034.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT034.mml)|ネクロファンタジア|PHANTASMボス・八雲 紫のテーマ|
+|19|[BSLOT035.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT035.mml)|春風の夢|エンディングテーマ|
+|20|[BSLOT036.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT036.mml)|さくらさくら　～ Japanize Dream...|スタッフロールテーマ|
+|21|[BSLOT037.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT037.mml)|過去の花　～ Fairy of Flower|未使用曲|
+
+# TODO: 以下のテーブル化
 
 ### 東方萃夢想 (0/3)
 - × Demystify Feast -- 宴会直前ステージのテーマ
