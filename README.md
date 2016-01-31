@@ -1,13 +1,24 @@
 このリポジトリは、東方BGM on VGSのソースコード、各種情報（バグ、エンハンス、レビュー等）を管理する目的のものです。
 
-# VGS BGM Playerでの利用方法
-- [vgspackディレクトリ](https://github.com/suzukiplan/Touhou-VGS-MML-data/tree/master/vgspack) の内容をDropboxに保存してアプリからアクセスすれば、インポートすることができます。
-- VGS BGM Player について詳しいことは [こちら](https://github.com/suzukiplan/vgs-bgm-player) を参照してください。
+# 再生方法
+### 東方BGM on VGS（iPhone/Android）
+- iPhone: https://itunes.apple.com/jp/app/dong-fangbgm-on-vgs/id680248037?mt=8
+- Android: https://play.google.com/store/apps/details?id=com.suzukiplan.TOHOVGS
+- 多分、これが一番簡単だと思います
 
-# PC（Mac or Linux）での利用方法
-ここで公開しているmmlファイルは、Mac（OS X 10.3以降推奨） か Linux（CentOS7推奨）を搭載したパソコンを持っていれば簡単に視聴できます。詳しい手順は[こちら](https://gist.github.com/suzukiplan/ce6126d5344dd9a46e56)のシェルスクリプトを参照してください。（なお、Windowsのパソコンでは、必ずしも無理ではないけど、一定のプログラミング知識と環境を揃えなければできないため、解説は省略します）
+### VGS BGM Player（iPhone）
+- [vgspackディレクトリ](https://github.com/suzukiplan/Touhou-VGS-MML-data/tree/master/vgspack) の内容をDropboxに保存してアプリからアクセスすれば、インポートすることができます
+- VGS BGM Player について詳しいことは [こちら](https://github.com/suzukiplan/vgs-bgm-player) を参照してください
+- 東方BGM on VGSより若干まどるっこしいですが、最新の曲や自作の曲が再生できたりします
 
-# MMLの書き方＆演奏方法
+### VGS mk-II SR（Mac or Linux）
+- https://github.com/suzukiplan/vgs2
+- ここで公開しているmmlファイルは、Mac（OS X 10.3以降推奨） か Linux（CentOS7推奨）を搭載したパソコンを持っていれば簡単に視聴できます。（Windowsでも多分使えますが obsoleted です）
+- 詳しい手順は[こちら](https://gist.github.com/suzukiplan/ce6126d5344dd9a46e56)のシェルスクリプトを参照してください。
+- 自作のプレイヤやプラグインを作って演奏したかったりする上級者向け。
+- また、「このアレンジは気に食わん！」などと思った方は、VGS mk-II SRを使えば誰でも自由にカスタマイズできるので、自分でアレンジしてお楽しみください
+
+# MMLの作成方法
 ### MMLとは？
 - MML（Music Macro Language）とは、テキストで記述する音楽データのことです。
 - midi等の祖先だと思っておけば概ね間違いありません。
@@ -360,324 +371,251 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |20|[BSLOT057.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT057.mml)|Eternal Dream　～ 幽玄の槭樹|スタッフロールテーマ|
 |21|[BSLOT058.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT058.mml)|東方妖怪小町|ラストワードのテーマ|
 
-# TODO: 以下のテーブル化
-
 ### 東方花映塚 (8/19)
-- ● 花映塚　～ Higan Retour -- タイトル画面テーマ
-- ● 春色小径　～ Colorful Path -- 博麗 霊夢のテーマ
-- ● オリエンタルダークフライト -- 霧雨 魔理沙のテーマ
-- ● フラワリングナイト -- 十六夜 咲夜のテーマ
-- × 東方妖々夢　～ Ancient Temple -- 魂魄 妖夢のテーマ
-- × 狂気の瞳　～ Invisible Full Moon -- 鈴仙・U・イナバのテーマ
-- ● おてんば恋娘の冒険 -- チルノのテーマ
-- × 幽霊楽団　～ Phantom Ensemble -- プリズムリバー三姉妹のテーマ
-- × もう歌しか聞こえない　～ Flower Mix -- ミスティア・ローレライのテーマ
-- ● お宇佐さまの素い幡 -- 因幡 てゐのテーマ
-- ● 風神少女　 (Short Version) -- 射命丸 文のテーマ
-- × ポイズンボディ　～ Forsaken Doll -- メディスン・メランコリーのテーマ
-- × 今昔幻想郷　～ Flower Land -- 風見 幽香のテーマ
-- × 彼岸帰航　～ Riverside View -- 小野塚 小町のテーマ
-- ● 六十年目の東方裁判　～ Fate of Sixty Years -- 四季映姫・ヤマザナドゥのテーマ
-- × 花の映る塚 -- 会話場面のテーマ１
-- × 此岸の塚 -- 会話場面のテーマ２
-- × 花は幻想のままに -- エンディングテーマ
-- × 魂の花　～ Another Dream... -- スタッフロールテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|[BSLOT070.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT070.mml)|花映塚　～ Higan Retour|タイトル画面テーマ|
+|2|[BSLOT071.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT071.mml)|春色小径　～ Colorful Path|博麗 霊夢のテーマ|
+|3|[BSLOT076.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT076.mml)|オリエンタルダークフライト|霧雨 魔理沙のテーマ|
+|4|[BSLOT066.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT066.mml)|フラワリングナイト|十六夜 咲夜のテーマ|
+|5|-|東方妖々夢　～ Ancient Temple|魂魄 妖夢のテーマ|
+|6|-|狂気の瞳　～ Invisible Full Moon|鈴仙・U・イナバのテーマ|
+|7|[BSLOT083.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT083.mml)|おてんば恋娘の冒険|チルノのテーマ|
+|8|-|幽霊楽団　～ Phantom Ensemble|プリズムリバー三姉妹のテーマ|
+|9|-|もう歌しか聞こえない　～ Flower Mix|ミスティア・ローレライのテーマ|
+|10|[BSLOT084.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT084.mml)|お宇佐さまの素い幡|因幡 てゐのテーマ|
+|11|[BSLOT060.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT060.mml)|風神少女　 (Short Version)|射命丸 文のテーマ|
+|12|-|ポイズンボディ　～ Forsaken Doll|メディスン・メランコリーのテーマ|
+|13|-|今昔幻想郷　～ Flower Land|風見 幽香のテーマ|
+|14|-|彼岸帰航　～ Riverside View|小野塚 小町のテーマ|
+|15|[BSLOT085.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT085.mml)|六十年目の東方裁判　～ Fate of Sixty Years|四季映姫・ヤマザナドゥのテーマ|
+|16|-|花の映る塚|会話場面のテーマ１|
+|17|-|此岸の塚|会話場面のテーマ２|
+|18|-|花は幻想のままに|エンディングテーマ|
+|19|-|魂の花　～ Another Dream...|スタッフロールテーマ|
 
 ### 東方文花帖 (0/6)
-- × 天狗の手帖　～ Mysterious Note -- タイトル画面テーマ
-- × 風の循環　～ Wind Tour -- 撮影曲１
-- × 天狗が見ている　～ Black Eyes -- 撮影曲２
-- × 東の国の眠らない夜 -- 撮影曲３
-- × レトロスペクティブ京都 -- 撮影曲４
-- × 風神少女 -- 撮影曲５
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|天狗の手帖　～ Mysterious Note|タイトル画面テーマ|
+|2|-|風の循環　～ Wind Tour|撮影曲１|
+|3|-|天狗が見ている　～ Black Eyes|撮影曲２|
+|4|-|東の国の眠らない夜|撮影曲３|
+|5|-|レトロスペクティブ京都|撮影曲４|
+|6|-|風神少女|撮影曲５|
 
 ### 東方風神録 (18/18)
-- ● 1. 封印されし神々 -- タイトル画面テーマ
-- ● 2. 人恋し神様　～ Romantic Fall -- １面テーマ
-- ● 3. 稲田姫様に叱られるから -- １面ボス・秋 穣子のテーマ
-- ● 4. 厄神様の通り道　～ Dark Road -- ２面テーマ
-- ● 5. 運命のダークサイド -- ２面ボス・鍵山 雛のテーマ
-- ● 6. 神々が恋した幻想郷 -- ３面テーマ
-- ● 7. 芥川龍之介の河童　～ Candid Friend -- ３面ボス・河城 にとりのテーマ
-- ● 8. フォールオブフォール　～ 秋めく滝 -- ４面テーマ
-- ● 9. 妖怪の山　～ Mysterious Mountain -- ４面ボス・射命丸 文のテーマ
-- ● 10. 少女が見た日本の原風景 -- ５面テーマ
-- ● 11. 信仰は儚き人間の為に -- ５面ボス・東風谷 早苗のテーマ
-- ● 12. 御柱の墓場　～ Grave of Being -- ６面テーマ
-- ● 13. 神さびた古戦場　～ Suwa Foughten Field -- ６面ボス・八坂 神奈子のテーマ
-- ● 14. 明日ハレの日、ケの昨日 -- EXTRAテーマ
-- ● 15. ネイティブフェイス -- EXTRAボス・洩矢 諏訪子のテーマ
-- ● 16. 麓の神社 -- エンディングテーマ
-- ● 17. 神は恵みの雨を降らす　～ Sylphid Dream -- スタッフロールテーマ
-- ● 18. プレイヤーズスコア -- ゲームオーバーテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|[BSLOT098.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT098.mml)|封印されし神々|タイトル画面テーマ|
+|2|[BSLOT088.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT088.mml)|人恋し神様　～ Romantic Fall|１面テーマ|
+|3|[BSLOT069.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT069.mml)|稲田姫様に叱られるから|１面ボス・秋 穣子のテーマ|
+|4|[BSLOT089.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT089.mml)|厄神様の通り道　～ Dark Road|２面テーマ|
+|5|[BSLOT090.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT090.mml)|運命のダークサイド|２面ボス・鍵山 雛のテーマ|
+|6|[BSLOT064.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT064.mml)|神々が恋した幻想郷|３面テーマ|
+|7|[BSLOT065.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT065.mml)|芥川龍之介の河童　～ Candid Friend|３面ボス・河城 にとりのテーマ|
+|8|[BSLOT091.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT091.mml)|フォールオブフォール　～ 秋めく滝|４面テーマ|
+|9|[BSLOT092.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT092.mml)|妖怪の山　～ Mysterious Mountain|４面ボス・射命丸 文のテーマ|
+|10|[BSLOT093.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT093.mml)|少女が見た日本の原風景|５面テーマ|
+|11|[BSLOT094.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT094.mml)|信仰は儚き人間の為に|５面ボス・東風谷 早苗のテーマ|
+|12|[BSLOT095.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT095.mml)|御柱の墓場　～ Grave of Being|６面テーマ|
+|13|[BSLOT096.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT096.mml)|神さびた古戦場　～ Suwa Foughten Field|６面ボス・八坂 神奈子のテーマ|
+|14|[BSLOT067.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT067.mml)|明日ハレの日、ケの昨日|EXTRAテーマ|
+|15|[BSLOT068.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT068.mml)|ネイティブフェイス|EXTRAボス・洩矢 諏訪子のテーマ|
+|16|[BSLOT097.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT097.mml)|麓の神社|エンディングテーマ|
+|17|[BSLOT099.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT099.mml)|神は恵みの雨を降らす　～ Sylphid Dream|スタッフロールテーマ|
+|18|[BSLOT100.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT100.mml)|プレイヤーズスコア|ゲームオーバーテーマ|
 
 ### 東方緋想天 (0/3)
-- × 黒い海に紅く　～ Legendary Fish -- 永江 衣玖のテーマ
-- × 有頂天変　～ Wonderful Heaven -- 比那名居 天子のテーマ
-- × 幼心地の有頂天 -- ラストスペルのテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|黒い海に紅く　～ Legendary Fish|永江 衣玖のテーマ|
+|2|-|有頂天変　～ Wonderful Heaven|比那名居 天子のテーマ|
+|3|-|幼心地の有頂天|ラストスペルのテーマ|
 
 ### 東方地霊殿 (3/18)
-- × 地霊達の起床 -- タイトル画面テーマ
-- × 暗闇の風穴 -- １面テーマ
-- × 封じられた妖怪　～ Lost Place -- １面ボス・黒谷 ヤマメのテーマ
-- × 渡る者の途絶えた橋 -- ２面テーマ
-- ● 緑眼のジェラシー -- ２面ボス・水橋 パルスィのテーマ
-- × 旧地獄街道を行く -- ３面テーマ
-- × 華のさかづき大江山 -- ３面ボス・星熊 勇儀のテーマ
-- × ハートフェルトファンシー -- ４面テーマ
-- ● 少女さとり　～ 3rd eye -- ４面ボス・古明地 さとりのテーマ
-- × 廃獄ララバイ -- ５面のテーマ
-- ● 死体旅行　～ Be of good cheer! -- ５面ボス・火焔猫 燐のテーマ
-- × 業火マントル -- ６面のテーマ
-- × 霊知の太陽信仰　～ Nuclear Fusion -- ６面ボス・霊烏路 空のテーマ
-- × ラストリモート -- EXTRAのテーマ
-- × ハルトマンの妖怪少女 -- EXTRAボス・古明地 こいしのテーマ
-- × 地霊達の帰宅 -- エンディングテーマ
-- × エネルギー黎明 ～ Future Dream... -- スタッフロールのテーマ
-- × プレイヤーズスコア -- ゲームオーバーテーマ　（※風神録と同じ）
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|地霊達の起床|タイトル画面テーマ|
+|2|-|暗闇の風穴|１面テーマ|
+|3|-|封じられた妖怪　～ Lost Place|１面ボス・黒谷 ヤマメのテーマ|
+|4|-|渡る者の途絶えた橋|２面テーマ|
+|5|[BSLOT101.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT101.mml)|緑眼のジェラシー|２面ボス・水橋 パルスィのテーマ|
+|6|-|旧地獄街道を行く|３面テーマ|
+|7|-|華のさかづき大江山|３面ボス・星熊 勇儀のテーマ|
+|8|-|ハートフェルトファンシー|４面テーマ|
+|9|[BSLOT072.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT072.mml)|少女さとり　～ 3rd eye|４面ボス・古明地 さとりのテーマ|
+|10|-|廃獄ララバイ|５面のテーマ|
+|11|[BSLOT102.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT102.mml)|死体旅行　～ Be of good cheer!|５面ボス・火焔猫 燐のテーマ|
+|12|-|業火マントル|６面のテーマ|
+|13|-|霊知の太陽信仰　～ Nuclear Fusion|６面ボス・霊烏路 空のテーマ|
+|14|-|ラストリモート|EXTRAのテーマ|
+|15|-|ハルトマンの妖怪少女|EXTRAボス・古明地 こいしのテーマ|
+|16|-|地霊達の帰宅|エンディングテーマ|
+|17|-|エネルギー黎明 ～ Future Dream...|スタッフロールのテーマ|
+|18|-|プレイヤーズスコア|ゲームオーバーテーマ　（※風神録と同じ）|
 
 ### 東方星蓮船 (0/18)
-- × 青空の影 -- タイトル画面テーマ
-- × 春の湊に -- １面テーマ
-- × 小さな小さな賢将 -- １面ボス・ナズーリンのテーマ
-- × 閉ざせし雲の通い路 -- ２面テーマ
-- × 万年置き傘にご注意を -- ２面ボス・多々良 小傘のテーマ
-- × スカイルーイン -- ３面テーマ
-- × 時代親父とハイカラ少女 -- ３面ボス・雲居 一輪＆雲山のテーマ
-- × 幽霊客船の時空を越えた旅 -- ４面テーマ
-- × キャプテン・ムラサ -- ４面ボス・村紗 水蜜のテーマ
-- × 魔界地方都市エソテリア -- ５面テーマ
-- × 虎柄の毘沙門天 -- ５面ボス・寅丸 星のテーマ
-- × 法界の火 -- ６面テーマ
-- × 感情の摩天楼　～ Cosmic Mind -- ６面ボス・聖 白蓮のテーマ
-- × 夜空のユーフォーロマンス -- EXTRAのテーマ
-- × 平安のエイリアン -- EXTRAボス・封獣 ぬえのテーマ
-- × 妖怪寺 -- エンディングテーマ
-- × 空の帰り道　～ Sky Dream -- スタッフロールのテーマ
-- × プレイヤーズスコア -- ゲームオーバーテーマ　（※風神録と同じ）
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|青空の影|タイトル画面テーマ|
+|2|-|春の湊に|１面テーマ|
+|3|-|小さな小さな賢将|１面ボス・ナズーリンのテーマ|
+|4|-|閉ざせし雲の通い路|２面テーマ|
+|5|-|万年置き傘にご注意を|２面ボス・多々良 小傘のテーマ|
+|6|-|スカイルーイン|３面テーマ|
+|7|-|時代親父とハイカラ少女|３面ボス・雲居 一輪＆雲山のテーマ|
+|8|-|幽霊客船の時空を越えた旅|４面テーマ|
+|9|-|キャプテン・ムラサ|４面ボス・村紗 水蜜のテーマ|
+|10|-|魔界地方都市エソテリア|５面テーマ|
+|11|-|虎柄の毘沙門天|５面ボス・寅丸 星のテーマ|
+|12|-|法界の火|６面テーマ|
+|13|-|感情の摩天楼　～ Cosmic Mind|６面ボス・聖 白蓮のテーマ|
+|14|-|夜空のユーフォーロマンス|EXTRAのテーマ|
+|15|-|平安のエイリアン|EXTRAボス・封獣 ぬえのテーマ|
+|16|-|妖怪寺|エンディングテーマ|
+|17|-|空の帰り道　～ Sky Dream|スタッフロールのテーマ|
+|18|-|プレイヤーズスコア|ゲームオーバーテーマ　（※風神録と同じ）|
 
 ### 東方非想天則 (0/2)
-- × アンノウンX　～ Unfound Adventure -- ファイナルステージ共通テーマ
-- × 空に浮かぶ物体X -- 早苗ストーリー・ラストスペルのテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|アンノウンX　～ Unfound Adventure|ファイナルステージ共通テーマ|
+|2|-|空に浮かぶ物体X|早苗ストーリー・ラストスペルのテーマ|
 
 ### ダブルスポイラー (0/7)
-- × ニュースハウンド -- タイトル画面テーマ
-- × あなたの町の怪事件 -- 取材のテーマ１
-- × 妖怪モダンコロニー -- 取材のテーマ２
-- × ネメシスの要塞 -- 取材のテーマ３
-- × 無間の鐘　～ Infinite Nightmare -- 取材のテーマ４
-- × 妖怪の山　～ Mysterious Mountain -- 取材のテーマ５
-- × （曲名不明） -- はたてモード開放画面・コンプリート画面のテーマ
-- × 音楽室には登録なし（データではth125_07.wav）
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|ニュースハウンド|タイトル画面テーマ|
+|2|-|あなたの町の怪事件|取材のテーマ１|
+|3|-|妖怪モダンコロニー|取材のテーマ２|
+|4|-|ネメシスの要塞|取材のテーマ３|
+|5|-|無間の鐘　～ Infinite Nightmare|取材のテーマ４|
+|6|-|妖怪の山　～ Mysterious Mountain|取材のテーマ５|
+|7|-|_（曲名不明）_|はたてモード開放画面・コンプリート画面のテーマ|
+|8|-|_（未使用？）_|音楽室には登録なし（データではth125_07.wav）|
 
 ### 妖精大戦争 (0/10)
-- × 春の氷精 -- タイトル画面テーマ
-- × 可愛い大戦争のリフレーン -- １面のテーマ
-- × いたずらに命をかけて -- １、２面ボスのテーマ
-- × 年中夢中の好奇心 -- ２面のテーマ
-- × 真夜中のフェアリーダンス -- ３面のテーマ
-- × 妖精大戦争　～ Fairy Wars -- ３面ボスのテーマ
-- × ルーズレイン -- EXTRAのテーマ
-- × メイガスナイト -- EXTRAボス・霧雨 魔理沙のテーマ
-- × 春の氷精　- 静 - -- エンディングテーマ
-- × プレイヤーズスコア -- ネームレジストのテーマ（※新アレンジ）
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|春の氷精|タイトル画面テーマ|
+|2|-|可愛い大戦争のリフレーン|１面のテーマ|
+|3|-|いたずらに命をかけて|１、２面ボスのテーマ|
+|4|-|年中夢中の好奇心|２面のテーマ|
+|5|-|真夜中のフェアリーダンス|３面のテーマ|
+|6|-|妖精大戦争　～ __Fairy__ Wars|３面ボスのテーマ|
+|7|-|ルーズレイン|EXTRAのテーマ|
+|8|-|メイガスナイト|EXTRAボス・霧雨 魔理沙のテーマ|
+|9|-|春の氷精　- 静 -|エンディングテーマ|
+|10|-|プレイヤーズスコア|ネームレジストのテーマ（※新アレンジ）|
 
 _※妖精大戦争　～ Fairy WarsのFairyの表記は、ゲーム中及び音楽室選択画面だとFailyと表記されている（1.00a）_
 
 ### 東方神霊廟 (0/18)
-- × 欲深き霊魂 -- タイトル画面テーマ
-- × 死霊の夜桜 -- １面テーマ
-- × ゴーストリード -- １面ボス・西行寺 幽々子のテーマ
-- × 妖怪寺へようこそ -- ２面テーマ
-- × 門前の妖怪小娘 -- ２面ボス・幽谷 響子のテーマ
-- × 素敵な墓場で暮しましょ -- ３面テーマ
-- × リジッドパラダイス -- ３面ボス・宮古 芳香のテーマ
-- × デザイアドライブ -- ４面テーマ
-- × 古きユアンシェン -- ４面ボス・霍 青娥のテーマ
-- × 夢殿大祀廟 -- ５面テーマ
-- × 大神神話伝 -- ５面ボス・物部 布都のテーマ
-- × 小さな欲望の星空 -- ６面テーマ
-- × 聖徳伝説　～ True Administrator -- ６面ボス・豊聡耳 神子のテーマ
-- × 妖怪裏参道 -- EXTRAのテーマ
-- × 佐渡の二ッ岩 -- EXTRAボス・二ッ岩 マミゾウのテーマ
-- × 神社の新しい風 -- エンディングテーマ
-- × デザイアドリーム -- スタッフロールテーマ
-- × プレイヤーズスコア -- ゲームオーバーテーマ　（※妖精大戦争と同じ）
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|欲深き霊魂|タイトル画面テーマ|
+|2|-|死霊の夜桜|１面テーマ|
+|3|-|ゴーストリード|１面ボス・西行寺 幽々子のテーマ|
+|4|-|妖怪寺へようこそ|２面テーマ|
+|5|-|門前の妖怪小娘|２面ボス・幽谷 響子のテーマ|
+|6|-|素敵な墓場で暮しましょ|３面テーマ|
+|7|-|リジッドパラダイス|３面ボス・宮古 芳香のテーマ|
+|8|-|デザイアドライブ|４面テーマ|
+|9|-|古きユアンシェン|４面ボス・霍 青娥のテーマ|
+|10|-|夢殿大祀廟|５面テーマ|
+|11|-|大神神話伝|５面ボス・物部 布都のテーマ|
+|12|-|小さな欲望の星空|６面テーマ|
+|13|-|聖徳伝説　～ True Administrator|６面ボス・豊聡耳 神子のテーマ|
+|14|-|妖怪裏参道|EXTRAのテーマ|
+|15|-|佐渡の二ッ岩|EXTRAボス・二ッ岩 マミゾウのテーマ|
+|16|-|神社の新しい風|エンディングテーマ|
+|17|-|デザイアドリーム|スタッフロールテーマ|
+|18|-|プレイヤーズスコア|ゲームオーバーテーマ　（※妖精大戦争と同じ）|
 
 ### 東方心綺楼 (0/2)
-- × 幻想郷の二ッ岩 -- 二ッ岩 マミゾウのテーマ
-- × 亡失のエモーション -- 秦 こころのテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|幻想郷の二ッ岩|二ッ岩 マミゾウのテーマ|
+|2|-|亡失のエモーション|秦 こころのテーマ|
 
 ### 東方輝針城 (0/18)
-- × 不思議なお祓い棒 -- タイトル画面テーマ
-- × ミストレイク -- １面テーマ
-- × 秘境のマーメイド -- １面ボス・わかさぎ姫のテーマ
-- × 運河を行き交う人妖 -- ２面テーマ
-- × 柳の下のデュラハン -- ２面ボス・赤蛮奇のテーマ
-- × 満月の竹林 -- ３面テーマ
-- × 孤独なウェアウルフ -- ３面ボス・今泉 影狼のテーマ
-- × マジカルストーム -- ４面テーマ
-- × 幻想浄瑠璃 -- ４面ボス・九十九 弁々＆九十九 八橋のテーマ
-- × 空中に沈む輝針城 -- ５面テーマ
-- × リバースイデオロギー -- ５面ボス・鬼人 正邪のテーマ
-- × 針小棒大の天守閣 -- ６面テーマ
-- × 輝く針の小人族　～ Little Princess -- ６面ボス・少名 針妙丸のテーマ
-- × 魔力の雷雲 -- EXTRAのテーマ
-- × 始原のビート　～ Pristine Beat -- EXTRAボス・堀川 雷鼓のテーマ
-- × 小槌の魔力 -- エンディングテーマ
-- × 不思議な不思議な道具達 -- スタッフロールテーマ
-- × プレイヤーズスコア -- ゲームオーバーテーマ　（※妖精大戦争と同じ）
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|不思議なお祓い棒|タイトル画面テーマ|
+|2|-|ミストレイク|１面テーマ|
+|3|-|秘境のマーメイド|１面ボス・わかさぎ姫のテーマ|
+|4|-|運河を行き交う人妖|２面テーマ|
+|5|-|柳の下のデュラハン|２面ボス・赤蛮奇のテーマ|
+|6|-|満月の竹林|３面テーマ|
+|7|-|孤独なウェアウルフ|３面ボス・今泉 影狼のテーマ|
+|8|-|マジカルストーム|４面テーマ|
+|9|-|幻想浄瑠璃|４面ボス・九十九 弁々＆九十九 八橋のテーマ|
+|10|-|空中に沈む輝針城|５面テーマ|
+|11|-|リバースイデオロギー|５面ボス・鬼人 正邪のテーマ|
+|12|-|針小棒大の天守閣|６面テーマ|
+|13|-|輝く針の小人族　～ Little Princess|６面ボス・少名 針妙丸のテーマ|
+|14|-|魔力の雷雲|EXTRAのテーマ|
+|15|-|始原のビート　～ Pristine Beat|EXTRAボス・堀川 雷鼓のテーマ|
+|16|-|小槌の魔力|エンディングテーマ|
+|17|-|不思議な不思議な道具達|スタッフロールテーマ|
+|18|-|プレイヤーズスコア|ゲームオーバーテーマ　（※妖精大戦争と同じ）|
 
 ### 弾幕アマノジャク (0/9)
-- × 反則の狼煙を上げろ -- タイトル画面テーマ
-- × 不可能弾幕には反則を -- 最序盤のテーマ
-- × ミッドナイトスペルカード -- 序盤のテーマ
-- × ロマンチック逃飛行 -- 中盤のテーマ
-- × 永遠の三日天下 -- 終盤のテーマ
-- × 秘境のマーメイド -- （※輝針城から再録）
-- × リバースイデオロギー -- （※輝針城から再録）
-- × 幻想浄瑠璃 -- （※輝針城から再録）
-- × 妖怪の山　～ Mysterious Mountain -- （※風神録から再録）
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|反則の狼煙を上げろ|タイトル画面テーマ|
+|2|-|不可能弾幕には反則を|最序盤のテーマ|
+|3|-|ミッドナイトスペルカード|序盤のテーマ|
+|4|-|ロマンチック逃飛行|中盤のテーマ|
+|5|-|永遠の三日天下|終盤のテーマ|
+|6|-|秘境のマーメイド|（※輝針城から再録）|
+|7|-|リバースイデオロギー|（※輝針城から再録）|
+|8|-|幻想浄瑠璃|（※輝針城から再録）|
+|9|-|妖怪の山　～ Mysterious Mountain|（※風神録から再録）|
 
 ### 東方深秘録 (0/2)
-- × 華狭間のバトルフィールド -- 茨木 華扇のテーマ
-- × ラストオカルティズム　～ 現し世の秘術師 -- 宇佐見 菫子のテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|華狭間のバトルフィールド -- 茨木 華扇のテーマ
+|2|-|ラストオカルティズム　～ 現し世の秘術師 -- 宇佐見 菫子のテーマ
 
 ### 東方紺珠伝 (0/18)
-- × 宇宙巫女現る -- タイトル画面テーマ
-- × 忘れがたき、よすがの緑 -- １面テーマ
-- × 兎は舞い降りた -- １面ボス・清蘭のテーマ
-- × 湖は浄めの月光を映して -- ２面テーマ
-- × 九月のパンプキン -- ２面ボス・鈴瑚のテーマ
-- × 宇宙を飛ぶ不思議な巫女 -- ３面テーマ
-- × 永遠の春夢 -- ３面ボス・ドレミー・スイートのテーマ
-- × 凍り付いた永遠の都 -- ４面テーマ
-- × 逆転するホイールオブフォーチュン -- ４面ボス・稀神 サグメのテーマ
-- × 遥か３８万キロのボヤージュ -- ５面テーマ
-- × 星条旗のピエロ -- ５面ボス・クラウンピースのテーマ
-- × 故郷の星が映る海 -- ６面テーマ
-- × ピュアヒューリーズ　～ 心の在処 -- ６面ボス・純狐のテーマ
-- × 見た事も無い悪夢の世界 -- EXTRAのテーマ
-- × パンデモニックプラネット -- EXTRAボス・ヘカーティア・ラピスラズリのテーマ
-- × 神社から見える月 -- エンディングテーマ
-- × 宇宙巫女帰還する -- スタッフロールテーマ
-- × プレイヤーズスコア -- ゲームオーバーテーマ　（※輝針城・神霊廟・妖精大戦争と同じ）
 
-### 【補足】
-
-- 旧作は怪綺談が手に入れば全部できます（※手に入らないので誰か譲ってくださいｗ）。
-- 当然ですが違法ダウンロードでの入手はダメです。
-- 幺樂団の歴史は全部持っているので、耳コピでなら出来なくもないけど、耳コピはキツい...
-- 耳コピが必要な曲（×）の楽譜は提供いただけるとありがたいです（形式は不問です）
-
-# ファイルと曲の対応関係
-- BSLOT000.mml: 赤より紅い夢
-- BSLOT001.mml: ほおずきみたいに紅い魂
-- BSLOT002.mml: 妖魔夜行
-- BSLOT003.mml: ルーネイトエルフ
-- BSLOT004.mml: おてんば恋娘
-- BSLOT005.mml: 上海紅茶館 ～ Chinese Tea
-- BSLOT006.mml: 明治十七年の上海アリス
-- BSLOT007.mml: ヴワル魔法図書館
-- BSLOT008.mml: ラクトガール ～ 少女密室
-- BSLOT009.mml: メイドと血の懐中時計
-- BSLOT010.mml: 月時計 ～ ルナ・ダイアル
-- BSLOT011.mml: ツェペシュの幼き末裔
-- BSLOT012.mml: 亡き王女の為のセプテット
-- BSLOT013.mml: 魔法少女達の百年祭
-- BSLOT014.mml: U.N.オーエンは彼女なのか？
-- BSLOT015.mml: 紅より儚い永遠
-- BSLOT016.mml: 紅楼 ～ Eastern Dream...
-- BSLOT017.mml: 妖々夢 ～ Snow or Cherry Petal
-- BSLOT018.mml: 無何有の郷 ～ Deep Mountain
-- BSLOT019.mml: クリスタライズシルバー
-- BSLOT020.mml: 遠野幻想物語
-- BSLOT021.mml: ティアオイエツォン(withered leaf)
-- BSLOT022.mml: ブクレシュティの人形師
-- BSLOT023.mml: 人形裁判 ～ 人の形弄びし少女
-- BSLOT024.mml: 天空の花の都
-- BSLOT025.mml: 幽霊楽団 ～ Phantom Ensemble
-- BSLOT026.mml: 東方妖々夢 ～ Ancient Temple
-- BSLOT027.mml: 広有射怪鳥事 ～ Till When?
-- BSLOT028.mml: アルティメットトゥルース
-- BSLOT029.mml: 幽雅に咲かせ、墨染の桜 ～ Border of Life
-- BSLOT030.mml: ボーダーオブライフ
-- BSLOT031.mml: 妖々跋扈
-- BSLOT032.mml: 少女幻葬 ～ Necro-Fantasy
-- BSLOT033.mml: 妖々跋扈 ～ Who done it!
-- BSLOT034.mml: ネクロファンタジア
-- BSLOT035.mml: 春風の夢
-- BSLOT036.mml: さくらさくら ～ Japanize Dream...
-- BSLOT037.mml: 過去の花 ～ Fairy of Flower
-- BSLOT038.mml: 永夜抄 ～ Eastern Night.
-- BSLOT039.mml: 幻視の夜 ～ Ghostly Eyes
-- BSLOT040.mml: 蠢々秋月 ～ Mooned Insect
-- BSLOT041.mml: 夜雀の歌声 ～ Night Bird
-- BSLOT042.mml: もう歌しか聞こえない
-- BSLOT043.mml: 懐かしき東方の血 ～ Old World
-- BSLOT044.mml: プレインエイジア
-- BSLOT045.mml: 永夜の報い ～ Imperishable Night.
-- BSLOT046.mml: 少女綺想曲 ～ Dream Battle
-- BSLOT047.mml: 恋色マスタースパーク
-- BSLOT048.mml: シンデレラケージ ～ Kagome-Kagome
-- BSLOT049.mml: 狂気の瞳 ～ Invisible Full Moon
-- BSLOT050.mml: ヴォヤージュ1969
-- BSLOT051.mml: 千年幻想郷 ～ History of the Moon
-- BSLOT052.mml: 竹取飛翔 ～ Lunatic Princess
-- BSLOT053.mml: ヴォヤージュ1970
-- BSLOT054.mml: エクステンドアッシュ ～ 蓬莱人
-- BSLOT055.mml: 月まで届け、不死の煙
-- BSLOT056.mml: 月見草
-- BSLOT057.mml: Eternal Dream ～ 幽玄の槭樹
-- BSLOT058.mml: 東方妖怪小町
-- BSLOT059.mml: 蓬莱伝説
-- BSLOT060.mml: 風神少女
-- BSLOT061.mml: Bad Apple!!
-- BSLOT062.mml: 不思議の国のアリス
-- BSLOT063.mml: the Grimoire of Alice
-- BSLOT064.mml: 神々が恋した幻想郷
-- BSLOT065.mml: 芥川龍之介の河童 ～ Candid Friend
-- BSLOT066.mml: フラワリングナイト
-- BSLOT067.mml: 明日ハレの日、ケの昨日
-- BSLOT068.mml: ネイティブフェイス
-- BSLOT069.mml: 稲田姫様に叱られるから
-- BSLOT070.mml: 花映塚 ～ Higan Retour
-- BSLOT071.mml: 春色小径 ～ Colorful Path
-- BSLOT072.mml: 少女さとり　～ 3rd eye
-- BSLOT073.mml: 星の器　～ Casket of Star
-- BSLOT074.mml: 少女綺想曲　～ Capriccio
-- BSLOT075.mml: アリスマエステラ
-- BSLOT076.mml: オリエンタルダークフライト
-- BSLOT077.mml: Plastic Space
-- BSLOT078.mml: 霊戦　～ Perdition crisis
-- BSLOT079.mml: 幻想郷　～ Lotus Land Story
-- BSLOT080.mml: Witching Dream
-- BSLOT081.mml: Selene's Light
-- BSLOT082.mml: 装飾戦　～ Decoration Battle
-- BSLOT083.mml: おてんば恋娘の冒険
-- BSLOT084.mml: お宇佐さまの素い幡
-- BSLOT085.mml: 六十年目の東方裁判　～ Fate of Sixty Years
-- BSLOT086.mml: Break the Sabbath
-- BSLOT087.mml: 紅響曲　～ Scarlet Phoneme
-- BSLOT088.mml: 人恋し神様　～ Romantic Fall
-- BSLOT089.mml: 厄神様の通り道　～ Dark Road
-- BSLOT090.mml: 運命のダークサイド
-- BSLOT091.mml: フォールオブフォール　～ 秋めく滝
-- BSLOT092.mml: 妖怪の山　～ Mysterious Mountain
-- BSLOT093.mml: 少女が見た日本の原風景
-- BSLOT094.mml: 信仰は儚き人間の為に
-- BSLOT095.mml: 御柱の墓場　～ Grave of Being
-- BSLOT096.mml: 神さびた古戦場　～ Suwa Foughten Field
-- BSLOT097.mml: 麓の神社
-- BSLOT098.mml: 封印されし神々
-- BSLOT099.mml: 神は恵みの雨を降らす　～ Sylphid Dream
-- BSLOT100.mml: プレイヤーズスコア（東方風神録版）
-- BSLOT101.mml: 緑眼のジェラシー
-- BSLOT102.mml: 死体旅行　～ Be of good cheer!
-- BSLOT103.mml: 宵闇の魔術師
-- BSLOT104.mml: 蓬莱幻想　～ far East
-- BSLOT105.mml: Lotus Love
-- BSLOT106.mml: 眠れる恐怖　～ Sleeping Terror
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|宇宙巫女現る|タイトル画面テーマ|
+|2|-|忘れがたき、よすがの緑|１面テーマ|
+|3|-|兎は舞い降りた|１面ボス・清蘭のテーマ|
+|4|-|湖は浄めの月光を映して|２面テーマ|
+|5|-|九月のパンプキン|２面ボス・鈴瑚のテーマ|
+|6|-|宇宙を飛ぶ不思議な巫女|３面テーマ|
+|7|-|永遠の春夢|３面ボス・ドレミー・スイートのテーマ|
+|8|-|凍り付いた永遠の都|４面テーマ|
+|9|-|逆転するホイールオブフォーチュン|４面ボス・稀神 サグメのテーマ|
+|10|-|遥か３８万キロのボヤージュ|５面テーマ|
+|11|-|星条旗のピエロ|５面ボス・クラウンピースのテーマ|
+|12|-|故郷の星が映る海|６面テーマ|
+|13|-|ピュアヒューリーズ　～ 心の在処|６面ボス・純狐のテーマ|
+|14|-|見た事も無い悪夢の世界|EXTRAのテーマ|
+|15|-|パンデモニックプラネット|EXTRAボス・ヘカーティア・ラピスラズリのテーマ|
+|16|-|神社から見える月|エンディングテーマ|
+|17|-|宇宙巫女帰還する|スタッフロールテーマ|
+|18|-|プレイヤーズスコア|ゲームオーバーテーマ　（※輝針城・神霊廟・妖精大戦争と同じ）|
 
 # 連絡先
 - Twitter https://twitter.com/suzukiplan
