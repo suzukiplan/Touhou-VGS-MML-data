@@ -64,156 +64,158 @@
 _※以前、別の形で公開していたMMLについては、ここの使用許諾を適用しません。各公開ドキュメントに付随している方の使用許諾を優先してください。_
 
 # 対応予定リスト
-### 凡例
-- × Coming soon (未完成)
-- ● Completion (完成済み)
 
-### 東方靈異伝 (0/15)
-- × A Sacred Lot -- タイトル画面テーマ
-- × 風の神社 -- 未使用曲
-- × 永遠の巫女 -- １～４面、地獄１６～１９面テーマ
-- × Highly Responsive to Prayers -- 魔界６～９面テーマ
-- × 東方怪奇談 -- 地獄６～９面テーマ
-- × Oriental Magician -- 魔界１１～１４面テーマ
-- × 破邪の小太刀 -- 地獄１１～１４面テーマ
-- × The Legend of KAGE -- 魔界１６～１９面テーマ
-- × The Positive and Negative -- ５面テーマ
-- × 天使伝説 -- １０面テーマ
-- × 魔鏡 -- １５面テーマ
-- × いざ、倒れ逝くその時まで -- 魔界最終面テーマ１
-- × 死なばもろとも -- 魔界最終面テーマ２
-- × 星幽剣士 -- 地獄最終面テーマ
-- × アイリス -- エンディングテーマ
+### 東方靈異伝 (0/29)
 
-（未使用曲）(0/14)
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|A Sacred Lot|タイトル画面テーマ|
+|2|-|風の神社|未使用曲|
+|3|-|永遠の巫女|１～４面、地獄１６～１９面テーマ|
+|4|-|Highly Responsive to Prayers|魔界６～９面テーマ|
+|5|-|東方怪奇談|地獄６～９面テーマ|
+|6|-|Oriental Magician|魔界１１～１４面テーマ|
+|7|-|破邪の小太刀|地獄１１～１４面テーマ|
+|8|-|The Legend of KAGE|魔界１６～１９面テーマ|
+|9|-|The Positive and Negative|５面テーマ|
+|10|-|天使伝説|１０面テーマ|
+|11|-|魔鏡|１５面テーマ|
+|12|-|いざ、倒れ逝くその時まで|魔界最終面テーマ１|
+|13|-|死なばもろとも|魔界最終面テーマ２|
+|14|-|星幽剣士|地獄最終面テーマ|
+|15|-|アイリス|エンディングテーマ|
+|16|-|_A Sacred Lot_|タイトルテーマ PMDアレンジ版|
+|17|-|_永遠の巫女_|１～４面、地獄１６～１９面テーマ（ちょっとアレンジ版）|
+|18|-|_The Positive and Negative_|５面テーマ（快速アレンジ版）|
+|19|-|_Highly Responsive to Prayers_|魔界６～９面テーマ（ほんのりアレンジ版）|
+|20|-|_東方怪奇談_|地獄６～９面テーマ（さわやかアレンジ版）|
+|21|-|_天使伝説_|１０面テーマ（こってりアレンジ版）|
+|22|-|_Oriental Magician_|魔界１１～１４面テーマ（ノリノリアレンジ版）|
+|23|-|_破邪の小太刀_|地獄１１～１４面テーマ（しあわせアレンジ版）|
+|24|-|_魔鏡_|１５面テーマ（夢幻アレンジ版）|
+|25|-|_the Legend of KAGE_|魔界１６～１９面テーマ（ダークアレンジ版）|
+|26|-|_いざ、倒れ逝くその時まで_|魔界最終面テーマ１（まったりアレンジ版）|
+|27|-|_Civilization of Magic_|魔界最終面テーマ２（ゆったりアレンジ版）|
+|28|-|_星幽天使_|地獄最終面テーマ（のんびりアレンジ版）|
+|29|-|_アイリス_|エンディングテーマ（6月アレンジ版）|
 
-- × A Sacred Lot -- タイトルテーマ PMDアレンジ版
-- × 永遠の巫女 -- １～４面、地獄１６～１９面テーマ（ちょっとアレンジ版）
-- × The Positive and Negative -- ５面テーマ（快速アレンジ版）
-- × Highly Responsive to Prayers -- 魔界６～９面テーマ（ほんのりアレンジ版）
-- × 東方怪奇談 -- 地獄６～９面テーマ（さわやかアレンジ版）
-- × 天使伝説 -- １０面テーマ（こってりアレンジ版）
-- × Oriental Magician -- 魔界１１～１４面テーマ（ノリノリアレンジ版）
-- × 破邪の小太刀 -- 地獄１１～１４面テーマ（しあわせアレンジ版）
-- × 魔鏡 -- １５面テーマ（夢幻アレンジ版）
-- × the Legend of KAGE -- 魔界１６～１９面テーマ（ダークアレンジ版）
-- × いざ、倒れ逝くその時まで -- 魔界最終面テーマ１（まったりアレンジ版）
-- × Civilization of Magic -- 魔界最終面テーマ２（ゆったりアレンジ版）
-- × 星幽天使 -- 地獄最終面テーマ（のんびりアレンジ版）
-- × アイリス -- エンディングテーマ（6月アレンジ版）
+### 東方封魔録 (0/21)
 
-### 東方封魔録 (0/15)
-- × 東方封魔録　～浄土曼荼羅 -- タイトル画面
-- × 博麗　～Eastern Wind -- １面テーマ
-- × She's in a temper!! -- １面ボス・里香のテーマ１
-- × End of Daylight -- ２面テーマ
-- × やみのちから -- ２面ボス・明羅のテーマ
-- × 幻夢界 -- ３面テーマ
-- × 死を賭して -- ３面ボス
-- × ひもろぎ、むらさきにもえ -- ４面テーマ
-- × 恋色マジック -- ４面ボス・魔理沙のテーマ
-- × 東方封魔録　～幽幻乱舞 -- 最終面テーマ
-- × Complete Darkness -- 最終面ボス・魅魔のテーマ
-- × エキストララブ -- エキストラステージテーマ
-- × 戦車むすめのみるゆめ -- エキストラボス・里香のテーマ２
-- × 遠野の森 -- エンディングテーマ
-- × 昔話わんだーらんど -- スタッフロールテーマ
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|東方封魔録　～浄土曼荼羅||タイトル画面|
+|2|-|博麗　～Eastern Wind|１面テーマ|
+|3|-|She's in a temper!!|１面ボス・里香のテーマ１|
+|4|-|End of Daylight|２面テーマ|
+|5|-|やみのちから|２面ボス・明羅のテーマ|
+|6|-|幻夢界|３面テーマ|
+|7|-|死を賭して|３面ボス|
+|8|-|ひもろぎ、むらさきにもえ|４面テーマ|
+|9|-|恋色マジック|４面ボス・魔理沙のテーマ|
+|10|-|東方封魔録　～幽幻乱舞|最終面テーマ|
+|11|-|Complete Darkness|最終面ボス・魅魔のテーマ|
+|12|-|エキストララブ|エキストラステージテーマ|
+|13|-|戦車むすめのみるゆめ|エキストラボス・里香のテーマ２|
+|14|-|遠野の森|エンディングテーマ|
+|15|-|昔話わんだーらんど|スタッフロールテーマ|
+|16|-|_ひもろぎ、むらさきにもえ_|Remix|
+|17|-|_東方封魔録　～幽幻乱舞_|Remix|
+|18|-|_Complete Darkness_|Remix|
+|19|-|_博麗神社境内_|未使用曲（１面テーマ）|
+|20|-|_陽落ちて_|未使用曲（２面テーマ）|
+|21|-|封魔終演|未使用曲（スタッフロールテーマ）|
 
-（未使用曲）(0/6)
+### 東方夢時空 (0/24)
 
-- × ひもろぎ、むらさきにもえ -- Remix
-- × 東方封魔録　～幽幻乱舞 -- Remix
-- × Complete Darkness -- Remix
-- × 博麗神社境内 -- 未使用曲（１面テーマ）
-- × 陽落ちて -- 未使用曲（２面テーマ）
-- × 封魔終演 -- 未使用曲（スタッフロールテーマ）
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|夢は時空を越えて|タイトル画面テーマ|
+|2|-|Selection|使用キャラ選択テーマ|
+|3|-|東方妖恋談|博麗 靈夢のテーマ|
+|4|-|Reincarnation|魅魔のテーマ|
+|5|-|Dim. Dream|霧雨 魔理沙のテーマ|
+|6|-|Tabula rasa　～ 空白少女|エレンのテーマ|
+|7|-|Maniacal Princess|小兎姫のテーマ|
+|8|-|夢消失　～ Lost Dream|カナ・アナベラルのテーマ|
+|9|-|夢幻遊戯　～ Dream War|朝倉 理香子のテーマ|
+|10|-|魔法決戦！　～ Fight it out!|ＣＰＵ７人目のテーマ|
+|11|-|Sailor of Time|北白河 ちゆりのテーマ|
+|12|-|Strawberry Crisis!!|岡崎 夢美のテーマ|
+|13|-|非統一魔法世界論|中ボスデモテーマ|
+|14|-|魔法鐘愛|夢美デモテーマ|
+|15|-|久遠の夢|共通エンディングテーマ|
+|16|-|東方の青い空|昼のエンディングテーマ|
+|17|-|永遠の満月|夜のエンディングテーマ|
+|18|-|Maple Dream...|スタッフロールテーマ|
+|19|-|霊人の休日|ネームレジストテーマ|
+|20|-|勝利デモ|勝利デモテーマ|
+|21|-|ゲームオーバー|ゲームオーバーテーマ|
+|22|-|_時の風_|未使用曲|
+|23|-|_スターボウドリーム_|未使用曲|
+|24|-|_Phantasmagoria_|未使用曲|
 
-### 東方夢時空 (0/21)
-- × 夢は時空を越えて -- タイトル画面テーマ
-- × Selection -- 使用キャラ選択テーマ
-- × 東方妖恋談 -- 博麗 靈夢のテーマ
-- × Reincarnation -- 魅魔のテーマ
-- × Dim. Dream -- 霧雨 魔理沙のテーマ
-- × Tabula rasa　～ 空白少女 -- エレンのテーマ
-- × Maniacal Princess -- 小兎姫のテーマ
-- × 夢消失　～ Lost Dream -- カナ・アナベラルのテーマ
-- × 夢幻遊戯　～ Dream War -- 朝倉 理香子のテーマ
-- × 魔法決戦！　～ Fight it out! -- ＣＰＵ７人目のテーマ
-- × Sailor of Time -- 北白河 ちゆりのテーマ
-- × Strawberry Crisis!! -- 岡崎 夢美のテーマ
-- × 非統一魔法世界論 -- 中ボスデモテーマ
-- × 魔法鐘愛 -- 夢美デモテーマ
-- × 久遠の夢 -- 共通エンディングテーマ
-- × 東方の青い空 -- 昼のエンディングテーマ
-- × 永遠の満月 -- 夜のエンディングテーマ
-- × Maple Dream... -- スタッフロールテーマ
-- × 霊人の休日 -- ネームレジストテーマ
-- × 勝利デモ -- 勝利デモテーマ
-- × ゲームオーバー -- ゲームオーバーテーマ
+### 東方幻想郷 (12/28)
 
-（未使用曲）(0/3)
-
-- × 時の風 -- 未使用曲
-- × スターボウドリーム -- 未使用曲
-- × Phantasmagoria -- 未使用曲
-
-### 東方幻想郷 (12/22)
-- ● 幻想郷　～ Lotus Land Story -- タイトル画面テーマ
-- ● Witching Dream -- 靈夢１面のテーマ
-- ● Selene's Light -- 魔理沙１面のテーマ
-- ● 装飾戦　～ Decoration Battle -- １面ボス・オレンジのテーマ
-- ● Break the Sabbath -- ２面テーマ
-- ● 紅響曲　～ Scarlet Phoneme -- ２面ボス・くるみのテーマ
-- ● Bad Apple!! -- ３面テーマ
-- ● 霊戦　～ Perdition crisis -- ３面ボス・エリーのテーマ
-- ● アリスマエステラ -- ４面テーマ
-- ● 少女綺想曲　～ Capriccio -- ４面ボス・靈夢のテーマ
-- ● 星の器　～ Casket of Star -- ４面ボス・魔理沙のテーマ
-- ● Lotus Love -- ５面テーマ
-- × 眠れる恐怖　～ Sleeping Terror -- ５面ボス・幽香のテーマ１
-- × Dream Land -- 最終面テーマ
-- × 幽夢　～ Inanimate Dream -- 最終面ボス・幽香のテーマ２
-- × 禁じざるをえない遊戯 -- エキストラステージテーマ
-- × メイド幻想　～ Icemilk Magic -- エキストラボス・夢月のテーマ
-- × かわいい悪魔　～ Innocence -- エキストラボス・幻月のテーマ
-- × Days -- バッドエンドのテーマ
-- × Peaceful -- グッドエンドのテーマ
-- × Arcadian Dream -- スタッフロールのテーマ
-- × 幻想の住人 -- ネームレジストのテーマ
-
-（未使用曲）(0/6)
-
-- × Lotus Road -- 未使用曲（１面テーマ）
-- × Dreamy pilot -- 未使用曲（４面テーマ）
-- × Incomplete Plot -- 未使用曲（５面テーマ）
-- × Border Land -- 未使用曲（６面テーマ）
-- × Magic Shop of Raspberry -- 未使用曲（エキストラステージテーマ）
-- × Crescent Dream -- 未使用曲（スタッフロールテーマ）
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|[BSLOT079.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT079.mml)|幻想郷　～ Lotus Land Story|タイトル画面テーマ|
+|2|[BSLOT080.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT080.mml)|Witching Dream|靈夢１面のテーマ|
+|3|[BSLOT081.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT081.mml)|Selene's Light|魔理沙１面のテーマ|
+|4|[BSLOT082.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT082.mml)|装飾戦　～ Decoration Battle|１面ボス・オレンジのテーマ|
+|5|[BSLOT086.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT086.mml)|Break the Sabbath|２面テーマ|
+|6|[BSLOT087.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT087.mml)|紅響曲　～ Scarlet Phoneme|２面ボス・くるみのテーマ|
+|7|[BSLOT061.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT061.mml)|Bad Apple!!|３面テーマ|
+|8|[BSLOT078.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT078.mml)|霊戦　～ Perdition crisis|３面ボス・エリーのテーマ|
+|9|[BSLOT075.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT075.mml)|アリスマエステラ|４面テーマ|
+|10|[BSLOT074.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT074.mml)|少女綺想曲　～ Capriccio|４面ボス・靈夢のテーマ|
+|11|[BSLOT073.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT073.mml)|星の器　～ Casket of Star|４面ボス・魔理沙のテーマ|
+|12|[BSLOT105.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT105.mml)|Lotus Love|５面テーマ|
+|13|-|眠れる恐怖　～ Sleeping Terror|５面ボス・幽香のテーマ１|
+|14|-|Dream Land|最終面テーマ|
+|15|-|幽夢　～ Inanimate Dream|最終面ボス・幽香のテーマ２|
+|16|-|禁じざるをえない遊戯|エキストラステージテーマ|
+|17|-|メイド幻想　～ Icemilk Magic|エキストラボス・夢月のテーマ|
+|18|-|かわいい悪魔　～ Innocence|エキストラボス・幻月のテーマ|
+|19|-|Days|バッドエンドのテーマ|
+|20|-|Peaceful|グッドエンドのテーマ|
+|21|-|Arcadian Dream|スタッフロールのテーマ|
+|22|-|幻想の住人|ネームレジストのテーマ|
+|23|-|_Lotus Road_|未使用曲（１面テーマ）|
+|24|-|_Dreamy pilot_|未使用曲（４面テーマ）|
+|25|-|_Incomplete Plot_|未使用曲（５面テーマ）|
+|26|-|_Border Land_|未使用曲（６面テーマ）|
+|27|-|_Magic Shop of Raspberry_|未使用曲（エキストラステージテーマ）|
+|28|-|_Crescent Dream_|未使用曲（スタッフロールテーマ）|
 
 ### 東方怪綺談 (2/23)
-- × 怪綺談　～ Mystic Square -- タイトル画面テーマ
-- × Dream Express -- １面テーマ
-- × 魔法陣　～ Magic Square -- １面ボス・サラのテーマ
-- × 夢想時空 -- ２面テーマ
-- × 霊天　～ Spiritual Heaven -- ２面ボス・ルイズのテーマ
-- × Romantic Children -- ３面テーマ
-- × プラスチックマインド -- ３面ボス・アリスのテーマ１
-- × メイプルワイズ -- ４面テーマ
-- × 禁断の魔法　～ Forbidden Magic -- ４面ボス・ユキ＆マイのテーマ
-- × 真紅の少女　～ Crimson Dead!! -- ４面ボス・ユキのテーマ
-- × 裏切りの少女　～ Judas Kiss -- ４面ボス・マイのテーマ
-- × the Last Judgement -- ５面テーマ
-- × 悲しき人形　～ Doll of Misery -- ５面ボス・夢子のテーマ
-- × 世界の果て　～ World's End -- ６面テーマ
-- × 神話幻想　～ Infinite Being -- ６面ボス・神綺のテーマ
-- ● 不思議の国のアリス -- エキストラステージテーマ
-- ● the Grimoire of Alice -- エキストラボス・アリスのテーマ２
-- × 神社 -- バッドエンドテーマ
-- × Endless -- グッドエンドテーマ１
-- × 久遠の楽園 -- グッドエンドテーマ２
-- × Mystic Dream -- スタッフロールテーマ
-- × Peaceful Romancer -- エキストラエンディングのテーマ
-- × 魂の休らむ所 -- ネームレジストテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|怪綺談　～ Mystic Square|タイトル画面テーマ|
+|2|-|Dream Express|１面テーマ|
+|3|-|魔法陣　～ Magic Square|１面ボス・サラのテーマ|
+|4|-|夢想時空|２面テーマ|
+|5|-|霊天　～ Spiritual Heaven|２面ボス・ルイズのテーマ|
+|6|-|Romantic Children|３面テーマ|
+|7|-|プラスチックマインド|３面ボス・アリスのテーマ１|
+|8|-|メイプルワイズ|４面テーマ|
+|9|-|禁断の魔法　～ Forbidden Magic|４面ボス・ユキ＆マイのテーマ|
+|10|-|真紅の少女　～ Crimson Dead!!|４面ボス・ユキのテーマ|
+|11|-|裏切りの少女　～ Judas Kiss|４面ボス・マイのテーマ|
+|12|-|the Last Judgement|５面テーマ|
+|13|-|悲しき人形　～ Doll of Misery|５面ボス・夢子のテーマ|
+|14|-|世界の果て　～ World's End|６面テーマ|
+|15|-|神話幻想　～ Infinite Being|６面ボス・神綺のテーマ|
+|16|[BSLOT062.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT062.mml)|不思議の国のアリス|エキストラステージテーマ|
+|17|[BSLOT063.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT063.mml)|the Grimoire of Alice|エキストラボス・アリスのテーマ２|
+|18|-|神社|バッドエンドテーマ|
+|19|-|Endless|グッドエンドテーマ１|
+|20|-|久遠の楽園|グッドエンドテーマ２|
+|21|-|Mystic Dream|スタッフロールテーマ|
+|22|-|Peaceful Romancer|エキストラエンディングのテーマ|
+|23|-|魂の休らむ所|ネームレジストテーマ|
+
+# TODO: 以下のテーブル化
 
 ### 東方幻想的音楽
 
