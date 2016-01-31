@@ -334,30 +334,33 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |2|-|夜が降りてくる　～ Evening Star|セミファイナルステージ・八雲 紫のテーマ|
 |3|-|御伽の国の鬼が島　～ Missing Power|ファイナルステージ・伊吹 萃香のテーマ|
 
-# TODO: 以下のテーブル化
-
 ### 東方永夜抄 (21/21)
-- ● 永夜抄　～ Eastern Night. -- タイトル画面テーマ
-- ● 幻視の夜　～ Ghostly Eyes -- １面テーマ
-- ● 蠢々秋月　～ Mooned Insect -- １面ボス・リグル・ナイトバグのテーマ
-- ● 夜雀の歌声　～ Night Bird -- ２面テーマ
-- ● もう歌しか聞こえない -- ２面ボス・ミスティア・ローレライのテーマ
-- ● 懐かしき東方の血　～ Old World -- ３面のテーマ
-- ● プレインエイジア -- ３面ボス・上白沢 慧音のテーマ
-- ● 永夜の報い　～ Imperishable Night. -- ４面テーマ
-- ● 少女綺想曲　～ Dream Battle -- ４面ボス・博麗 霊夢のテーマ
-- ● 恋色マスタースパーク -- ４面ボス・霧雨 魔理沙のテーマ
-- ● シンデレラケージ　～ Kagome-Kagome -- ５面テーマ
-- ● 狂気の瞳　～ Invisible Full Moon -- ５面ボス・鈴仙・U・イナバのテーマ
-- ● ヴォヤージュ1969 -- ６面テーマ
-- ● 千年幻想郷　～ History of the Moon -- ６面Aボス・八意 永琳のテーマ
-- ● 竹取飛翔　～ Lunatic Princess -- ６面Bボス・蓬莱山 輝夜のテーマ
-- ● ヴォヤージュ1970 -- 永琳・輝夜ファイナルスペルのテーマ
-- ● エクステンドアッシュ　～ 蓬莱人 -- EXTRAテーマ
-- ● 月まで届け、不死の煙 -- EXTRAボス・藤原 妹紅のテーマ
-- ● 月見草 -- エンディングテーマ
-- ● Eternal Dream　～ 幽玄の槭樹 -- スタッフロールテーマ
-- ● 東方妖怪小町 -- ラストワードのテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|[BSLOT038.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT038.mml)|永夜抄　～ Eastern Night.|タイトル画面テーマ|
+|2|[BSLOT039.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT039.mml)|幻視の夜　～ Ghostly Eyes|１面テーマ|
+|3|[BSLOT040.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT040.mml)|蠢々秋月　～ Mooned Insect|１面ボス・リグル・ナイトバグのテーマ|
+|4|[BSLOT041.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT041.mml)|夜雀の歌声　～ Night Bird|２面テーマ|
+|5|[BSLOT042.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT042.mml)|もう歌しか聞こえない|２面ボス・ミスティア・ローレライのテーマ|
+|6|[BSLOT043.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT043.mml)|懐かしき東方の血　～ Old World|３面のテーマ|
+|7|[BSLOT044.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT044.mml)|プレインエイジア|３面ボス・上白沢 慧音のテーマ|
+|8|[BSLOT045.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT045.mml)|永夜の報い　～ Imperishable Night. |４面テーマ|
+|9|[BSLOT046.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT046.mml)|少女綺想曲　～ Dream Battle|４面ボス・博麗 霊夢のテーマ|
+|10|[BSLOT047.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT047.mml)|恋色マスタースパーク|４面ボス・霧雨 魔理沙のテーマ|
+|11|[BSLOT048.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT048.mml)|シンデレラケージ　～ Kagome-Kagome|５面テーマ|
+|12|[BSLOT049.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT049.mml)|狂気の瞳　～ Invisible Full Moon|５面ボス・鈴仙・U・イナバのテーマ|
+|13|[BSLOT050.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT050.mml)|ヴォヤージュ1969|６面テーマ|
+|14|[BSLOT051.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT051.mml)|千年幻想郷　～ History of the Moon|６面Aボス・八意 永琳のテーマ|
+|15|[BSLOT052.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT052.mml)|竹取飛翔　～ Lunatic Princess|６面Bボス・蓬莱山 輝夜のテーマ|
+|16|[BSLOT053.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT053.mml)|ヴォヤージュ1970|永琳・輝夜ファイナルスペルのテーマ|
+|17|[BSLOT054.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT054.mml)|エクステンドアッシュ　～ 蓬莱人|EXTRAテーマ|
+|18|[BSLOT055.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT055.mml)|月まで届け、不死の煙|EXTRAボス・藤原 妹紅のテーマ|
+|19|[BSLOT056.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT056.mml)|月見草|エンディングテーマ|
+|20|[BSLOT057.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT057.mml)|Eternal Dream　～ 幽玄の槭樹|スタッフロールテーマ|
+|21|[BSLOT058.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT058.mml)|東方妖怪小町|ラストワードのテーマ|
+
+# TODO: 以下のテーブル化
 
 ### 東方花映塚 (8/19)
 - ● 花映塚　～ Higan Retour -- タイトル画面テーマ
