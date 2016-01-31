@@ -326,12 +326,15 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |20|[BSLOT036.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT036.mml)|さくらさくら　～ Japanize Dream...|スタッフロールテーマ|
 |21|[BSLOT037.mml](https://github.com/suzukiplan/Touhou-VGS-MML-data/blob/master/data/BSLOT037.mml)|過去の花　～ Fairy of Flower|未使用曲|
 
-# TODO: 以下のテーブル化
-
 ### 東方萃夢想 (0/3)
-- × Demystify Feast -- 宴会直前ステージのテーマ
-- × 夜が降りてくる　～ Evening Star -- セミファイナルステージ・八雲 紫のテーマ
-- × 御伽の国の鬼が島　～ Missing Power -- ファイナルステージ・伊吹 萃香のテーマ
+
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|Demystify Feast|宴会直前ステージのテーマ|
+|2|-|夜が降りてくる　～ Evening Star|セミファイナルステージ・八雲 紫のテーマ|
+|3|-|御伽の国の鬼が島　～ Missing Power|ファイナルステージ・伊吹 萃香のテーマ|
+
+# TODO: 以下のテーブル化
 
 ### 東方永夜抄 (21/21)
 - ● 永夜抄　～ Eastern Night. -- タイトル画面テーマ
