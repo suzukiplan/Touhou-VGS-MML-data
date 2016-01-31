@@ -241,12 +241,14 @@ _※以前、別の形で公開していたMMLについては、ここの使用�
 |18|-|二色蓮花蝶　～ Ancients|エキストラボス２ 博麗 霊夢のテーマ|
 |19|-|ハーセルヴズ|エンディングテーマ|
 
-# TODO: 以下のテーブル化
-
 #### （☆トルテ ル マジック）(0/3)
-- × Witch of Love Potion -- 通常面テーマ
-- × Magical and Hopeless -- シューのテーマ
-- × Sacred Battle -- コアントローのテーマ
+|No|MML file|Title|Description|
+|---:|---|---|---|
+|1|-|Witch of Love Potion|通常面テーマ|
+|2|-|Magical and Hopeless|シューのテーマ|
+|3|-|Sacred Battle|コアントローのテーマ|
+
+# TODO: 以下のテーブル化
 
 #### （ZUN's Strange Works）(3/6)
 - ● 宵闇の魔術師 -- ふぁんたすていかに激しく
