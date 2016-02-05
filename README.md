@@ -18,6 +18,10 @@
 - 自作のプレイヤやプラグインを作って演奏したかったりする上級者向け。
 - また、「このアレンジは気に食わん！」などと思った方は、VGS mk-II SRを使えば誰でも自由にカスタマイズできるので、自分でアレンジしてお楽しみください
 
+### VGS BGM Decoder
+- https://github.com/suzukiplan/vgs-bgm-decoder
+- プログラマ専用（分かる人だけ使ってください）
+
 # MMLの作成方法
 ### MMLとは？
 - MML（Music Macro Language）とは、テキストで記述する音楽データのことです。
