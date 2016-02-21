@@ -90,6 +90,7 @@ struct Preferences {
     int infy;
     int loop;
     int lock;
+    int kobushi;
 };
 static struct Preferences PRF;
 
@@ -269,6 +270,7 @@ int vge_loop()
     static int touching = 0;
     static int selectTime = 0;
     static int selectSong = -1;
+    static int kobushi;
     struct InputInf ci;
     int i, j, k;
     int ii;
@@ -330,6 +332,11 @@ int vge_loop()
         if (0 != PRF.lock && 1 != PRF.lock) {
             PRF.lock = 0;
         }
+        kobushi = PRF.kobushi;
+        if (0 != PRF.kobushi && 1 != PRF.kobushi) {
+            PRF.kobushi = 0;
+            kobushi = 0;
+        }
     } else {
         /* store preferences */
         PRF.base = (int)base;
@@ -343,6 +350,7 @@ int vge_loop()
         PRF.shuf = shuf;
         PRF.infy = infy;
         PRF.loop = loop;
+        PRF.kobushi = kobushi;
     }
 
     /* calc bmin */
@@ -360,6 +368,7 @@ int vge_loop()
             g_songChanged++;
             g_playing = 1;
             vge_bplay(_list[_mcur].no);
+            vgsdec_set_value(_psg, VGSDEC_REG_KOBUSHI, kobushi);
             focus = 1;
             whourai = 120;
             playing = 1;
@@ -1360,6 +1369,25 @@ SKIP_DRAW_PROC:
                 vge_putSP(0, (loop - 1) * 24, 160, 24, 12, 80 + ii, 112);
             }
         }
+    }
+
+    /* KOBUSHI button */
+    if (ci.s && touch_off == 0 && HITCHK(212, 92, 24, 32, ci.cx - 4, ci.cy - 4, 8, 8)) {
+        vge_putSP(0, 24, 216, 24, 12, 240 - 28, 112);
+        if (push) {
+            kobushi = 1 - kobushi;
+            if (vgsdec_get_value(_psg, VGSDEC_REG_PLAYING)) {
+                push = 0;
+                ci.s = 0;
+                paused = 0;
+                _list[i].played = 1;
+                vge_bstop();
+                playwait = 6;
+                playing = 0;
+            }
+        }
+    } else {
+        vge_putSP(0, 48 - kobushi * 48, 216, 24, 12, 212, 112);
     }
 
 SKIP_DRAW_PROC2:
