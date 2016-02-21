@@ -9,6 +9,7 @@
 #include <ctype.h>
 #include "vgeapi.h"
 #include "vgeint.h"
+#include "vgsdec.h"
 
 FILE* vge_fopen(const char*, const char*);
 
@@ -1097,44 +1098,48 @@ int vge_loop()
     vge_lineSP(0, 129, 240, 129, 111);
     vge_lineSP(0, 127, 240, 127, 106);
     if (_mcur < 0) {
-        putfontS(8, 16, "INDEX     %05d", _psg.nidx);
+        putfontS(8, 16, "INDEX     %05d", vgsdec_get_value(_psg, VGSDEC_REG_LENGTH));
     } else {
         if (_list[_mcur].loop) {
             if (infy) {
-                putfontS(8, 16, "INDEX     %05d  PLAYING %d", _psg.nidx, _psg.loop + 1);
+                putfontS(8, 16, "INDEX     %05d  PLAYING %d", vgsdec_get_value(_psg, VGSDEC_REG_INDEX), vgsdec_get_value(_psg, VGSDEC_REG_LOOP_COUNT) + 1);
             } else {
-                if (_psg.loop < loop) {
-                    putfontS(8, 16, "INDEX     %05d  PLAYING %d OF %d", _psg.nidx, _psg.loop + 1, loop);
+                if (vgsdec_get_value(_psg, VGSDEC_REG_LOOP_COUNT) < loop) {
+                    putfontS(8, 16, "INDEX     %05d  PLAYING %d OF %d", vgsdec_get_value(_psg, VGSDEC_REG_INDEX),
+                             vgsdec_get_value(_psg, VGSDEC_REG_LOOP_COUNT) + 1, loop);
                 } else {
-                    putfontS(8, 16, "INDEX     %05d  FADEOUT", _psg.nidx);
+                    putfontS(8, 16, "INDEX     %05d  FADEOUT", vgsdec_get_value(_psg, VGSDEC_REG_INDEX));
                 }
             }
         } else {
-            putfontS(8, 16, "INDEX     %05d  ACYCLIC SONG", _psg.nidx);
+            putfontS(8, 16, "INDEX     %05d  ACYCLIC SONG", vgsdec_get_value(_psg, VGSDEC_REG_INDEX));
         }
     }
-    if (0 == infy && (_psg.timeI || _psg.timeL)) {
+    if (0 == infy) {
         int ss;
         int sm;
         if (_list[_mcur].loop) {
-            ss = (int)(_psg.timeI + _psg.timeL * loop);
-            ss += 66150;
-            ss -= _psg.timeP;
+            int introLen = vgsdec_get_value(_psg, VGSDEC_REG_LOOP_TIME);
+            int loopLen = vgsdec_get_value(_psg, VGSDEC_REG_TIME_LENGTH) - introLen;
+            ss = introLen + loopLen * loop;
+            ss += vgsdec_get_value(_psg, VGSDEC_REG_PLAYING) * 102400;
+            ss -= vgsdec_get_value(_psg, VGSDEC_REG_TIME);
+            ss -= vgsdec_get_value(_psg, VGSDEC_REG_LOOP_COUNT) * loopLen;
             ss /= 22050;
             if (ss < 0) ss = 0;
             sm = ss / 60;
             ss -= sm * 60;
         } else {
-            ss = (int)(_psg.timeI + _psg.timeL);
-            ss -= _psg.timeP;
+            ss = vgsdec_get_value(_psg, VGSDEC_REG_TIME_LENGTH);
+            ss -= vgsdec_get_value(_psg, VGSDEC_REG_TIME);
             ss /= 22050;
             if (ss < 0) ss = 0;
             sm = ss / 60;
             ss -= sm * 60;
         }
-        putfontS(8, 24, "WAIT TIME %05d  %02d:%02d", _psg.waitTime, sm, ss);
+        putfontS(8, 24, "LEFT TIME %02d:%02d", sm, ss);
     } else {
-        putfontS(8, 24, "WAIT TIME %05d", _psg.waitTime);
+        putfontS(8, 24, "LEFT TIME INFINITY");
     }
     /* seek */
     vge_boxSP(12, 34, 235, 42, 53);
@@ -1143,14 +1148,12 @@ int vge_loop()
     vge_lineSP(16, 37, 229, 37, 53);
     vge_lineSP(16, 39, 229, 39, 48);
     vge_putSP(0, 232, 64, 8, 8, 4, 34);
-    u = _psg.timeI + _psg.timeL;
-    if (u) {
-        if (u < _psg.timeP) {
-            ii = (_psg.timeP - u) % _psg.timeL;
-            ii = (ii + _psg.timeI) % u * 214 / u;
-        } else {
-            ii = _psg.timeP * 214 / u;
-        }
+    if (vgsdec_get_value(_psg, VGSDEC_REG_PLAYING)) {
+        u = vgsdec_get_value(_psg, VGSDEC_REG_TIME) / 22050;
+        ii = vgsdec_get_value(_psg, VGSDEC_REG_TIME_LENGTH) / 22050;
+        i = vgsdec_get_value(_psg, VGSDEC_REG_LOOP_TIME) / 22050;
+        j = vgsdec_get_value(_psg, VGSDEC_REG_LOOP_COUNT);
+        ii = u * 212 / ii;
         vge_lineSP(16 + ii, 35, 16 + ii, 41, 109);
         vge_lineSP(17 + ii, 35, 17 + ii, 41, 103);
 
@@ -1171,7 +1174,7 @@ int vge_loop()
                 i -= 16;
                 if (i < 0) i = 0;
                 if (212 < i) i = 212;
-                vge_bpos(u * i / 212);
+                vgsdec_set_value(_psg, VGSDEC_REG_TIME, vgsdec_get_value(_psg, VGSDEC_REG_TIME_LENGTH) * i / 212);
                 push = 0;
             }
         }
@@ -1179,10 +1182,10 @@ int vge_loop()
 
     /* piano */
     for (i = 0; i < 6; i++) {
-        putfontS(4, 46 + i * 10, "CH%d %s", i, tn[_psg.ch[i].toneT]);
+        putfontS(4, 46 + i * 10, "CH%d %s", i, tn[vgsdec_get_value(_psg, VGSDEC_REG_TONE_0 + i)]);
         vge_putSP(0, 0, 208, 200, 8, 36, 46 + i * 10);
-        if (_psg.wav[i] != 0 || _psg.ch[i].keyOn) {
-            k = _psg.ch[i].toneK;
+        if (vgsdec_get_value(_psg, VGSDEC_REG_VOL_0 + i) != 0 || vgsdec_get_value(_psg, VGSDEC_REG_KEYON_0 + i) != 0) {
+            k = vgsdec_get_value(_psg, VGSDEC_REG_KEY_0 + i);
             switch (k % 12) {
                 case 0:
                     j = 0;
@@ -1362,7 +1365,7 @@ SKIP_DRAW_PROC:
 SKIP_DRAW_PROC2:
 
     // acyclic song
-    if (0 == playwait && playing && 0 == _psg.waitTime) {
+    if (-1 == vgsdec_get_value(_psg, VGSDEC_REG_LOOP_INDEX) && !vgsdec_get_value(_psg, VGSDEC_REG_PLAYING)) {
         if (0 == interval2) {
             interval2 = 1;
             if (shuf) {
@@ -1398,7 +1401,7 @@ SKIP_DRAW_PROC2:
     }
 
     // cyclic songs
-    if (-1 != _mcur && 0 == infy && _list[_mcur].loop && loop <= _psg.loop) {
+    if (-1 != _mcur && 0 == infy && _list[_mcur].loop && loop <= vgsdec_get_value(_psg, VGSDEC_REG_LOOP_COUNT)) {
         if (shuf) {
             for (i = 0; i < SONG_NUM; i++)
                 if (_list[i].played == 0) break;
@@ -1412,11 +1415,11 @@ SKIP_DRAW_PROC2:
                 }
             }
         }
-        if (_psg.fade2 == 0) {
-            _psg.fade2 = 1;
+        if (vgsdec_get_value(_psg, VGSDEC_REG_FADEOUT_COUNTER) == 0) {
+            vgsdec_set_value(_psg, VGSDEC_REG_FADEOUT, 1);
             interval = 0;
         }
-        if (100 <= _psg.fade2) {
+        if (100 <= vgsdec_get_value(_psg, VGSDEC_REG_FADEOUT_COUNTER)) {
             if (interval < 30) {
                 interval++;
             } else {
